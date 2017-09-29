@@ -552,8 +552,13 @@ def generate_type_stats_class (pokemon_type):
 
 		# append pokemon types dictionary to contain constructed named tuple.
 		pokemon_type_stats.update({
+
+				# set substring containing dynamically construct class property.
+				generated_class_meta_name = "".join([
+					str.capitalize(str.lower(pokemon_type_subgroups[i][0])), "Type", "Meta"])
+
 				# set dictionary key for item at index as named tuple.
-				pokemon_type_subgroups[i][0]: namedtuple("".join([str.capitalize(str.lower(pokemon_type_subgroups[i][0])), "Type", "Meta"]), "EFFECT SUM")(
+				pokemon_type_subgroups[i][0]: namedtuple(generated_class_meta_name, "EFFECT SUM")(
 					# set properties from current index tuple.
 					EFFECT = pokemon_type_subgroups[i][2], SUM = pokemon_type_subgroups[i][1])})
 
