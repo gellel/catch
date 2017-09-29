@@ -571,7 +571,8 @@ class Props (namedtuple("Types", NAMES_STRS)):
 
 		return super(Props, self).__new__(self, **{GROUPS[pokemon_type][i][0]: namedtuple(
 			"".join([str.capitalize(str.lower(GROUPS[pokemon_type][i][0])), "Type", "Meta"]), "EFFECT SUM")(
-				EFFECT = GROUPS[pokemon_type][i][2], SUM = GROUPS[pokemon_type][i][1]) for i in range(0, len(GROUPS[pokemon_type]))})
+				EFFECT = GROUPS[pokemon_type][i][2], SUM = GROUPS[pokemon_type][i][1]) 
+					for i in range(0, len(GROUPS[pokemon_type]))})
 
 
 #
