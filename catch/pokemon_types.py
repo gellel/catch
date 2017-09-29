@@ -2,6 +2,10 @@
 
 # -*- coding: utf-8 -*- 
 
+from collections import namedtuple
+
+import random
+
 ########################
 ### File information ###
 ########################
@@ -10,9 +14,9 @@ __author__  = "Lindsay Gelle (https://github.com/gellel)"
 
 __version__ = "1.0"
 
-#############################
-### Pokemon element types ###
-#############################
+########################
+### Module constants ###
+########################
 
 BUG = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
@@ -374,9 +378,11 @@ WATER = (
 	("STEEL", 1, "NORMAL_EFFECT"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-########################################
-### Pokemon element types dictionary ###
-########################################
+"""Dictionary containing the primary Pokemon types.
+
+Key contains collection of tuples containing element type resistances and strengths.
+Strengths and resistances are presented as the same float or integer.
+"""
 
 GROUPS = {
 	"BUG": BUG,
@@ -398,14 +404,110 @@ GROUPS = {
 	"STEEL": STEEL,
 	"WATER": WATER }
 
-GROUPS_EFFECTS_SUMS = {k:v[1] for (k,v) in GROUPS.iteritems()}
+"""Dictionary containing the primary Pokemon types.
 
-##################################
-### Pokemon element type names ###
-##################################
+Key value is collection of dictionaries containing element type numerical scale.
+Strengths and resistances are presented as the same float or integer for the corresponding key.
+"""
+
+GROUPS_SUMS = { k: { v[i][0]: v[i][1] 
+	for i in range(0, len(v)) } 
+	for (k,v) in GROUPS.iteritems() }
+
+"""Dictionary containing the primary Pokemon types.
+
+Key value is collection of dictionaries containing element type numerical scale representation as string.
+Strengths and resistances are presented as either "no_effect", "not_very_effective", "normal_effect", "super_effective".
+"""
+
+GROUPS_EFFECTS = { k: { v[i][0]: v[i][2] 
+	for i in range(0, len(v)) } 
+	for (k,v) in GROUPS.iteritems() }
+
+
+"""Tuple containing strings of primary Pokemon types.
+
+Names are generated from initialised names. Requires Pokemon type is defined in Groups dictionary.
+"""
 
 NAMES = tuple(dict.keys(GROUPS))
 
 
-print(GROUPS_EFFECTS_SUMS)
+def generate_type_sum_class (pokemon_type):
+	"""Construct psuedo-class property. Contains type numerical scale for property parent.
+	
+	Pokemon type constructed using Bug as the Pokemon type argument contains sums as defined in Bug constant.
+	"""
 
+	"""
+	>>> import pokemon_types
+	>>> pokemon_types.generate_type_sum_class("BUG")
+
+	BUG(GHOST=0.5, STEEL=0.5, ELECTRIC=1, 
+		NORMAL=1, FIRE=0.5, WATER=1, 
+		PSYCHIC=2, FLYING=0.5, FIGHTING=0.5, 
+		DRAGON=1, DARK=1, POISON=0.5, 
+		ICE=1, ROCK=1, FAIRY=0.5, 
+		GRASS=2, BUG=1, GROUND=1)
+	"""
+
+	# Named arguments #
+
+	# @parameter: <pokemon_type>, @type: <str>, @required: <true>
+	# @description: Pokemon element type to generate.
+
+
+	# set pokemon type argument as string and uppercase for comparisons and collections.
+	pokemon_type = str.upper(str(pokemon_type))
+
+	# confirm pokemon type is defined type otherwise select type at random.
+	pokemon_type = pokemon_type if pokemon_type in NAMES else random.choice(NAMES)
+
+	# construct pseudo-class constant from named tuple. sets integer sums as corresponding type pair value.
+	pokemon_generated_type = namedtuple(pokemon_type, " ".join(NAMES))(**GROUPS_SUMS[pokemon_type])
+
+	# return: @type: @class.__main__.STR_ARG_AS_CLS_NAME
+	return pokemon_generated_type
+
+
+def generate_type_effect_class (pokemon_type):
+
+	"""Construct psuedo-class property. Contains type string effectivness for property parent.
+	
+	Pokemon type constructed using Bug as the Pokemon type argument contains string as defined in Bug constant.
+	"""
+
+	"""
+	>>> import pokemon_types
+	>>> pokemon_types.generate_type_effect_class("BUG")
+
+	BUG(GHOST='NOT_VERY_EFFECTIVE', STEEL='NOT_VERY_EFFECTIVE', ELECTRIC='NORMAL_EFFECT', 
+		NORMAL='NORMAL_EFFECT', FIRE='NOT_VERY_EFFECTIVE', WATER='NORMAL_EFFECT', 
+		PSYCHIC='SUPER_EFFECTIVE', FLYING='NOT_VERY_EFFECTIVE', FIGHTING='NOT_VERY_EFFECTIVE', 
+		DRAGON='NORMAL_EFFECT', DARK='NORMAL_EFFECT', POISON='NOT_VERY_EFFECTIVE', 
+		ICE='NORMAL_EFFECT', ROCK='NORMAL_EFFECT', FAIRY='NOT_VERY_EFFECTIVE', 
+		GRASS='SUPER_EFFECTIVE', BUG='NORMAL_EFFECT', GROUND='NORMAL_EFFECT')
+	"""
+
+	# Named arguments #
+
+	# @parameter: <pokemon_type>, @type: <str>, @required: <true>
+	# @description: Pokemon element type to generate.
+
+
+	# set pokemon type argument as string and uppercase for comparisons and collections.
+	pokemon_type = str.upper(str(pokemon_type))
+
+	# confirm pokemon type is defined type otherwise select type at random.
+	pokemon_type = pokemon_type if pokemon_type in NAMES else random.choice(NAMES)
+
+	# construct pseudo-class constant from named tuple. sets integer sums as corresponding type pair value.
+	pokemon_generated_type = namedtuple(pokemon_type, " ".join(NAMES))(**GROUPS_EFFECTS[pokemon_type])
+
+	# return: @type: @class.__main__.STR_ARG_AS_CLS_NAME
+	return pokemon_generated_type
+
+
+print(generate_type_sum_class("BUG"))
+
+print(generate_type_effect_class("BUG"))
