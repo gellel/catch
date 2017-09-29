@@ -432,6 +432,10 @@ Names are generated from initialised names. Requires Pokemon type is defined in 
 
 NAMES = tuple(dict.keys(GROUPS))
 
+"""String comprised of the different Pokemon type names."""
+
+NAMES_STRS = " ".join(NAMES)
+
 
 def generate_type_sum_class (pokemon_type):
 	"""Construct psuedo-class property. Contains type numerical scale for property parent.
@@ -500,7 +504,7 @@ def generate_type_effect_class (pokemon_type):
 	pokemon_type = pokemon_type if pokemon_type in NAMES else random.choice(NAMES)
 
 	# construct pseudo-class constant from named tuple. sets integer sums as corresponding type pair value.
-	pokemon_generated_type = namedtuple(pokemon_type, " ".join(NAMES))(**GROUPS_EFFECTS[pokemon_type])
+	pokemon_generated_type = namedtuple(pokemon_type, NAMES_STRS)(**GROUPS_EFFECTS[pokemon_type])
 
 	# return: @type: @class.__main__.STR_ARG_AS_CLS_NAME
 	return pokemon_generated_type
@@ -540,20 +544,28 @@ def generate_type_stats_class (pokemon_type):
 	# construct dictionary to contain collection of named tuples.
 	pokemon_type_stats = dict()
 
-	# iterate for keys of pokemon type groups.
-	for (k,v) in GROUPS.iteritems():
+	# set sub group of properties for specific Pokemon type.
+	pokemon_type_subgroups = GROUPS[pokemon_type]
 
-		# iterate for child group properties for current type.
-		for i in range(0, len(v)):
-			
-			# append pokemon types dictionary to contain constructed named tuple.
-			pokemon_type_stats.update({
-				v[i][0]: namedtuple("Statistics", "EFFECT SUM")(EFFECT = v[i][2], SUM = v[i][1])})
+	# iterate for keys of pokemon type groups.
+	for i in range(0, len(pokemon_type_subgroups)):
+
+		# append pokemon types dictionary to contain constructed named tuple.
+		pokemon_type_stats.update({
+				# set dictionary key for item at index as named tuple.
+				pokemon_type_subgroups[i][0]: namedtuple("Attribute", "EFFECT SUM")(
+					# set properties from current index tuple.
+					EFFECT = pokemon_type_subgroups[i][2], SUM = pokemon_type_subgroups[i][1])})
 
 	# return: @type: @class.__main__.STR_ARG_AS_CLS_NAME
-	return namedtuple(pokemon_type, " ".join(NAMES))(**pokemon_type_stats)
+	return namedtuple(pokemon_type, NAMES_STRS)(**pokemon_type_stats)
 
 
-Bug = generate_type_stats_class("BUG")
 
-print(Bug)
+
+
+print(generate_type_stats_class("BUG").FIRE)
+print("\n")
+print(generate_type_stats_class("FIRE").BUG)
+
+
