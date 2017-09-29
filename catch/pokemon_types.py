@@ -521,11 +521,11 @@ def generate_type_stats_class (pokemon_type):
 	>>> pokemon_types.generate_type_stats_class("BUG")
 
 	BUG(
-		GHOST=Statistics(
+		GHOST=GhostTypeMeta(
 			EFFECT='NORMAL_EFFECT', SUM=1), 
-		STEEL=Statistics(
+		STEEL=SteelTypeMeta(
 			EFFECT='SUPER_EFFECTIVE', SUM=2), 
-		ELECTRIC=Statistics(
+		ELECTRIC=ElectricTypeMeta(
 			EFFECT='SUPER_EFFECTIVE', SUM=2),
 			...)
 	"""
@@ -553,7 +553,7 @@ def generate_type_stats_class (pokemon_type):
 		# append pokemon types dictionary to contain constructed named tuple.
 		pokemon_type_stats.update({
 				# set dictionary key for item at index as named tuple.
-				pokemon_type_subgroups[i][0]: namedtuple("Attribute", "EFFECT SUM")(
+				pokemon_type_subgroups[i][0]: namedtuple("".join([str.capitalize(str.lower(pokemon_type_subgroups[i][0])), "Type", "Meta"]), "EFFECT SUM")(
 					# set properties from current index tuple.
 					EFFECT = pokemon_type_subgroups[i][2], SUM = pokemon_type_subgroups[i][1])})
 
@@ -562,10 +562,11 @@ def generate_type_stats_class (pokemon_type):
 
 
 
+#namedtuple() for i in range(0, len(GROUPS[t]))
 
 
-print(generate_type_stats_class("BUG").FIRE)
+print(generate_type_stats_class("BUG"))
 print("\n")
-print(generate_type_stats_class("FIRE").BUG)
+print(generate_type_stats_class("FIRE"))
 
 
