@@ -471,7 +471,6 @@ def generate_type_sum_class (pokemon_type):
 
 
 def generate_type_effect_class (pokemon_type):
-
 	"""Construct psuedo-class property. Contains type string effectivness for property parent.
 	
 	Pokemon type constructed using Bug as the Pokemon type argument contains string as defined in Bug constant.
@@ -481,12 +480,11 @@ def generate_type_effect_class (pokemon_type):
 	>>> import pokemon_types
 	>>> pokemon_types.generate_type_effect_class("BUG")
 
-	BUG(GHOST='NOT_VERY_EFFECTIVE', STEEL='NOT_VERY_EFFECTIVE', ELECTRIC='NORMAL_EFFECT', 
-		NORMAL='NORMAL_EFFECT', FIRE='NOT_VERY_EFFECTIVE', WATER='NORMAL_EFFECT', 
-		PSYCHIC='SUPER_EFFECTIVE', FLYING='NOT_VERY_EFFECTIVE', FIGHTING='NOT_VERY_EFFECTIVE', 
-		DRAGON='NORMAL_EFFECT', DARK='NORMAL_EFFECT', POISON='NOT_VERY_EFFECTIVE', 
-		ICE='NORMAL_EFFECT', ROCK='NORMAL_EFFECT', FAIRY='NOT_VERY_EFFECTIVE', 
-		GRASS='SUPER_EFFECTIVE', BUG='NORMAL_EFFECT', GROUND='NORMAL_EFFECT')
+	BUG(
+		GHOST='NOT_VERY_EFFECTIVE', 
+		STEEL='NOT_VERY_EFFECTIVE', 
+		ELECTRIC='NORMAL_EFFECT', 
+		...)
 	"""
 
 	# Named arguments #
@@ -508,6 +506,54 @@ def generate_type_effect_class (pokemon_type):
 	return pokemon_generated_type
 
 
-print(generate_type_sum_class("BUG"))
+def generate_type_stats_class (pokemon_type):
+	"""Construct psuedo-class property. Contains type string effectivness for property parent.
+	
+	Pokemon type constructed using Bug as the Pokemon type argument contains string as defined in Bug constant.
+	"""
+	
+	"""
+	>>> import pokemon_types
+	>>> pokemon_types.generate_type_stats_class("BUG")
 
-print(generate_type_effect_class("BUG"))
+	BUG(
+		GHOST=Statistics(
+			EFFECT='NORMAL_EFFECT', SUM=1), 
+		STEEL=Statistics(
+			EFFECT='SUPER_EFFECTIVE', SUM=2), 
+		ELECTRIC=Statistics(
+			EFFECT='SUPER_EFFECTIVE', SUM=2),
+			...)
+	"""
+
+	# Named arguments #
+
+	# @parameter: <pokemon_type>, @type: <str>, @required: <true>
+	# @description: Pokemon element type to generate.
+
+	# set pokemon type argument as string and uppercase for comparisons and collections.
+	pokemon_type = str.upper(str(pokemon_type))
+
+	# confirm pokemon type is defined type otherwise select type at random.
+	pokemon_type = pokemon_type if pokemon_type in NAMES else random.choice(NAMES)
+
+	# construct dictionary to contain collection of named tuples.
+	pokemon_type_stats = dict()
+
+	# iterate for keys of pokemon type groups.
+	for (k,v) in GROUPS.iteritems():
+
+		# iterate for child group properties for current type.
+		for i in range(0, len(v)):
+			
+			# append pokemon types dictionary to contain constructed named tuple.
+			pokemon_type_stats.update({
+				v[i][0]: namedtuple("Statistics", "EFFECT SUM")(EFFECT = v[i][2], SUM = v[i][1])})
+
+	# return: @type: @class.__main__.STR_ARG_AS_CLS_NAME
+	return namedtuple(pokemon_type, " ".join(NAMES))(**pokemon_type_stats)
+
+
+Bug = generate_type_stats_class("BUG")
+
+print(Bug)
