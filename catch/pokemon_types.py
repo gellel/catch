@@ -565,11 +565,15 @@ def generate_type_stats_class (pokemon_type):
 	return namedtuple(pokemon_type, NAMES_STRS)(**pokemon_type_stats)
 
 
-class Props (namedtuple("Types", NAMES_STRS)):
+class Generate (namedtuple("Props", NAMES_STRS)):
 
 	def __new__ (self, pokemon_type):
+		"""Inherit constants for class from named tuple Props.
+		
+		Anticipated to be consumed in Pokemon class constructor.
+		"""
 
-		return super(Props, self).__new__(self, **{GROUPS[pokemon_type][i][0]: namedtuple(
+		return super(Generate, self).__new__(self, **{GROUPS[pokemon_type][i][0]: namedtuple(
 			"".join([str.capitalize(str.lower(GROUPS[pokemon_type][i][0])), "Type", "Meta"]), "EFFECT SUM")(
 				EFFECT = GROUPS[pokemon_type][i][2], SUM = GROUPS[pokemon_type][i][1]) 
 					for i in range(0, len(GROUPS[pokemon_type]))})
@@ -582,4 +586,5 @@ class Props (namedtuple("Types", NAMES_STRS)):
 #print("\n")
 #print(generate_type_stats_class("FIRE"))
 
-print(Props("BUG"))
+b = (Generate("BUG"))
+
