@@ -570,8 +570,26 @@ class Generate (namedtuple("Props", NAMES_STRS)):
 	def __new__ (self, pokemon_type):
 		"""Inherit constants for class from named tuple Props.
 		
-		Anticipated to be consumed in Pokemon class constructor.
+		Anticipated to be consumed in Pokemon class constructor. 
 		"""
+
+		"""
+		>>> import pokemon_types
+		>>> pokemon_types.Generate("BUG")
+
+		Props(
+			GHOST=GhostTypeMeta(
+				EFFECT='NOT_VERY_EFFECTIVE', SUM=0.5), 
+			STEEL=SteelTypeMeta(
+				EFFECT='NOT_VERY_EFFECTIVE', SUM=0.5), 
+			ELECTRIC=ElectricTypeMeta(
+				EFFECT='NORMAL_EFFECT', SUM=1), ...)
+		"""
+
+		# Named arguments #
+
+		# @parameter: <pokemon_type>, @type: <str>, @required: <true>
+		# @description: Pokemon element class type to generate.
 
 		return super(Generate, self).__new__(self, **{GROUPS[pokemon_type][i][0]: namedtuple(
 			"".join([str.capitalize(str.lower(GROUPS[pokemon_type][i][0])), "Type", "Meta"]), "EFFECT SUM")(
@@ -588,3 +606,4 @@ class Generate (namedtuple("Props", NAMES_STRS)):
 
 b = (Generate("BUG"))
 
+print(b)
