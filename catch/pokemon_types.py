@@ -437,6 +437,26 @@ NAMES = tuple(dict.keys(GROUPS))
 NAMES_STRS = " ".join(NAMES)
 
 
+def generate_type_meta_name (pokemon_type_name):
+	"""Create string formatted to the named tuple Pokemon types scale convention."""
+
+	"""
+	>>> import pokemon_types
+	>>> pokemon_types.generate_type_meta_name("BUG")
+	
+	'BugTypeMeta'
+	"""
+
+	# Named arguments #
+
+	# @parameter: <pokemon_type_name>, @type: <str>, @required: <true>
+	# @description: Pokemon element type to generate string for.
+
+	# @return: @type: <str>
+	return "".join([str.capitalize(
+		str.lower(str(pokemon_type_name))), "Type", "Meta"])
+
+
 def generate_type_sum_class (pokemon_type):
 	"""Construct psuedo-class property. Contains type numerical scale for property parent.
 	
@@ -551,8 +571,7 @@ def generate_type_stats_class (pokemon_type):
 	for i in range(0, len(pokemon_type_subgroups)):
 
 		# set substring containing dynamically construct class property.
-		generated_class_meta_name = "".join([
-			str.capitalize(str.lower(pokemon_type_subgroups[i][0])), "Type", "Meta"])
+		generated_class_meta_name = generate_type_meta_name(pokemon_type_subgroups[i][0])
 
 		# append pokemon types dictionary to contain constructed named tuple.
 		pokemon_type_stats.update({
@@ -592,7 +611,7 @@ class Generate (namedtuple("Props", NAMES_STRS)):
 		# @description: Pokemon element class type to generate.
 
 		return super(Generate, self).__new__(self, **{GROUPS[pokemon_type][i][0]: namedtuple(
-			"".join([str.capitalize(str.lower(GROUPS[pokemon_type][i][0])), "Type", "Meta"]), "EFFECT SUM")(
+			generate_type_meta_name(GROUPS[pokemon_type][i][0]), "EFFECT SUM")(
 				EFFECT = GROUPS[pokemon_type][i][2], SUM = GROUPS[pokemon_type][i][1]) 
 					for i in range(0, len(GROUPS[pokemon_type]))})
 
