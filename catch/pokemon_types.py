@@ -550,13 +550,12 @@ def generate_type_stats_class (pokemon_type):
 	# iterate for keys of pokemon type groups.
 	for i in range(0, len(pokemon_type_subgroups)):
 
+		# set substring containing dynamically construct class property.
+		generated_class_meta_name = "".join([
+			str.capitalize(str.lower(pokemon_type_subgroups[i][0])), "Type", "Meta"])
+
 		# append pokemon types dictionary to contain constructed named tuple.
 		pokemon_type_stats.update({
-
-				# set substring containing dynamically construct class property.
-				generated_class_meta_name = "".join([
-					str.capitalize(str.lower(pokemon_type_subgroups[i][0])), "Type", "Meta"])
-
 				# set dictionary key for item at index as named tuple.
 				pokemon_type_subgroups[i][0]: namedtuple(generated_class_meta_name, "EFFECT SUM")(
 					# set properties from current index tuple.
@@ -566,12 +565,18 @@ def generate_type_stats_class (pokemon_type):
 	return namedtuple(pokemon_type, NAMES_STRS)(**pokemon_type_stats)
 
 
+class Props (namedtuple("Types", NAMES_STRS)):
 
-#namedtuple() for i in range(0, len(GROUPS[t]))
+	def __new__ (self, t):
 
-
-print(generate_type_stats_class("BUG"))
-print("\n")
-print(generate_type_stats_class("FIRE"))
+		return super(Props, self).__new__(self, **{GROUPS[t][i][0]:namedtuple("".join([str.capitalize(str.lower(GROUPS[t][i][0])), "Type", "Meta"]), "EFFECT SUM")(EFFECT = GROUPS[t][i][2], SUM = GROUPS[t][i][1]) for i in range(0, len(GROUPS[t]))})
 
 
+#
+
+
+#print(generate_type_stats_class("BUG"))
+#print("\n")
+#print(generate_type_stats_class("FIRE"))
+
+print(Props("BUG"))
