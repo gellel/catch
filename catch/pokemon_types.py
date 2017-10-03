@@ -586,10 +586,12 @@ def generate_type_stats_class (pokemon_type):
 
 class Generate (namedtuple("Props", NAMES_STRS)):
 
+	"""Generates type properties for defined Pokemon type."""
+
 	def __new__ (self, pokemon_type):
 		"""Inherit constants for class from named tuple Props.
 		
-		Anticipated to be consumed in Pokemon class constructor. 
+		Anticipated to be consumed in Pokemon base type class constructor. 
 		"""
 
 		"""
@@ -610,19 +612,196 @@ class Generate (namedtuple("Props", NAMES_STRS)):
 		# @parameter: <pokemon_type>, @type: <str>, @required: <true>
 		# @description: Pokemon element class type to generate.
 
-		return super(Generate, self).__new__(self, **{GROUPS[pokemon_type][i][0]: namedtuple(
-			generate_type_meta_name(GROUPS[pokemon_type][i][0]), "EFFECT SUM")(
-				EFFECT = GROUPS[pokemon_type][i][2], SUM = GROUPS[pokemon_type][i][1]) 
-					for i in range(0, len(GROUPS[pokemon_type]))})
+		# set pokemon type argument as string and uppercase for comparisons and collections.
+		pokemon_type = str.upper(str(pokemon_type))
+
+		# confirm pokemon type is defined type otherwise select type at random.
+		pokemon_type = pokemon_type if pokemon_type in NAMES else random.choice(NAMES)
+		
+		# set sub group of properties for specific Pokemon type.
+		pokemon_type_subgroups = GROUPS[pokemon_type]
+
+		# return: @type: @class.__main__.Generate
+		return super(Generate, self).__new__(self, **{pokemon_type_subgroups[i][0]: namedtuple(
+			generate_type_meta_name(pokemon_type_subgroups[i][0]), "EFFECT SUM")(
+				EFFECT = pokemon_type_subgroups[i][2], SUM = pokemon_type_subgroups[i][1]) 
+					for i in range(0, len(pokemon_type_subgroups))})
 
 
-#
+class Bug (Generate):
+	"""Generates Bug type Pokemon properties."""
+	
+	def __new__ (self):
+		"""Pass required arguments for inheritence constructor.""" 
+
+		# return: @type: @class.__main__.Bug
+		return super(Bug, self).__new__(self, "BUG")
 
 
-#print(generate_type_stats_class("BUG"))
-#print("\n")
-#print(generate_type_stats_class("FIRE"))
+class Dark (Generate):
+	"""Generates Dark type Pokemon properties."""
 
-b = (Generate("BUG"))
+	def __new__ (self):
+		"""Pass required arguments for inheritence constructor.""" 
 
-print(b)
+		# return: @type: @class.__main__.Dark
+		return super(Dark, self).__new__(self, "DARK")
+
+
+class Dragon (Generate):
+	"""Generates Dragon type Pokemon properties."""
+
+	def __new__ (self):
+		"""Pass required arguments for inheritence constructor.""" 
+
+		# return: @type: @class.__main__.Dragon
+		return super(Dragon, self).__new__(self, "DRAGON")
+
+
+class Electric (Generate):
+	"""Generates Electric type Pokemon properties."""
+
+	def __new__ (self):
+		"""Pass required arguments for inheritence constructor.""" 
+
+		# return: @type: @class.__main__.Electric
+		return super(Electric, self).__new__(self, "ELECTRIC")
+
+
+class Fairy (Generate):
+	"""Generates Fairy type Pokemon properties."""
+
+	def __new__ (self):
+		"""Pass required arguments for inheritence constructor.""" 
+
+		return super(Fairy, self).__new__(self, "FAIRY")
+
+
+class Fighting (Generate):
+	"""Generates Fighting type Pokemon properties."""
+
+	def __new__ (self):
+		"""Pass required arguments for inheritence constructor.""" 
+
+		# return: @type: @class.__main__.Fighting
+		return super(Fighting, self).__new__(self, "FIGHTING")
+
+
+class Fire (Generate):
+	"""Generates Fire type Pokemon properties."""
+
+	def __new__ (self):
+		"""Pass required arguments for inheritence constructor.""" 
+
+		# return: @type: @class.__main__.Fire
+		return super(Fire, self).__new__(self, "FIRE")
+
+
+class Flying (Generate):
+	"""Generates Flying type Pokemon properties."""
+
+	def __new__ (self):
+		"""Pass required arguments for inheritence constructor.""" 
+
+		# return: @type: @class.__main__.Flying
+		return super(Flying, self).__new__(self, "FLYING")
+
+
+class Ghost (Generate):
+	"""Generates Ghost type Pokemon properties."""
+
+	def __new__ (self):
+		"""Pass required arguments for inheritence constructor.""" 
+
+		# return: @type: @class.__main__.Ghost
+		return super(Ghost, self).__new__(self, "GHOST")
+
+
+class Grass (Generate):
+	"""Generates Grass type Pokemon properties."""
+
+	def __new__ (self):
+		"""Pass required arguments for inheritence constructor.""" 
+		
+		# return: @type: @class.__main__.Grass
+		return super(Grass, self).__new__(self, "GRASS")
+
+
+class Ground (Generate):
+	"""Generates Ground type Pokemon properties."""
+
+	def __new__ (self):
+		"""Pass required arguments for inheritence constructor.""" 
+
+		# return: @type: @class.__main__.Ground
+		return super(Ground, self).__new__(self, "GROUND")
+
+
+class Ice (Generate):
+	"""Generates Ice type Pokemon properties."""
+
+	def __new__ (self):
+		"""Pass required arguments for inheritence constructor.""" 
+
+		# return: @type: @class.__main__.Ice
+		return super(Ice, self).__new__(self, "ICE")
+
+
+class Normal (Generate):
+	"""Generates Normal type Pokemon properties."""
+
+	def __new__ (self):
+		"""Pass required arguments for inheritence constructor.""" 
+
+		# return: @type: @class.__main__.Normal
+		return super(Normal, self).__new__(self, "NORMAL")
+
+
+class Poison (Generate):
+	"""Generates Poison type Pokemon properties."""
+
+	def __new__ (self):
+		"""Pass required arguments for inheritence constructor.""" 
+
+		# return: @type: @class.__main__.Poison
+		return super(Poison, self).__new__(self, "POISON")
+
+
+class Psychic (Generate):
+	"""Generates Psychic type Pokemon properties."""
+
+	def __new__ (self):
+		"""Pass required arguments for inheritence constructor.""" 
+
+		# return: @type: @class.__main__.Psychic
+		return super(Psychic, self).__new__(self, "PSYCHIC")
+
+
+class Rock (Generate):
+	"""Generates Rock type Pokemon properties."""
+
+	def __new__ (self):
+		"""Pass required arguments for inheritence constructor.""" 
+
+		# return: @type: @class.__main__.Rock
+		return super(Rock, self).__new__(self, "ROCK")
+
+
+class Steel (Generate):
+	"""Generates Steel type Pokemon properties."""
+
+	def __new__ (self):
+		"""Pass required arguments for inheritence constructor.""" 
+
+		# return: @type: @class.__main__.Steel
+		return super(Steel, self).__new__(self, "STEEL")
+
+
+class Water (Generate):
+	"""Generates Water type Pokemon properties."""
+
+	def __new__ (self):
+		"""Pass required arguments for inheritence constructor.""" 
+
+		# return: @type: @class.__main__.Ground
+		return super(Water, self).__new__(self, "WATER")
