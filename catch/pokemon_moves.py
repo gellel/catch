@@ -79,7 +79,7 @@ AMNESIA = dict(
 	pp = 20,
 	description = "Sharply raises user's Special Defense.")
 
-Aurora_Beam = dict(
+AURORA_BEAM = dict(
 	element_type = "Ice",
 	category = "Special",
 	power = 65, 
@@ -87,7 +87,7 @@ Aurora_Beam = dict(
 	pp = 20,
 	description = "May lower opponent's Attack.")
 
-Barrage = dict(
+BARRAGE = dict(
  	element_type = "Normal",
 	category = "Physical",
 	power = 15,
@@ -95,7 +95,7 @@ Barrage = dict(
 	pp = 20,
 	description = "Hits 2-5 times in one turn.")
 
-Barrier = dict(
+BARRIER = dict(
  	element_type = "Psychic",
 	category = "Status",
 	power = None,
@@ -103,7 +103,7 @@ Barrier = dict(
 	pp = 20,
 	description = "Sharply raises user's Defense.")
 
-Bide = dict(
+BIDE = dict(
  	element_type = "Normal",
 	category = "Physical",
 	power = None,
@@ -111,7 +111,7 @@ Bide = dict(
 	pp = 10,
 	description = "User takes damage for two turns then strikes back double.")
 
-Bind = dict(
+BIND = dict(
  	element_type = "Normal",
 	category = "Physical",
 	power = 15,
@@ -119,7 +119,7 @@ Bind = dict(
 	pp = 20,
 	description = "Traps opponent, damaging them for 4-5 turns.")
 
-Bite = dict(
+BITE = dict(
  	element_type = "Dark",
 	category = "Physical",
 	power = 60,
@@ -127,7 +127,7 @@ Bite = dict(
 	pp = 25,
 	description = "May cause flinching.")
 
-Blizzard = dict(
+BLIZZARD = dict(
  	element_type = "Ice",
 	category = "Special",
 	power = 110,
@@ -135,7 +135,7 @@ Blizzard = dict(
 	pp = 5,
 	description = "May freeze opponent.")
 
-Body_Slam = dict(
+BODY_SLAM = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = 85,
@@ -143,7 +143,7 @@ Body_Slam = dict(
 	pp = 15,
 	description = "May paralyze opponent.")
 
-Bone_Club = dict(
+BONE_CLUB = dict(
 	element_type = "Ground",
 	category = "Physical",
 	power = 65,
@@ -151,7 +151,7 @@ Bone_Club = dict(
 	pp = 20,
 	description = "May cause flinching.")
 
-Bonemerang = dict(
+BONEMERANG = dict(
  	element_type = "Ground",
 	category = "Physical",
 	power = 50,
@@ -159,7 +159,7 @@ Bonemerang = dict(
 	pp = 10,
 	description = "Hits twice in one turn.")
 
-Bubble = dict(
+BUBBLE = dict(
  	element_type = "Water",
 	category = "Special",
 	power = 40,
@@ -167,7 +167,7 @@ Bubble = dict(
 	pp = 30,
 	description = "May lower opponent's Speed.")
 
-Bubble_Beam = dict(
+BUBBLE_BEAM = dict(
 	element_type = "Water",
 	category = "Special",
 	power = 65, 
@@ -175,7 +175,7 @@ Bubble_Beam = dict(
 	pp = 20,
 	description = "May lower opponent's Speed.")
 
-Clamp = dict(
+CLAMP = dict(
  	element_type = "Water",
 	category = "Physical",
 	power = 35,
@@ -183,7 +183,7 @@ Clamp = dict(
 	pp = 10,
 	description = "Traps opponent, damaging them for 4-5 turns.")
 
-Comet_Punch = dict(
+COMET_PUNCH = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = 18,
@@ -191,7 +191,7 @@ Comet_Punch = dict(
 	pp = 15,
 	description = "Hits 2-5 times in one turn.")
 
-Confuse_Ray = dict(
+CONFUSE_RAY = dict(
 	element_type = "Ghost",
 	category = "Status",
 	power = None, 
@@ -199,7 +199,7 @@ Confuse_Ray = dict(
 	pp = 10,
 	description = "Confuses opponent.")
 
-Confusion = dict(
+CONFUSION = dict(
  	element_type = "Psychic",
 	category = "Special",
 	power = 50,
@@ -207,7 +207,7 @@ Confusion = dict(
 	pp = 25,
 	description = "May confuse opponent.")
 
-Constrict = dict(
+CONSTRICT = dict(
  	element_type = "Normal",
 	category = "Physical",
 	power = 10,
@@ -215,7 +215,7 @@ Constrict = dict(
 	pp = 35,
 	description = "May lower opponent's Speed by one stage.")
 
-Conversion = dict(
+CONVERSION = dict(
  	element_type = "Normal",
 	category = "Status",
 	power = None,
@@ -223,7 +223,7 @@ Conversion = dict(
 	pp = 30,
 	description = "Changes user's type to that of its first move.")
 
-Counter = dict(
+COUNTER = dict(
  	element_type = "Fighting",
 	category = "Physical",
 	power = None,
@@ -231,7 +231,7 @@ Counter = dict(
 	pp = 20,
 	description = "When hit by a Physical Attack, user strikes back with 2x power.")
 
-Crabhammer = dict(
+CRABHAMMER = dict(
  	element_type = "Water",
 	category = "Physical",
 	power = 100,
@@ -239,7 +239,7 @@ Crabhammer = dict(
 	pp = 10,
 	description = "High critical hit ratio.")
 
-Cut = dict(
+CUT = dict(
  	element_type = "Normal",
 	category = "Physical",
 	power = 50,
@@ -247,7 +247,7 @@ Cut = dict(
 	pp = 30,
 	description = "")
 
-Defense_Curl = dict(
+DEFENSE_CURL = dict(
 	element_type = "Normal",
 	category = "Status",
 	power = None, 
@@ -255,7 +255,7 @@ Defense_Curl = dict(
 	pp = 40,
 	description = "Raises user's Defense.")
 
-Dig = dict(
+DIG = dict(
  	element_type = "Ground",
 	category = "Physical",
 	power = 80,
@@ -263,7 +263,7 @@ Dig = dict(
 	pp = 10,
 	description = "Digs underground on first turn, attacks on second. Can also escape from caves.")
 
-Disable = dict(
+DISABLE = dict(
  	element_type = "Normal",
 	category = "Status",
 	power = None,
@@ -271,7 +271,7 @@ Disable = dict(
 	pp = 20,
 	description = "Opponent can't use its last attack for a few turns.")
 
-Dizzy_Punch = dict(
+DIZZY_PUNCH = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = 70,
@@ -279,7 +279,7 @@ Dizzy_Punch = dict(
 	pp = 10,
 	description = "May confuse opponent.")
 
-Double_Kick = dict(
+DOUBLE_KICK = dict(
 	element_type = "Fighting",
 	category = "Physical",
 	power = 30,
@@ -287,7 +287,7 @@ Double_Kick = dict(
 	pp = 30,
 	description = "Hits twice in one turn.")
 
-Double_Slap = dict(
+DOUBLE_SLAP = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = 15,
@@ -295,7 +295,7 @@ Double_Slap = dict(
 	pp = 10,
 	description = "Hits 2-5 times in one turn.")
 
-Double_Team = dict(
+DOUBLE_Team = dict(
 	element_type = "Normal",
 	category = "Status",
 	power = None, 
@@ -303,7 +303,7 @@ Double_Team = dict(
 	pp = 15,
 	description = "Raises user's Evasiveness.")
 
-Double_Edge = dict(
+DOUBLE_EDGE = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = 120, 
@@ -311,7 +311,7 @@ Double_Edge = dict(
 	pp = 15,
 	description = "User receives recoil damage.")
 
-Dragon_Rage = dict(
+DRAGON_RAGE = dict(
 	element_type = "Dragon",
 	category = "Special",
 	power = None,
@@ -319,7 +319,7 @@ Dragon_Rage = dict(
 	pp = 10,
 	description = "Always inflicts 40 HP.")
 
-Dream_Eater = dict(
+DREAM_EATER = dict(
 	element_type = "Psychic",
 	category = "Special",
 	power = 10,0 
@@ -327,7 +327,7 @@ Dream_Eater = dict(
 	pp = 15,
 	description = "User recovers half the HP inflicted on a sleeping opponent.")
 
-Drill_Peck = dict(
+DRILL_PECK = dict(
 	element_type = "Flying",
 	category = "Physical",
 	power = 80,
@@ -335,7 +335,7 @@ Drill_Peck = dict(
 	pp = 20,
 	description = "")
 
-Earthquake = dict(
+EARTHQUAKE = dict(
  	element_type = "Ground",
 	category = "Physical",
 	power = 100,
@@ -343,7 +343,7 @@ Earthquake = dict(
 	pp = 10,
 	description = "Power is doubled if opponent is underground from using Dig.")
 
-Egg_Bomb = dict(
+EGG_BOMB = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = 100, 
@@ -351,7 +351,7 @@ Egg_Bomb = dict(
 	pp = 10,
 	description = "")
 
-Ember = dict(
+EMBER = dict(
  	element_type = "Fire",
 	category = "Special",
 	power = 40,
@@ -359,7 +359,7 @@ Ember = dict(
 	pp = 25,
 	description = "May burn opponent.")
 
-Explosion = dict(
+EXPLOSION = dict(
  	element_type = "Normal",
 	category = "Physical",
 	power = 250,
@@ -367,7 +367,7 @@ Explosion = dict(
 	pp = 5,
 	description = "User faints.")
 
-Fire_Blast = dict(
+FIRE_BLAST = dict(
 	element_type = "Fire",
 	category = "Special",
 	power = 11,0 
@@ -375,7 +375,7 @@ Fire_Blast = dict(
 	pp = 5,
 	description = "May burn opponent.")
 
-Fire_Punch = dict(
+FIRE_PUNCH = dict(
 	element_type = "Fire",
 	category = "Physical",
 	power = 75,
@@ -383,7 +383,7 @@ Fire_Punch = dict(
 	pp = 15,
 	description = "May burn opponent.")
 
-Fire_Spin = dict(
+FIRE_SPIN = dict(
 	element_type = "Fire",
 	category = "Special",
 	power = 35, 
@@ -391,7 +391,7 @@ Fire_Spin = dict(
 	pp = 15,
 	description = "Traps opponent, damaging them for 4-5 turns.")
 
-Fissure = dict(
+FISSURE = dict(
  	element_type = "Ground",
 	category = "Physical",
 	power = None,
@@ -399,7 +399,7 @@ Fissure = dict(
 	pp = 5,
 	description = "One-Hit-KO, if it hits.")
 
-Flamethrower = dict(
+FLAMETHROWER = dict(
  	element_type = "Fire",
 	category = "Special",
 	power = 90,
@@ -407,7 +407,7 @@ Flamethrower = dict(
 	pp = 15,
 	description = "May burn opponent.")
 
-Flash = dict(
+FLASH = dict(
  	element_type = "Normal",
 	category = "Status",
 	power = None,
@@ -415,7 +415,7 @@ Flash = dict(
 	pp = 20,
 	description = "Lowers opponent's Accuracy.")
 
-Fly = dict(
+FLY = dict(
  	element_type = "Flying",
 	category = "Physical",
 	power = 90,
@@ -423,7 +423,7 @@ Fly = dict(
 	pp = 15,
 	description = "Flies up on first turn, attacks on second turn.")
 
-Focus_Energy = dict(
+FOCUS_ENERGY = dict(
 	element_type = "Normal",
 	category = "Status",
 	power = None, 
@@ -431,7 +431,7 @@ Focus_Energy = dict(
 	pp = 30,
 	description = "Increases critical hit ratio.")
 
-Fury_Attack = dict(
+FURY_ATTACK = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = 15,
@@ -439,7 +439,7 @@ Fury_Attack = dict(
 	pp = 20,
 	description = "Hits 2-5 times in one turn.")
 
-Fury_Swipes = dict(
+FURY_SWIPES = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = 18,
@@ -447,7 +447,7 @@ Fury_Swipes = dict(
 	pp = 15,
 	description = "Hits 2-5 times in one turn.")
 
-Glare = dict(
+GLARE = dict(
  	element_type = "Normal",
 	category = "Status",
 	power = None,
@@ -455,7 +455,7 @@ Glare = dict(
 	pp = 30,
 	description = "Paralyzes opponent.")
 
-Growl = dict(
+GROWL = dict(
  	element_type = "Normal",
 	category = "Status",
 	power = None,
@@ -463,7 +463,7 @@ Growl = dict(
 	pp = 40,
 	description = "Lowers opponent's Attack.")
 
-Growth = dict(
+GROWTH = dict(
  	element_type = "Normal",
 	category = "Status",
 	power = None,
@@ -471,7 +471,7 @@ Growth = dict(
 	pp = 40,
 	description = "Raises user's Attack and Special Attack.")
 
-Guillotine = dict(
+GUILLOTINE = dict(
  	element_type = "Normal",
 	category = "Physical",
 	power = None,
@@ -479,7 +479,7 @@ Guillotine = dict(
 	pp = 5,
 	description = "One-Hit-KO, if it hits.")
 
-Gust = dict(
+GUST = dict(
  	element_type = "Flying",
 	category = "Special",
 	power = 40,
@@ -487,7 +487,7 @@ Gust = dict(
 	pp = 35,
 	description = "Hits Pokémon using Fly/Bounce with double power.")
 
-Harden = dict(
+HARDEN = dict(
  	element_type = "Normal",
 	category = "Status",
 	power = None,
@@ -495,7 +495,7 @@ Harden = dict(
 	pp = 30,
 	description = "Raises user's Defense.")
 
-Haze = dict(
+HAZE = dict(
  	element_type = "Ice",
 	category = "Status",
 	power = None,
@@ -503,7 +503,7 @@ Haze = dict(
 	pp = 30,
 	description = "Resets all stat changes.")
 
-Headbutt = dict(
+HEADBUTT = dict(
  	element_type = "Normal",
 	category = "Physical",
 	power = 70,
@@ -511,7 +511,7 @@ Headbutt = dict(
 	pp = 15,
 	description = "May cause flinching.")
 
-High_Jump = dict( Kick
+HIGH_JUMP = dict( KICK
 	element_type = "Fighting",
 	category = "Physical",
 	power = 130, 
@@ -519,7 +519,7 @@ High_Jump = dict( Kick
 	pp = 10,
 	description = "If it misses, the user loses half their HP.")
 
-Horn_Attack = dict(
+HORN_ATTACK = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = 65,
@@ -527,7 +527,7 @@ Horn_Attack = dict(
 	pp = 25,
 	description = "")
 
-Horn_Drill = dict(
+HORN_DRILL = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = None,
@@ -535,7 +535,7 @@ Horn_Drill = dict(
 	pp = 5,
 	description = "One-Hit-KO, if it hits.")
 
-Hydro_Pump = dict(
+HYDRO_PUMP = dict(
 	element_type = "Water",
 	category = "Special",
 	power = 11,0 
@@ -543,7 +543,7 @@ Hydro_Pump = dict(
 	pp = 5,
 	description = "")
 
-Hyper_Beam = dict(
+HYPER_BEAM = dict(
 	element_type = "Normal",
 	category = "Special",
 	power = 15,0 
@@ -551,7 +551,7 @@ Hyper_Beam = dict(
 	pp = 5,
 	description = "User must recharge next turn.")
 
-Hyper_Fang = dict(
+HYPER_Fang = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = 80,
@@ -559,7 +559,7 @@ Hyper_Fang = dict(
 	pp = 15,
 	description = "May cause flinching.")
 
-Hypnosis = dict(
+HYPNOSIS = dict(
  	element_type = "Psychic",
 	category = "Status",
 	power = None,
@@ -567,7 +567,7 @@ Hypnosis = dict(
 	pp = 20,
 	description = "Puts opponent to sleep.")
 
-Ice_Beam = dict(
+ICE_BEAM = dict(
 	element_type = "Ice",
 	category = "Special",
 	power = 90, 
@@ -575,7 +575,7 @@ Ice_Beam = dict(
 	pp = 10,
 	description = "May freeze opponent.")
 
-Ice_Punch = dict(
+ICE_PUNCH = dict(
 	element_type = "Ice",
 	category = "Physical",
 	power = 75,
@@ -583,7 +583,7 @@ Ice_Punch = dict(
 	pp = 15,
 	description = "May freeze opponent.")
 
-Jump_Kick = dict(
+JUMP_KICK = dict(
 	element_type = "Fighting",
 	category = "Physical",
 	power = 100, 
@@ -591,7 +591,7 @@ Jump_Kick = dict(
 	pp = 10,
 	description = "If it misses, the user loses half their HP.")
 
-Karate_Chop = dict(
+KARATE_CHOP = dict(
 	element_type = "Fighting",
 	category = "Physical",
 	power = 50,
@@ -599,7 +599,7 @@ Karate_Chop = dict(
 	pp = 25,
 	description = "High critical hit ratio.")
 
-Kinesis = dict(
+KINESIS = dict(
  	element_type = "Psychic",
 	category = "Status",
 	power = None,
@@ -607,7 +607,7 @@ Kinesis = dict(
 	pp = 15,
 	description = "Lowers opponent's Accuracy.")
 
-Leech_Life = dict(
+LEECH_LIFE = dict(
 	element_type = "Bug",
 	category = "Physical",
 	power = 80,
@@ -615,7 +615,7 @@ Leech_Life = dict(
 	pp = 10,
 	description = "User recovers half the HP inflicted on opponent.")
 
-Leech_Seed = dict(
+LEECH_SEED = dict(
 	element_type = "Grass",
 	category = "Status",
 	power = None, 
@@ -623,7 +623,7 @@ Leech_Seed = dict(
 	pp = 10,
 	description = "User steals HP from opponent each turn.")
 
-Leer = dict(
+LEER = dict(
  	element_type = "Normal",
 	category = "Status",
 	power = None,
@@ -631,15 +631,15 @@ Leer = dict(
 	pp = 30,
 	description = "Lowers opponent's Defense.")
 
-Lick = dict(
- 	element_type=Ghost
+LICK = dict(
+ 	element_type = "Ghost",
 	category = "Physical",
 	power = 30,
 	accuracy = 100,
 	pp = 30,
 	description = "May paralyze opponent.")
 
-Light_Screen = dict(
+LIGHT_SCREEN = dict(
 	element_type = "Psychic",
 	category = "Status",
 	power = None, 
@@ -647,7 +647,7 @@ Light_Screen = dict(
 	pp = 30,
 	description = "Halves damage from Special attacks for 5 turns.")
 
-Lovely_Kiss = dict(
+LOVELY_KISS = dict(
 	element_type = "Normal",
 	category = "Status",
 	power = None, 
@@ -655,7 +655,7 @@ Lovely_Kiss = dict(
 	pp = 10,
 	description = "Puts opponent to sleep.")
 
-Low_Kick = dict(
+LOW_KICK = dict(
 	element_type = "Fighting",
 	category = "Physical",
 	power = None,
@@ -663,7 +663,7 @@ Low_Kick = dict(
 	pp = 20,
 	description = "The heavier the opponent, the stronger the attack.")
 
-Meditate = dict(
+MEDITATE = dict(
  	element_type = "Psychic",
 	category = "Status",
 	power = None,
@@ -671,7 +671,7 @@ Meditate = dict(
 	pp = 40,
 	description = "Raises user's Attack.")
 
-Mega_Drain = dict(
+MEGA_DRAIN = dict(
 	element_type = "Grass",
 	category = "Special",
 	power = 40, 
@@ -679,7 +679,7 @@ Mega_Drain = dict(
 	pp = 15,
 	description = "User recovers half the HP inflicted on opponent.")
 
-Mega_Kick = dict(
+MEGA_KICK = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = 120, 
@@ -687,7 +687,7 @@ Mega_Kick = dict(
 	pp = 5,
 	description = "")
 
-Mega_Punch = dict(
+MEGA_PUNCH = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = 80,
@@ -695,7 +695,7 @@ Mega_Punch = dict(
 	pp = 20,
 	description = "")
 
-Metronome = dict(
+METRONOME = dict(
  	element_type = "Normal",
 	category = "Status",
 	power = None,
@@ -703,7 +703,7 @@ Metronome = dict(
 	pp = 10,
 	description = "User performs any move in the game at random.")
 
-Mimic = dict(
+MIMIC = dict(
  	element_type = "Normal",
 	category = "Status",
 	power = None,
@@ -711,7 +711,7 @@ Mimic = dict(
 	pp = 10,
 	description = "Copies the opponent's last move.")
 
-Minimize = dict(
+MINIMIZE = dict(
  	element_type = "Normal",
 	category = "Status",
 	power = None,
@@ -719,7 +719,7 @@ Minimize = dict(
 	pp = 10,
 	description = "Sharply raises user's Evasiveness.")
 
-Mirror_Move = dict(
+MIRROR_MOVE = dict(
 	element_type = "Flying",
 	category = "Status",
 	power = None, 
@@ -727,7 +727,7 @@ Mirror_Move = dict(
 	pp = 20,
 	description = "User performs the opponent's last move.")
 
-Mist = dict(
+MIST = dict(
  	element_type = "Ice",
 	category = "Status",
 	power = None,
@@ -735,7 +735,7 @@ Mist = dict(
 	pp = 30,
 	description = "User's stats cannot be changed for a period of time.")
 
-Night_Shade = dict(
+NIGHT_SHADE = dict(
 	element_type = "Ghost",
 	category = "Special",
 	power = None,
@@ -743,7 +743,7 @@ Night_Shade = dict(
 	pp = 15,
 	description = "Inflicts damage equal to user's level.")
 
-Pay_Day = dict(
+PAY_DAY = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = 40,
@@ -751,7 +751,7 @@ Pay_Day = dict(
 	pp = 20,
 	description = "A small amount of money is gained after the battle resolves.")
 
-Peck = dict(
+PECK = dict(
  	element_type = "Flying",
 	category = "Physical",
 	power = 35,
@@ -759,7 +759,7 @@ Peck = dict(
 	pp = 35,
 	description = "")
 
-Petal_Dance = dict(
+PETAL_DANCE = dict(
 	element_type = "Grass",
 	category = "Special",
 	power = 12,0 
@@ -767,7 +767,7 @@ Petal_Dance = dict(
 	pp = 10,
 	description = "User attacks for 2-3 turns but then becomes confused.")
 
-Pin_Missile = dict(
+PIN_MISSILE = dict(
 	element_type = "Bug",
 	category = "Physical",
 	power = 25,
@@ -775,7 +775,7 @@ Pin_Missile = dict(
 	pp = 20,
 	description = "Hits 2-5 times in one turn.")
 
-Poison_Gas = dict(
+POISON_GAS = dict(
 	element_type = "Poison",
 	category = "Status",
 	power = None, 
@@ -783,7 +783,7 @@ Poison_Gas = dict(
 	pp = 40,
 	description = "Poisons opponent.")
 
-Poison_Powder = dict(
+POISON_POWDER = dict(
 	element_type = "Poison",
 	category = "Status",
 	power = None, 
@@ -791,7 +791,7 @@ Poison_Powder = dict(
 	pp = 35,
 	description = "Poisons opponent.")
 
-Poison_Sting = dict(
+POISON_STING = dict(
 	element_type = "Poison",
 	category = "Physical",
 	power = 15,
@@ -799,7 +799,7 @@ Poison_Sting = dict(
 	pp = 35,
 	description = "May poison the opponent.")
 
-Pound = dict(
+POUND = dict(
  	element_type = "Normal",
 	category = "Physical",
 	power = 40,
@@ -807,7 +807,7 @@ Pound = dict(
 	pp = 35,
 	description = "")
 
-Psybeam = dict(
+PSYBEAM = dict(
  	element_type = "Psychic",
 	category = "Special",
 	power = 65,
@@ -815,7 +815,7 @@ Psybeam = dict(
 	pp = 20,
 	description = "May confuse opponent.")
 
-Psychic = dict(
+PSYCHIC = dict(
  	element_type = "Psychic",
 	category = "Special",
 	power = 90,
@@ -823,7 +823,7 @@ Psychic = dict(
 	pp = 10,
 	description = "May lower opponent's Special Defense.")
 
-Psywave = dict(
+PSYWAVE = dict(
  	element_type = "Psychic",
 	category = "Special",
 	power = None,
@@ -831,7 +831,7 @@ Psywave = dict(
 	pp = 15,
 	description = "Inflicts damage 50-150% of user's level.")
 
-Quick_Attack = dict(
+QUICK_ATTACK = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = 40,
@@ -839,7 +839,7 @@ Quick_Attack = dict(
 	pp = 30,
 	description = "User attacks first.")
 
-Rage = dict(
+RAGE = dict(
  	element_type = "Normal",
 	category = "Physical",
 	power = 20,
@@ -847,7 +847,7 @@ Rage = dict(
 	pp = 20,
 	description = "Raises user's Attack when hit.")
 
-Razor_Leaf = dict(
+RAZOR_LEAF = dict(
 	element_type = "Grass",
 	category = "Physical",
 	power = 55,
@@ -855,7 +855,7 @@ Razor_Leaf = dict(
 	pp = 25,
 	description = "High critical hit ratio.")
 
-Razor_Wind = dict(
+RAZOR_WIND = dict(
 	element_type = "Normal",
 	category = "Special",
 	power = 80, 
@@ -863,7 +863,7 @@ Razor_Wind = dict(
 	pp = 10,
 	description = "Charges on first turn, attacks on second. High critical hit ratio.")
 
-Recover = dict(
+RECOVER = dict(
  	element_type = "Normal",
 	category = "Status",
 	power = None,
@@ -871,7 +871,7 @@ Recover = dict(
 	pp = 10,
 	description = "User recovers half its max HP.")
 
-Reflect = dict(
+REFLECT = dict(
  	element_type = "Psychic",
 	category = "Status",
 	power = None,
@@ -879,7 +879,7 @@ Reflect = dict(
 	pp = 20,
 	description = "Halves damage from Physical attacks for 5 turns.")
 
-Rest = dict(
+REST = dict(
  	element_type = "Psychic",
 	category = "Status",
 	power = None,
@@ -887,7 +887,7 @@ Rest = dict(
 	pp = 10,
 	description = "User sleeps for 2 turns, but user is fully healed.")
 
-Roar = dict(
+ROAR = dict(
  	element_type = "Normal",
 	category = "Status",
 	power = None,
@@ -895,23 +895,23 @@ Roar = dict(
 	pp = 20,
 	description = "In battles, the opponent switches. In the wild, the Pokémon runs.")
 
-Rock_Slide = dict(
-	Rock
+ROCK_SLIDE = dict(
+	element_type = "Rock",
 	category = "Physical",
 	power = 75,
 	accuracy = 90,
 	pp = 10,
 	description = "May cause flinching.")
 
-Rock_Throw = dict(
-	Rock
+ROCK_THROW = dict(
+	element_type = "Rock",
 	category = "Physical",
 	power = 50,
 	accuracy = 90,
 	pp = 15,
 	description = "")
 
-Rolling_Kick = dict(
+ROLLING_KICK = dict(
 	element_type = "Fighting",
 	category = "Physical",
 	power = 60,
@@ -919,7 +919,7 @@ Rolling_Kick = dict(
 	pp = 15,
 	description = "May cause flinching.")
 
-Sand_Attack = dict(
+SAND_ATTACK = dict(
 	element_type = "Ground",
 	category = "Status",
 	power = None, 
@@ -927,7 +927,7 @@ Sand_Attack = dict(
 	pp = 15,
 	description = "Lowers opponent's Accuracy.")
 
-Scratch = dict(
+SCRATCH = dict(
  	element_type = "Normal",
 	category = "Physical",
 	power = 40,
@@ -935,7 +935,7 @@ Scratch = dict(
 	pp = 35,
 	description = "")
 
-Screech = dict(
+SCREECH = dict(
  	element_type = "Normal",
 	category = "Status",
 	power = None,
@@ -943,7 +943,7 @@ Screech = dict(
 	pp = 40,
 	description = "Sharply lowers opponent's Defense.")
 
-Seismic_Toss = dict(
+SEISMIC_TOSS = dict(
 	element_type = "Fighting",
 	category = "Physical",
 	power = None,
@@ -983,7 +983,7 @@ Skull_Bash = dict(
 	pp = 10,
 	description = "Raises Defense on first turn, attacks on second.")
 
-Sky_Attack = dict(
+Sky_ATTACK = dict(
 	element_type = "Flying",
 	category = "Physical",
 	power = 140, 
@@ -1047,7 +1047,7 @@ Soft_Boiled = dict(
 	pp = 10,
 	description = "User recovers half its max HP.")
 
-Solar_Beam = dict(
+Solar_BEAM = dict(
 	element_type = "Grass",
 	category = "Special",
 	power = 12,0 
@@ -1127,7 +1127,7 @@ Stun_Spore = dict(
 	pp = 30,
 	description = "Paralyzes opponent.")
 
-Submission = dict(
+SUBMISSION = dict(
  	element_type = "Fighting",
 	category = "Physical",
 	power = 80,
@@ -1135,7 +1135,7 @@ Submission = dict(
 	pp = 20,
 	description = "User receives recoil damage.")
 
-Substitute = dict(
+SUBSTITUTE = dict(
  	element_type = "Normal",
 	category = "Status",
 	power = None,
@@ -1143,7 +1143,7 @@ Substitute = dict(
 	pp = 10,
 	description = "Uses HP to creates a decoy that takes hits.")
 
-Super_Fang = dict(
+SUPER_FANG = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = None,
@@ -1151,7 +1151,7 @@ Super_Fang = dict(
 	pp = 10,
 	description = "Always takes off half of the opponent's HP.")
 
-Supersonic = dict(
+SUPERSONIC = dict(
  	element_type = "Normal",
 	category = "Status",
 	power = None,
@@ -1159,7 +1159,7 @@ Supersonic = dict(
 	pp = 20,
 	description = "Confuses opponent.")
 
-Surf = dict(
+SURF = dict(
  	element_type = "Water",
 	category = "Special",
 	power = 90,
@@ -1167,7 +1167,7 @@ Surf = dict(
 	pp = 15,
 	description = "Hits all adjacent Pokémon.")
 
-Swift = dict(
+SWIFT = dict(
  	element_type = "Normal",
 	category = "Special",
 	power = 60,
@@ -1175,7 +1175,7 @@ Swift = dict(
 	pp = 20,
 	description = "Ignores Accuracy and Evasiveness.")
 
-Swords_Dance = dict(
+SWORDS_DANCE = dict(
 	element_type = "Normal",
 	category = "Status",
 	power = None, 
@@ -1183,7 +1183,7 @@ Swords_Dance = dict(
 	pp = 20,
 	description = "Sharply raises user's Attack.")
 
-Tackle = dict(
+TACKLE = dict(
  	element_type = "Normal",
 	category = "Physical",
 	power = 40,
@@ -1191,7 +1191,7 @@ Tackle = dict(
 	pp = 35,
 	description = "")
 
-Tail_Whip = dict(
+TAIL_WHIP = dict(
 	element_type = "Normal",
 	category = "Status",
 	power = None, 
@@ -1199,7 +1199,7 @@ Tail_Whip = dict(
 	pp = 30,
 	description = "Lowers opponent's Defense.")
 
-Take_Down = dict(
+TAKE_DOWN = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = 90,
@@ -1207,7 +1207,7 @@ Take_Down = dict(
 	pp = 20,
 	description = "User receives recoil damage.")
 
-Teleport = dict(
+TELEPORT = dict(
  	element_type = "Psychic",
 	category = "Status",
 	power = None,
@@ -1215,7 +1215,7 @@ Teleport = dict(
 	pp = 20,
 	description = "Allows user to flee wild battles; also warps player to last PokéCenter.")
 
-Thrash = dict(
+THRASH = dict(
  	element_type = "Normal",
 	category = "Physical",
 	power = 120,
@@ -1223,7 +1223,7 @@ Thrash = dict(
 	pp = 10,
 	description = "User attacks for 2-3 turns but then becomes confused.")
 
-Thunder = dict(
+THUNDER = dict(
  	element_type = "Electric",
 	category = "Special",
 	power = 110,
@@ -1231,7 +1231,7 @@ Thunder = dict(
 	pp = 10,
 	description = "May paralyze opponent.")
 
-Thunder_Punch = dict(
+THUNDER_PUNCH = dict(
 	element_type = "Electric",
 	category = "Physical",
 	power = 75,
@@ -1239,7 +1239,7 @@ Thunder_Punch = dict(
 	pp = 15,
 	description = "May paralyze opponent.")
 
-Thunder_Shock = dict(
+THUNDER_SHOCK = dict(
 	element_type = "Electric",
 	category = "Special",
 	power = 40, 
@@ -1247,7 +1247,7 @@ Thunder_Shock = dict(
 	pp = 30,
 	description = "May paralyze opponent.")
 
-Thunder_Wave = dict(
+THUNDER_WAVE = dict(
 	element_type = "Electric",
 	category = "Status",
 	power = None, 
@@ -1255,7 +1255,7 @@ Thunder_Wave = dict(
 	pp = 20,
 	description = "Paralyzes opponent.")
 
-Thunderbolt = dict(
+THUNDERBOLT = dict(
  	element_type = "Electric",
 	category = "Special",
 	power = 90,
@@ -1263,7 +1263,7 @@ Thunderbolt = dict(
 	pp = 15,
 	description = "May paralyze opponent.")
 
-Toxic = dict(
+TOXIC = dict(
  	element_type = "Poison",
 	category = "Status",
 	power = None,
@@ -1271,7 +1271,7 @@ Toxic = dict(
 	pp = 10,
 	description = "Badly poisons opponent.")
 
-Transform = dict(
+TRANSFORM = dict(
  	element_type = "Normal",
 	category = "Status",
 	power = None,
@@ -1279,7 +1279,7 @@ Transform = dict(
 	pp = 10,
 	description = "User takes on the form and attacks of the opponent.")
 
-Tri_Attack = dict(
+TRI_ATTACK = dict(
 	element_type = "Normal",
 	category = "Special",
 	power = 80, 
@@ -1287,7 +1287,7 @@ Tri_Attack = dict(
 	pp = 10,
 	description = "May paralyze, burn or freeze opponent.")
 
-Twineedle = dict(
+TWINEEDLE = dict(
  	element_type = "Bug",
 	category = "Physical",
 	power = 25,
@@ -1295,7 +1295,7 @@ Twineedle = dict(
 	pp = 20,
 	description = "Hits twice in one turn. May poison opponent.")
 
-Vice_Grip = dict(
+VICE_Grip = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = 55,
@@ -1303,7 +1303,7 @@ Vice_Grip = dict(
 	pp = 30,
 	description = "")
 
-Vine_Whip = dict(
+VINE_WHIP = dict(
 	element_type = "Grass",
 	category = "Physical",
 	power = 45,
