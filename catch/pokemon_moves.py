@@ -2,7 +2,25 @@
 
 # -*- coding: utf-8 -*- 
 
+# from collections import named tuple module.
 from collections import namedtuple
+# import random
+import random
+# import pokemon types
+import pokemon_types
+
+########################
+### File information ###
+########################
+
+__author__  = "Lindsay Gelle (https://github.com/gellel)"
+
+__version__ = "1.0"
+
+########################
+### Module constants ###
+########################
+
 
 Move = namedtuple("Move", " ".join((
 	"element_type",

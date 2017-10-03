@@ -2,8 +2,9 @@
 
 # -*- coding: utf-8 -*- 
 
+# from collections import named tuple module.
 from collections import namedtuple
-
+# import random
 import random
 
 ########################
