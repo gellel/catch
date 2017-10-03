@@ -425,7 +425,6 @@ GROUPS_EFFECTS = { k: { v[i][0]: v[i][2]
 	for i in range(0, len(v)) } 
 	for (k,v) in GROUPS.iteritems() }
 
-
 """Tuple containing strings of primary Pokemon types.
 
 Names are generated from initialised names. Requires Pokemon type is defined in Groups dictionary.
@@ -437,6 +436,9 @@ NAMES = tuple(dict.keys(GROUPS))
 
 NAMES_STRS = " ".join(NAMES)
 
+######################
+### Module methods ###
+######################
 
 def generate_type_meta_name (pokemon_type_name):
 	"""Create string formatted to the named tuple Pokemon types scale convention."""
@@ -456,7 +458,6 @@ def generate_type_meta_name (pokemon_type_name):
 	# @return: @type: <str>
 	return "".join([str.capitalize(
 		str.lower(str(pokemon_type_name))), "Type", "Meta"])
-
 
 def generate_type_sum_class (pokemon_type):
 	"""Construct psuedo-class property. Contains type numerical scale for property parent.
@@ -494,7 +495,6 @@ def generate_type_sum_class (pokemon_type):
 	# return: @type: @class.__main__.STR_ARG_AS_CLS_NAME
 	return pokemon_generated_type
 
-
 def generate_type_effect_class (pokemon_type):
 	"""Construct psuedo-class property. Contains type string effectivness for property parent.
 	
@@ -529,7 +529,6 @@ def generate_type_effect_class (pokemon_type):
 
 	# return: @type: @class.__main__.STR_ARG_AS_CLS_NAME
 	return pokemon_generated_type
-
 
 def generate_type_stats_class (pokemon_type):
 	"""Construct psuedo-class property. Contains type string effectivness for property parent.
@@ -584,6 +583,9 @@ def generate_type_stats_class (pokemon_type):
 	# return: @type: @class.__main__.STR_ARG_AS_CLS_NAME
 	return namedtuple(pokemon_type, NAMES_STRS)(**pokemon_type_stats)
 
+######################
+### Module classes ###
+######################
 
 class Generate (namedtuple("Props", NAMES_STRS)):
 	"""Generates type properties for defined Pokemon type."""
@@ -627,7 +629,6 @@ class Generate (namedtuple("Props", NAMES_STRS)):
 				EFFECT = pokemon_type_subgroups[i][2], SUM = pokemon_type_subgroups[i][1]) 
 					for i in range(0, len(pokemon_type_subgroups))})
 
-
 class Bug (Generate):
 	"""Generates Bug type Pokemon properties."""
 	
@@ -636,7 +637,6 @@ class Bug (Generate):
 
 		# return: @type: @class.__main__.Bug
 		return super(Bug, self).__new__(self, "BUG")
-
 
 class Dark (Generate):
 	"""Generates Dark type Pokemon properties."""
@@ -647,7 +647,6 @@ class Dark (Generate):
 		# return: @type: @class.__main__.Dark
 		return super(Dark, self).__new__(self, "DARK")
 
-
 class Dragon (Generate):
 	"""Generates Dragon type Pokemon properties."""
 
@@ -656,7 +655,6 @@ class Dragon (Generate):
 
 		# return: @type: @class.__main__.Dragon
 		return super(Dragon, self).__new__(self, "DRAGON")
-
 
 class Electric (Generate):
 	"""Generates Electric type Pokemon properties."""
@@ -667,7 +665,6 @@ class Electric (Generate):
 		# return: @type: @class.__main__.Electric
 		return super(Electric, self).__new__(self, "ELECTRIC")
 
-
 class Fairy (Generate):
 	"""Generates Fairy type Pokemon properties."""
 
@@ -675,7 +672,6 @@ class Fairy (Generate):
 		"""Pass required arguments for inheritence constructor.""" 
 
 		return super(Fairy, self).__new__(self, "FAIRY")
-
 
 class Fighting (Generate):
 	"""Generates Fighting type Pokemon properties."""
@@ -686,7 +682,6 @@ class Fighting (Generate):
 		# return: @type: @class.__main__.Fighting
 		return super(Fighting, self).__new__(self, "FIGHTING")
 
-
 class Fire (Generate):
 	"""Generates Fire type Pokemon properties."""
 
@@ -695,7 +690,6 @@ class Fire (Generate):
 
 		# return: @type: @class.__main__.Fire
 		return super(Fire, self).__new__(self, "FIRE")
-
 
 class Flying (Generate):
 	"""Generates Flying type Pokemon properties."""
@@ -706,7 +700,6 @@ class Flying (Generate):
 		# return: @type: @class.__main__.Flying
 		return super(Flying, self).__new__(self, "FLYING")
 
-
 class Ghost (Generate):
 	"""Generates Ghost type Pokemon properties."""
 
@@ -715,7 +708,6 @@ class Ghost (Generate):
 
 		# return: @type: @class.__main__.Ghost
 		return super(Ghost, self).__new__(self, "GHOST")
-
 
 class Grass (Generate):
 	"""Generates Grass type Pokemon properties."""
@@ -726,7 +718,6 @@ class Grass (Generate):
 		# return: @type: @class.__main__.Grass
 		return super(Grass, self).__new__(self, "GRASS")
 
-
 class Ground (Generate):
 	"""Generates Ground type Pokemon properties."""
 
@@ -735,7 +726,6 @@ class Ground (Generate):
 
 		# return: @type: @class.__main__.Ground
 		return super(Ground, self).__new__(self, "GROUND")
-
 
 class Ice (Generate):
 	"""Generates Ice type Pokemon properties."""
@@ -746,7 +736,6 @@ class Ice (Generate):
 		# return: @type: @class.__main__.Ice
 		return super(Ice, self).__new__(self, "ICE")
 
-
 class Normal (Generate):
 	"""Generates Normal type Pokemon properties."""
 
@@ -755,7 +744,6 @@ class Normal (Generate):
 
 		# return: @type: @class.__main__.Normal
 		return super(Normal, self).__new__(self, "NORMAL")
-
 
 class Poison (Generate):
 	"""Generates Poison type Pokemon properties."""
@@ -766,7 +754,6 @@ class Poison (Generate):
 		# return: @type: @class.__main__.Poison
 		return super(Poison, self).__new__(self, "POISON")
 
-
 class Psychic (Generate):
 	"""Generates Psychic type Pokemon properties."""
 
@@ -775,7 +762,6 @@ class Psychic (Generate):
 
 		# return: @type: @class.__main__.Psychic
 		return super(Psychic, self).__new__(self, "PSYCHIC")
-
 
 class Rock (Generate):
 	"""Generates Rock type Pokemon properties."""
@@ -786,7 +772,6 @@ class Rock (Generate):
 		# return: @type: @class.__main__.Rock
 		return super(Rock, self).__new__(self, "ROCK")
 
-
 class Steel (Generate):
 	"""Generates Steel type Pokemon properties."""
 
@@ -795,7 +780,6 @@ class Steel (Generate):
 
 		# return: @type: @class.__main__.Steel
 		return super(Steel, self).__new__(self, "STEEL")
-
 
 class Water (Generate):
 	"""Generates Water type Pokemon properties."""
