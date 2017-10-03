@@ -586,7 +586,6 @@ def generate_type_stats_class (pokemon_type):
 
 
 class Generate (namedtuple("Props", NAMES_STRS)):
-
 	"""Generates type properties for defined Pokemon type."""
 
 	def __new__ (self, pokemon_type):
