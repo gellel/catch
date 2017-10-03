@@ -21,7 +21,7 @@ __version__ = "1.0"
 ### Module constants ###
 ########################
 
-"""Tuple containing strings of keys for Pokemon moves generator.
+"""Tuple containing STRINGs of keys for Pokemon moves generator.
 
 Key names are base from Pokemon DB.
 """
@@ -34,7 +34,7 @@ KEYS = (
 	"PP", 
 	"DESCRIPTION")
 
-"""String comprised of the different Pokemon generator key substrings."""
+"""STRING comprised of the different Pokemon generator key subSTRINGs."""
 
 KEYS_STRS = " ".join(KEYS)
 
@@ -295,7 +295,7 @@ DOUBLE_SLAP = dict(
 	pp = 10,
 	description = "Hits 2-5 times in one turn.")
 
-DOUBLE_Team = dict(
+DOUBLE_TEAM = dict(
 	element_type = "Normal",
 	category = "Status",
 	power = None, 
@@ -485,7 +485,7 @@ GUST = dict(
 	power = 40,
 	accuracy = 100,
 	pp = 35,
-	description = "Hits Pokémon using Fly/Bounce with double power.")
+	description = "Hits Pokemon using Fly/Bounce with double power.")
 
 HARDEN = dict(
  	element_type = "Normal",
@@ -511,7 +511,7 @@ HEADBUTT = dict(
 	pp = 15,
 	description = "May cause flinching.")
 
-HIGH_JUMP = dict( KICK
+HIGH_JUMP_KICK = dict(
 	element_type = "Fighting",
 	category = "Physical",
 	power = 130, 
@@ -893,7 +893,7 @@ ROAR = dict(
 	power = None,
 	accuracy = None,
 	pp = 20,
-	description = "In battles, the opponent switches. In the wild, the Pokémon runs.")
+	description = "In battles, the opponent switches. In the wild, the Pokemon runs.")
 
 ROCK_SLIDE = dict(
 	element_type = "Rock",
@@ -951,7 +951,7 @@ SEISMIC_TOSS = dict(
 	pp = 20,
 	description = "Inflicts damage equal to user's level.")
 
-Self_Destruct = dict(
+SELF_DESTRUCT = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = 200, 
@@ -959,7 +959,7 @@ Self_Destruct = dict(
 	pp = 5,
 	description = "User faints.")
 
-Sharpen = dict(
+SHARPEN = dict(
  	element_type = "Normal",
 	category = "Status",
 	power = None,
@@ -967,7 +967,7 @@ Sharpen = dict(
 	pp = 30,
 	description = "Raises user's Attack.")
 
-Sing = dict(
+SING = dict(
  	element_type = "Normal",
 	category = "Status",
 	power = None,
@@ -975,7 +975,7 @@ Sing = dict(
 	pp = 15,
 	description = "Puts opponent to sleep.")
 
-Skull_Bash = dict(
+SKULL_BASH = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = 130, 
@@ -983,7 +983,7 @@ Skull_Bash = dict(
 	pp = 10,
 	description = "Raises Defense on first turn, attacks on second.")
 
-Sky_ATTACK = dict(
+SKY_ATTACK = dict(
 	element_type = "Flying",
 	category = "Physical",
 	power = 140, 
@@ -991,7 +991,7 @@ Sky_ATTACK = dict(
 	pp = 5,
 	description = "Charges on first turn, attacks on second. May cause flinching.")
 
-Slam = dict(
+SLAM = dict(
  	element_type = "Normal",
 	category = "Physical",
 	power = 80,
@@ -999,7 +999,7 @@ Slam = dict(
 	pp = 20,
 	description = "")
 
-Slash = dict(
+SLASH = dict(
  	element_type = "Normal",
 	category = "Physical",
 	power = 70,
@@ -1007,7 +1007,7 @@ Slash = dict(
 	pp = 20,
 	description = "High critical hit ratio.")
 
-Sleep_Powder = dict(
+SLEEP_POWDER = dict(
 	element_type = "Grass",
 	category = "Status",
 	power = None, 
@@ -1015,7 +1015,7 @@ Sleep_Powder = dict(
 	pp = 15,
 	description = "Puts opponent to sleep.")
 
-Sludge = dict(
+SLUDGE = dict(
  	element_type = "Poison",
 	category = "Special",
 	power = 65,
@@ -1023,7 +1023,7 @@ Sludge = dict(
 	pp = 20,
 	description = "May poison opponent.")
 
-Smog = dict(
+SMOG = dict(
  	element_type = "Poison",
 	category = "Special",
 	power = 30,
@@ -1031,7 +1031,7 @@ Smog = dict(
 	pp = 20,
 	description = "May poison opponent.")
 
-Smokescreen = dict(
+SMOKESCREEN = dict(
  	element_type = "Normal",
 	category = "Status",
 	power = None,
@@ -1039,7 +1039,7 @@ Smokescreen = dict(
 	pp = 20,
 	description = "Lowers opponent's Accuracy.")
 
-Soft_Boiled = dict(
+SOFT_BOILED = dict(
 	element_type = "Normal",
 	category = "Status",
 	power = None, 
@@ -1047,7 +1047,7 @@ Soft_Boiled = dict(
 	pp = 10,
 	description = "User recovers half its max HP.")
 
-Solar_BEAM = dict(
+SOLAR_BEAM = dict(
 	element_type = "Grass",
 	category = "Special",
 	power = 12,0 
@@ -1055,7 +1055,7 @@ Solar_BEAM = dict(
 	pp = 10,
 	description = "Charges on first turn, attacks on second.")
 
-Sonic_Boom = dict(
+SONIC_BOOM = dict(
 	element_type = "Normal",
 	category = "Special",
 	power = None,
@@ -1063,7 +1063,7 @@ Sonic_Boom = dict(
 	pp = 20,
 	description = "Always inflicts 20 HP.")
 
-Spike_Cannon = dict(
+SPIKE_CANNON = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = 20,
@@ -1071,7 +1071,7 @@ Spike_Cannon = dict(
 	pp = 15,
 	description = "Hits 2-5 times in one turn.")
 
-Splash = dict(
+SPLASH = dict(
  	element_type = "Normal",
 	category = "Status",
 	power = None,
@@ -1079,7 +1079,7 @@ Splash = dict(
 	pp = 40,
 	description = "Doesn't do ANYTHING.")
 
-Spore = dict(
+SPORE = dict(
  	element_type = "Grass",
 	category = "Status",
 	power = None,
@@ -1087,7 +1087,7 @@ Spore = dict(
 	pp = 15,
 	description = "Puts opponent to sleep.")
 
-Stomp = dict(
+STOMP = dict(
  	element_type = "Normal",
 	category = "Physical",
 	power = 65,
@@ -1095,7 +1095,7 @@ Stomp = dict(
 	pp = 20,
 	description = "May cause flinching.")
 
-Strength = dict(
+STRENGTH = dict(
  	element_type = "Normal",
 	category = "Physical",
 	power = 80,
@@ -1103,7 +1103,7 @@ Strength = dict(
 	pp = 15,
 	description = "")
 
-String_Shot = dict(
+STRING_SHOT = dict(
 	element_type = "Bug",
 	category = "Status",
 	power = None, 
@@ -1111,7 +1111,7 @@ String_Shot = dict(
 	pp = 40,
 	description = "Sharply lowers opponent's Speed.")
 
-Struggle = dict(
+STRUGGLE = dict(
  	element_type = "Normal",
 	category = "Physical",
 	power = 50,
@@ -1119,7 +1119,7 @@ Struggle = dict(
 	pp = None,
 	description = "Only usable when all PP are gone. Hurts the user.")
 
-Stun_Spore = dict(
+STUN_SPORE = dict(
 	element_type = "Grass",
 	category = "Status",
 	power = None, 
@@ -1165,13 +1165,13 @@ SURF = dict(
 	power = 90,
 	accuracy = 100,
 	pp = 15,
-	description = "Hits all adjacent Pokémon.")
+	description = "Hits all adjacent Pokemon.")
 
 SWIFT = dict(
  	element_type = "Normal",
 	category = "Special",
 	power = 60,
-	accuracy = ∞,
+	accuracy = 100,
 	pp = 20,
 	description = "Ignores Accuracy and Evasiveness.")
 
@@ -1213,7 +1213,7 @@ TELEPORT = dict(
 	power = None,
 	accuracy = None,
 	pp = 20,
-	description = "Allows user to flee wild battles; also warps player to last PokéCenter.")
+	description = "Allows user to flee wild battles; also warps player to last PokeCenter.")
 
 THRASH = dict(
  	element_type = "Normal",
@@ -1295,7 +1295,7 @@ TWINEEDLE = dict(
 	pp = 20,
 	description = "Hits twice in one turn. May poison opponent.")
 
-VICE_Grip = dict(
+VICE_GRIP = dict(
 	element_type = "Normal",
 	category = "Physical",
 	power = 55,
@@ -1333,7 +1333,7 @@ WHIRLWIND = dict(
 	power = None,
 	accuracy = None,
 	pp = 20,
-	description = "In battles, the opponent switches. In the wild, the Pokémon runs.")
+	description = "In battles, the opponent switches. In the wild, the Pokemon runs.")
 
 WING_ATTACK = dict(
 	element_type = "Flying",
