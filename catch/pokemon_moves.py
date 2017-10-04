@@ -21,24 +21,6 @@ __version__ = "1.0"
 ### Module constants ###
 ########################
 
-"""Tuple containing strings of keys for Pokemon moves generator.
-
-Key names are base from Pokemon DB.
-"""
-
-KEYS = (
-	"ELEMENT_TYPE", 
-	"CATEGORY", 
-	"POWER", 
-	"ACCURACY", 
-	"PP", 
-	"DESCRIPTION")
-
-"""STRING comprised of the different Pokemon generator key substrings."""
-
-KEYS_STRS = " ".join(KEYS)
-
-
 ABSORB = dict(
 	element_type = "Grass",
 	category = "Special",
@@ -229,7 +211,7 @@ COUNTER = dict(
 	power = None,
 	accuracy = 100,
 	pp = 20,
-	description = "When hit by a Physical Attack, user strikes back with 2x power.")
+	description = "When hit by a Physical Attack, user strikes back with 2x POWER.")
 
 CRABHAMMER = dict(
  	element_type = "Water",
@@ -341,7 +323,7 @@ EARTHQUAKE = dict(
 	power = 100,
 	accuracy = 100,
 	pp = 10,
-	description = "Power is doubled if opponent is underground from using Dig.")
+	description = "POWER is doubled if opponent is underground from using Dig.")
 
 EGG_BOMB = dict(
 	element_type = "Normal",
@@ -413,7 +395,7 @@ FLASH = dict(
 	power = None,
 	accuracy = 100,
 	pp = 20,
-	description = "Lowers opponent's Accuracy.")
+	description = "Lowers opponent's ACCURACY.")
 
 FLY = dict(
  	element_type = "Flying",
@@ -485,7 +467,7 @@ GUST = dict(
 	power = 40,
 	accuracy = 100,
 	pp = 35,
-	description = "Hits Pokemon using Fly/Bounce with double power.")
+	description = "Hits Pokemon using Fly/Bounce with double POWER.")
 
 HARDEN = dict(
  	element_type = "Normal",
@@ -605,7 +587,7 @@ KINESIS = dict(
 	power = None,
 	accuracy = 80,
 	pp = 15,
-	description = "Lowers opponent's Accuracy.")
+	description = "Lowers opponent's ACCURACY.")
 
 LEECH_LIFE = dict(
 	element_type = "Bug",
@@ -925,7 +907,7 @@ SAND_ATTACK = dict(
 	power = None, 
 	accuracy = 100,
 	pp = 15,
-	description = "Lowers opponent's Accuracy.")
+	description = "Lowers opponent's ACCURACY.")
 
 SCRATCH = dict(
  	element_type = "Normal",
@@ -1037,7 +1019,7 @@ SMOKESCREEN = dict(
 	power = None,
 	accuracy = 100,
 	pp = 20,
-	description = "Lowers opponent's Accuracy.")
+	description = "Lowers opponent's ACCURACY.")
 
 SOFT_BOILED = dict(
 	element_type = "Normal",
@@ -1173,7 +1155,7 @@ SWIFT = dict(
 	power = 60,
 	accuracy = 100,
 	pp = 20,
-	description = "Ignores Accuracy and Evasiveness.")
+	description = "Ignores ACCURACY and Evasiveness.")
 
 SWORDS_DANCE = dict(
 	element_type = "Normal",
@@ -1359,8 +1341,187 @@ WRAP = dict(
 	pp = 20,
 	description = "Traps opponent, damaging them for 4-5 turns.")
 
+"""Dictionary containing the primary Pokemon moves.
 
+Key contains collection of dictionaries containing move properties and statistics.
+"""
 
+MOVES = (
+	"ABSORB": ABSORB,
+	"ACID": ACID,
+	"ACID_ARMOUR": ACID_ARMOUR,
+	"AGILITY": AGILITY,
+	"AMNESIA": AMNESIA,
+	"AURORA_BEAM": AURORA_BEAM,
+	"BARRAGE": BARRAGE,
+	"BARRIER": BARRIER,
+	"BIDE": BIDE,
+	"BIND": BIND,
+	"BITE": BITE,
+	"BLIZZARD": BLIZZARD,
+	"BODY_SLAM": BODY_SLAM,
+	"BONEMERANG": BONEMERANG,
+	"BONE_CLUB": BONE_CLUB,
+	"BUBBLE": BUBBLE,
+	"BUBBLE_BEAM": BUBBLE_BEAM,
+	"CLAMP": CLAMP,
+	"COMET_PUNCH": COMET_PUNCH,
+	"CONFUSE_RAY": CONFUSE_RAY,
+	"CONFUSION": CONFUSION,
+	"CONSTRICT": CONSTRICT,
+	"CONVERSION": CONVERSION,
+	"COUNTER": COUNTER,
+	"CRABHAMMER": CRABHAMMER,
+	"CUT": CUT,
+	"DEFENSE_CURL": DEFENSE_CURL,
+	"DIG": DIG,
+	"DISABLE": DISABLE,
+	"DIZZY_PUNCH": DIZZY_PUNCH,
+	"DOUBLE_EDGE": DOUBLE_EDGE,
+	"DOUBLE_KICK": DOUBLE_KICK,
+	"DOUBLE_SLAP": DOUBLE_SLAP,
+	"DOUBLE_TEAM": DOUBLE_TEAM,
+	"DRAGON_RAGE": DRAGON_RAGE,
+	"DREAM_EATER": DREAM_EATER,
+	"DRILL_PECK": DRILL_PECK,
+	"EARTHQUAKE": EARTHQUAKE,
+	"EGG_BOMB": EGG_BOMB,
+	"EMBER": EMBER,
+	"EXPLOSION": EXPLOSION,
+	"FIRE_BLAST": FIRE_BLAST,
+	"FIRE_PUNCH": FIRE_PUNCH,
+	"FIRE_SPIN": FIRE_SPIN,
+	"FISSURE": FISSURE,
+	"FLAMETHROWER": FLAMETHROWER,
+	"FLASH": FLASH,
+	"FLY": FLY,
+	"FOCUS_ENERGY": FOCUS_ENERGY,
+	"FURY_ATTACK": FURY_ATTACK,
+	"FURY_SWIPES": FURY_SWIPES,
+	"GLARE": GLARE,
+	"GROWL": GROWL,
+	"GROWTH": GROWTH,
+	"GUILLOTINE": GUILLOTINE,
+	"GUST": GUST,
+	"HARDEN": HARDEN,
+	"HAZE": HAZE,
+	"HEADBUTT": HEADBUTT,
+	"HORN_ATTACK": HORN_ATTACK,
+	"HORN_DRILL": HORN_DRILL,
+	"HYDRO_PUMP": HYDRO_PUMP,
+	"HYPER_BEAM": HYPER_BEAM,
+	"HYPER_Fang": HYPER_Fang,
+	"HYPNOSIS": HYPNOSIS,
+	"ICE_BEAM": ICE_BEAM,
+	"ICE_PUNCH": ICE_PUNCH,
+	"JUMP_KICK": JUMP_KICK,
+	"KARATE_CHOP": KARATE_CHOP,
+	"KINESIS": KINESIS,
+	"LEECH_LIFE": LEECH_LIFE,
+	"LEECH_SEED": LEECH_SEED,
+	"LEER": LEER,
+	"LICK": LICK,
+	"LIGHT_SCREEN": LIGHT_SCREEN,
+	"LOVELY_KISS": LOVELY_KISS,
+	"LOW_KICK": LOW_KICK,
+	"MEDITATE": MEDITATE,
+	"MEGA_DRAIN": MEGA_DRAIN,
+	"MEGA_KICK": MEGA_KICK,
+	"MEGA_PUNCH": MEGA_PUNCH,
+	"METRONOME": METRONOME,
+	"MIMIC": MIMIC,
+	"MINIMIZE": MINIMIZE,
+	"MIRROR_MOVE": MIRROR_MOVE,
+	"MIST": MIST,
+	"NIGHT_SHADE": NIGHT_SHADE,
+	"PAY_DAY": PAY_DAY,
+	"PECK": PECK,
+	"PETAL_DANCE": PETAL_DANCE,
+	"PIN_MISSILE": PIN_MISSILE,
+	"POISON_GAS": POISON_GAS,
+	"POISON_POWDER": POISON_POWDER,
+	"POISON_STING": POISON_STING,
+	"POUND": POUND,
+	"PSYBEAM": PSYBEAM,
+	"PSYCHIC": PSYCHIC,
+	"PSYWAVE": PSYWAVE,
+	"QUICK_ATTACK": QUICK_ATTACK,
+	"RAGE": RAGE,
+	"RAZOR_LEAF": RAZOR_LEAF,
+	"RAZOR_WIND": RAZOR_WIND,
+	"RECOVER": RECOVER,
+	"REFLECT": REFLECT,
+	"REST": REST,
+	"ROAR": ROAR,
+	"ROCK_SLIDE": ROCK_SLIDE,
+	"ROCK_THROW": ROCK_THROW,
+	"ROLLING_KICK": ROLLING_KICK,
+	"SAND_ATTACK": SAND_ATTACK,
+	"SCRATCH": SCRATCH,
+	"SCREECH": SCREECH,
+	"SEISMIC_TOSS": SEISMIC_TOSS,
+	"SELF_DESTRUCT": SELF_DESTRUCT,
+	"SHARPEN": SHARPEN,
+	"SING": SING,
+	"SKULL_BASH": SKULL_BASH,
+	"SKY_ATTACK": SKY_ATTACK,
+	"SLAM": SLAM,
+	"SLASH": SLASH,
+	"SLEEP_POWDER": SLEEP_POWDER,
+	"SLUDGE": SLUDGE,
+	"SMOG": SMOG,
+	"SMOKESCREEN": SMOKESCREEN,
+	"SOFT_BOILED": SOFT_BOILED,
+	"SOLAR_BEAM": SOLAR_BEAM,
+	"SONIC_BOOM": SONIC_BOOM,
+	"SPIKE_CANNON": SPIKE_CANNON,
+	"SPLASH": SPLASH,
+	"SPORE": SPORE,
+	"STOMP": STOMP,
+	"STRENGTH": STRENGTH,
+	"STRING_SHOT": STRING_SHOT,
+	"STRUGGLE": STRUGGLE,
+	"STUN_SPORE": STUN_SPORE,
+	"SUBMISSION": SUBMISSION,
+	"SUBSTITUTE": SUBSTITUTE,
+	"SUPERSONIC": SUPERSONIC,
+	"SUPER_FANG": SUPER_FANG,
+	"SURF": SURF,
+	"SWIFT": SWIFT,
+	"SWORDS_DANCE": SWORDS_DANCE,
+	"TACKLE": TACKLE,
+	"TAIL_WHIP": TAIL_WHIP,
+	"TAKE_DOWN": TAKE_DOWN,
+	"TELEPORT": TELEPORT,
+	"THRASH": THRASH,
+	"THUNDER": THUNDER,
+	"THUNDERBOLT": THUNDERBOLT,
+	"THUNDER_PUNCH": THUNDER_PUNCH,
+	"THUNDER_SHOCK": THUNDER_SHOCK,
+	"THUNDER_WAVE": THUNDER_WAVE,
+	"TOXIC": TOXIC,
+	"TRANSFORM": TRANSFORM,
+	"TRI_ATTACK": TRI_ATTACK,
+	"TWINEEDLE": TWINEEDLE,
+	"VICE_GRIP": VICE_GRIP,
+	"VINE_WHIP": VINE_WHIP,
+	"WATERFALL": WATERFALL,
+	"WATER_GUN": WATER_GUN,
+	"WHIRLWIND": WHIRLWIND,
+	"WING_ATTACK": WING_ATTACK,
+	"WITHDRAW": WITHDRAW,
+	"WRAP")
+
+"""Tuple containing strings of Pokemon moves.
+
+Names are generated from initialised names. Requires Pokemon move is defined in Moveset dictionary.
+"""
+
+NAMES = tuple(dict.keys(MOVES))
+
+"""String comprised of the different Pokemon moves."""
+
+NAMES_STRS = " ".join(NAMES)
 
 
 class Generate (namedtuple("Props", NAMES_STRS)):
