@@ -23,6 +23,7 @@ __version__ = "1.0"
 
 ABSORB = dict(
 	element_type = "Grass",
+	element_type_data = pokemon_types.Grass(),
 	category = "Special",
 	power = 20,
 	accuracy = 100,
@@ -31,6 +32,7 @@ ABSORB = dict(
 
 ACID = dict(
 	element_type = "Poison",
+	element_type_data = pokemon_types.Poison(),
 	category = "Special",
 	power = 40,
 	accuracy = 100,
@@ -39,6 +41,7 @@ ACID = dict(
 
 ACID_ARMOUR = dict(
 	element_type = "Poison",
+	element_type_data = pokemon_types.Poison(),
 	category = "Status",
 	power = None, 
 	accuracy = None,
@@ -47,6 +50,7 @@ ACID_ARMOUR = dict(
 
 AGILITY = dict(
 	element_type = "Psychic",
+	element_type_data = pokemon_types.Psychic(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -55,6 +59,7 @@ AGILITY = dict(
 
 AMNESIA = dict(
 	element_type = "Psychic",
+	element_type_data = pokemon_types.Psychic(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -63,6 +68,7 @@ AMNESIA = dict(
 
 AURORA_BEAM = dict(
 	element_type = "Ice",
+	element_type_data = pokemon_types.Ice(),
 	category = "Special",
 	power = 65, 
 	accuracy = 100,
@@ -71,6 +77,7 @@ AURORA_BEAM = dict(
 
 BARRAGE = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 15,
 	accuracy = 85,
@@ -79,6 +86,7 @@ BARRAGE = dict(
 
 BARRIER = dict(
  	element_type = "Psychic",
+	element_type_data = pokemon_types.Psychic(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -87,6 +95,7 @@ BARRIER = dict(
 
 BIDE = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = None,
 	accuracy = None,
@@ -95,6 +104,7 @@ BIDE = dict(
 
 BIND = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 15,
 	accuracy = 85,
@@ -103,6 +113,7 @@ BIND = dict(
 
 BITE = dict(
  	element_type = "Dark",
+	element_type_data = pokemon_types.Dark(),
 	category = "Physical",
 	power = 60,
 	accuracy = 100,
@@ -111,6 +122,7 @@ BITE = dict(
 
 BLIZZARD = dict(
  	element_type = "Ice",
+	element_type_data = pokemon_types.Ice(),
 	category = "Special",
 	power = 110,
 	accuracy = 70,
@@ -119,6 +131,7 @@ BLIZZARD = dict(
 
 BODY_SLAM = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 85,
 	accuracy = 100,
@@ -127,6 +140,7 @@ BODY_SLAM = dict(
 
 BONE_CLUB = dict(
 	element_type = "Ground",
+	element_type_data = pokemon_types.Ground(),
 	category = "Physical",
 	power = 65,
 	accuracy = 85,
@@ -135,6 +149,7 @@ BONE_CLUB = dict(
 
 BONEMERANG = dict(
  	element_type = "Ground",
+	element_type_data = pokemon_types.Ground(),
 	category = "Physical",
 	power = 50,
 	accuracy = 90,
@@ -143,6 +158,7 @@ BONEMERANG = dict(
 
 BUBBLE = dict(
  	element_type = "Water",
+	element_type_data = pokemon_types.Water(),
 	category = "Special",
 	power = 40,
 	accuracy = 100,
@@ -151,6 +167,7 @@ BUBBLE = dict(
 
 BUBBLE_BEAM = dict(
 	element_type = "Water",
+	element_type_data = pokemon_types.Water(),
 	category = "Special",
 	power = 65, 
 	accuracy = 100,
@@ -159,6 +176,7 @@ BUBBLE_BEAM = dict(
 
 CLAMP = dict(
  	element_type = "Water",
+	element_type_data = pokemon_types.Water(),
 	category = "Physical",
 	power = 35,
 	accuracy = 85,
@@ -167,6 +185,7 @@ CLAMP = dict(
 
 COMET_PUNCH = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 18,
 	accuracy = 85,
@@ -175,6 +194,7 @@ COMET_PUNCH = dict(
 
 CONFUSE_RAY = dict(
 	element_type = "Ghost",
+	element_type_data = pokemon_types.Ghost(),
 	category = "Status",
 	power = None, 
 	accuracy = 100,
@@ -183,6 +203,7 @@ CONFUSE_RAY = dict(
 
 CONFUSION = dict(
  	element_type = "Psychic",
+	element_type_data = pokemon_types.Psychic(),
 	category = "Special",
 	power = 50,
 	accuracy = 100,
@@ -191,6 +212,7 @@ CONFUSION = dict(
 
 CONSTRICT = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 10,
 	accuracy = 100,
@@ -199,6 +221,7 @@ CONSTRICT = dict(
 
 CONVERSION = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -207,6 +230,7 @@ CONVERSION = dict(
 
 COUNTER = dict(
  	element_type = "Fighting",
+	element_type_data = pokemon_types.Fighting(),
 	category = "Physical",
 	power = None,
 	accuracy = 100,
@@ -215,6 +239,7 @@ COUNTER = dict(
 
 CRABHAMMER = dict(
  	element_type = "Water",
+	element_type_data = pokemon_types.Water(),
 	category = "Physical",
 	power = 100,
 	accuracy = 90,
@@ -223,6 +248,7 @@ CRABHAMMER = dict(
 
 CUT = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 50,
 	accuracy = 95,
@@ -231,6 +257,7 @@ CUT = dict(
 
 DEFENSE_CURL = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None, 
 	accuracy = None,
@@ -239,6 +266,7 @@ DEFENSE_CURL = dict(
 
 DIG = dict(
  	element_type = "Ground",
+	element_type_data = pokemon_types.Ground(),
 	category = "Physical",
 	power = 80,
 	accuracy = 100,
@@ -247,6 +275,7 @@ DIG = dict(
 
 DISABLE = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = 100,
@@ -255,6 +284,7 @@ DISABLE = dict(
 
 DIZZY_PUNCH = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 70,
 	accuracy = 100,
@@ -263,6 +293,7 @@ DIZZY_PUNCH = dict(
 
 DOUBLE_KICK = dict(
 	element_type = "Fighting",
+	element_type_data = pokemon_types.Fighting(),
 	category = "Physical",
 	power = 30,
 	accuracy = 100,
@@ -271,6 +302,7 @@ DOUBLE_KICK = dict(
 
 DOUBLE_SLAP = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 15,
 	accuracy = 85,
@@ -279,6 +311,7 @@ DOUBLE_SLAP = dict(
 
 DOUBLE_TEAM = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None, 
 	accuracy = None,
@@ -287,6 +320,7 @@ DOUBLE_TEAM = dict(
 
 DOUBLE_EDGE = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 120, 
 	accuracy = 100,
@@ -295,6 +329,7 @@ DOUBLE_EDGE = dict(
 
 DRAGON_RAGE = dict(
 	element_type = "Dragon",
+	element_type_data = pokemon_types.Dragon(),
 	category = "Special",
 	power = None,
 	accuracy = 100,
@@ -303,14 +338,16 @@ DRAGON_RAGE = dict(
 
 DREAM_EATER = dict(
 	element_type = "Psychic",
+	element_type_data = pokemon_types.Psychic(),
 	category = "Special",
-	power = 10,0 
+	power = 100,
 	accuracy = 100,
 	pp = 15,
 	description = "User recovers half the HP inflicted on a sleeping opponent.")
 
 DRILL_PECK = dict(
 	element_type = "Flying",
+	element_type_data = pokemon_types.Flying(),
 	category = "Physical",
 	power = 80,
 	accuracy = 100,
@@ -319,6 +356,7 @@ DRILL_PECK = dict(
 
 EARTHQUAKE = dict(
  	element_type = "Ground",
+	element_type_data = pokemon_types.Ground(),
 	category = "Physical",
 	power = 100,
 	accuracy = 100,
@@ -327,6 +365,7 @@ EARTHQUAKE = dict(
 
 EGG_BOMB = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 100, 
 	accuracy = 75,
@@ -335,6 +374,7 @@ EGG_BOMB = dict(
 
 EMBER = dict(
  	element_type = "Fire",
+	element_type_data = pokemon_types.Fire(),
 	category = "Special",
 	power = 40,
 	accuracy = 100,
@@ -343,6 +383,7 @@ EMBER = dict(
 
 EXPLOSION = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 250,
 	accuracy = 100,
@@ -351,14 +392,16 @@ EXPLOSION = dict(
 
 FIRE_BLAST = dict(
 	element_type = "Fire",
+	element_type_data = pokemon_types.Fire(),
 	category = "Special",
-	power = 11,0 
+	power = 110, 
 	accuracy = 85,
 	pp = 5,
 	description = "May burn opponent.")
 
 FIRE_PUNCH = dict(
 	element_type = "Fire",
+	element_type_data = pokemon_types.Fire(),
 	category = "Physical",
 	power = 75,
 	accuracy = 100,
@@ -367,6 +410,7 @@ FIRE_PUNCH = dict(
 
 FIRE_SPIN = dict(
 	element_type = "Fire",
+	element_type_data = pokemon_types.Fire(),
 	category = "Special",
 	power = 35, 
 	accuracy = 85,
@@ -375,6 +419,7 @@ FIRE_SPIN = dict(
 
 FISSURE = dict(
  	element_type = "Ground",
+	element_type_data = pokemon_types.Ground(),
 	category = "Physical",
 	power = None,
 	accuracy = None,
@@ -383,6 +428,7 @@ FISSURE = dict(
 
 FLAMETHROWER = dict(
  	element_type = "Fire",
+	element_type_data = pokemon_types.Fire(),
 	category = "Special",
 	power = 90,
 	accuracy = 100,
@@ -391,6 +437,7 @@ FLAMETHROWER = dict(
 
 FLASH = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = 100,
@@ -399,6 +446,7 @@ FLASH = dict(
 
 FLY = dict(
  	element_type = "Flying",
+	element_type_data = pokemon_types.Flying(),
 	category = "Physical",
 	power = 90,
 	accuracy = 95,
@@ -407,6 +455,7 @@ FLY = dict(
 
 FOCUS_ENERGY = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None, 
 	accuracy = None,
@@ -415,6 +464,7 @@ FOCUS_ENERGY = dict(
 
 FURY_ATTACK = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 15,
 	accuracy = 85,
@@ -423,6 +473,7 @@ FURY_ATTACK = dict(
 
 FURY_SWIPES = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 18,
 	accuracy = 80,
@@ -431,6 +482,7 @@ FURY_SWIPES = dict(
 
 GLARE = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = 100,
@@ -439,6 +491,7 @@ GLARE = dict(
 
 GROWL = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = 100,
@@ -447,6 +500,7 @@ GROWL = dict(
 
 GROWTH = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -455,6 +509,7 @@ GROWTH = dict(
 
 GUILLOTINE = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = None,
 	accuracy = None,
@@ -463,6 +518,7 @@ GUILLOTINE = dict(
 
 GUST = dict(
  	element_type = "Flying",
+	element_type_data = pokemon_types.Flying(),
 	category = "Special",
 	power = 40,
 	accuracy = 100,
@@ -471,6 +527,7 @@ GUST = dict(
 
 HARDEN = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -479,6 +536,7 @@ HARDEN = dict(
 
 HAZE = dict(
  	element_type = "Ice",
+	element_type_data = pokemon_types.Ice(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -487,6 +545,7 @@ HAZE = dict(
 
 HEADBUTT = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 70,
 	accuracy = 100,
@@ -495,6 +554,7 @@ HEADBUTT = dict(
 
 HIGH_JUMP_KICK = dict(
 	element_type = "Fighting",
+	element_type_data = pokemon_types.Fighting(),
 	category = "Physical",
 	power = 130, 
 	accuracy = 90,
@@ -503,6 +563,7 @@ HIGH_JUMP_KICK = dict(
 
 HORN_ATTACK = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 65,
 	accuracy = 100,
@@ -511,6 +572,7 @@ HORN_ATTACK = dict(
 
 HORN_DRILL = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = None,
 	accuracy = None,
@@ -519,22 +581,25 @@ HORN_DRILL = dict(
 
 HYDRO_PUMP = dict(
 	element_type = "Water",
+	element_type_data = pokemon_types.Water(),
 	category = "Special",
-	power = 11,0 
+	power = 110, 
 	accuracy = 80,
 	pp = 5,
 	description = "")
 
 HYPER_BEAM = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Special",
-	power = 15,0 
+	power = 150, 
 	accuracy = 90,
 	pp = 5,
 	description = "User must recharge next turn.")
 
 HYPER_Fang = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 80,
 	accuracy = 90,
@@ -543,6 +608,7 @@ HYPER_Fang = dict(
 
 HYPNOSIS = dict(
  	element_type = "Psychic",
+	element_type_data = pokemon_types.Psychic(),
 	category = "Status",
 	power = None,
 	accuracy = 60,
@@ -551,6 +617,7 @@ HYPNOSIS = dict(
 
 ICE_BEAM = dict(
 	element_type = "Ice",
+	element_type_data = pokemon_types.Ice(),
 	category = "Special",
 	power = 90, 
 	accuracy = 100,
@@ -559,6 +626,7 @@ ICE_BEAM = dict(
 
 ICE_PUNCH = dict(
 	element_type = "Ice",
+	element_type_data = pokemon_types.Ice(),
 	category = "Physical",
 	power = 75,
 	accuracy = 100,
@@ -567,6 +635,7 @@ ICE_PUNCH = dict(
 
 JUMP_KICK = dict(
 	element_type = "Fighting",
+	element_type_data = pokemon_types.Fighting(),
 	category = "Physical",
 	power = 100, 
 	accuracy = 95,
@@ -575,6 +644,7 @@ JUMP_KICK = dict(
 
 KARATE_CHOP = dict(
 	element_type = "Fighting",
+	element_type_data = pokemon_types.Fighting(),
 	category = "Physical",
 	power = 50,
 	accuracy = 100,
@@ -583,6 +653,7 @@ KARATE_CHOP = dict(
 
 KINESIS = dict(
  	element_type = "Psychic",
+	element_type_data = pokemon_types.Psychic(),
 	category = "Status",
 	power = None,
 	accuracy = 80,
@@ -591,6 +662,7 @@ KINESIS = dict(
 
 LEECH_LIFE = dict(
 	element_type = "Bug",
+	element_type_data = pokemon_types.Bug(),
 	category = "Physical",
 	power = 80,
 	accuracy = 100,
@@ -599,6 +671,7 @@ LEECH_LIFE = dict(
 
 LEECH_SEED = dict(
 	element_type = "Grass",
+	element_type_data = pokemon_types.Grass(),
 	category = "Status",
 	power = None, 
 	accuracy = 90,
@@ -607,6 +680,7 @@ LEECH_SEED = dict(
 
 LEER = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = 100,
@@ -615,6 +689,7 @@ LEER = dict(
 
 LICK = dict(
  	element_type = "Ghost",
+	element_type_data = pokemon_types.Ghost(),
 	category = "Physical",
 	power = 30,
 	accuracy = 100,
@@ -623,6 +698,7 @@ LICK = dict(
 
 LIGHT_SCREEN = dict(
 	element_type = "Psychic",
+	element_type_data = pokemon_types.Psychic(),
 	category = "Status",
 	power = None, 
 	accuracy = None,
@@ -631,6 +707,7 @@ LIGHT_SCREEN = dict(
 
 LOVELY_KISS = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None, 
 	accuracy = 75,
@@ -639,6 +716,7 @@ LOVELY_KISS = dict(
 
 LOW_KICK = dict(
 	element_type = "Fighting",
+	element_type_data = pokemon_types.Fighting(),
 	category = "Physical",
 	power = None,
 	accuracy = 100,
@@ -647,6 +725,7 @@ LOW_KICK = dict(
 
 MEDITATE = dict(
  	element_type = "Psychic",
+	element_type_data = pokemon_types.Psychic(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -655,6 +734,7 @@ MEDITATE = dict(
 
 MEGA_DRAIN = dict(
 	element_type = "Grass",
+	element_type_data = pokemon_types.Grass(),
 	category = "Special",
 	power = 40, 
 	accuracy = 100,
@@ -663,6 +743,7 @@ MEGA_DRAIN = dict(
 
 MEGA_KICK = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 120, 
 	accuracy = 75,
@@ -671,6 +752,7 @@ MEGA_KICK = dict(
 
 MEGA_PUNCH = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 80,
 	accuracy = 85,
@@ -679,6 +761,7 @@ MEGA_PUNCH = dict(
 
 METRONOME = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -687,6 +770,7 @@ METRONOME = dict(
 
 MIMIC = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -695,6 +779,7 @@ MIMIC = dict(
 
 MINIMIZE = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -703,6 +788,7 @@ MINIMIZE = dict(
 
 MIRROR_MOVE = dict(
 	element_type = "Flying",
+	element_type_data = pokemon_types.Flying(),
 	category = "Status",
 	power = None, 
 	accuracy = None,
@@ -711,6 +797,7 @@ MIRROR_MOVE = dict(
 
 MIST = dict(
  	element_type = "Ice",
+	element_type_data = pokemon_types.Ice(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -719,6 +806,7 @@ MIST = dict(
 
 NIGHT_SHADE = dict(
 	element_type = "Ghost",
+	element_type_data = pokemon_types.Ghost(),
 	category = "Special",
 	power = None,
 	accuracy = 100,
@@ -727,6 +815,7 @@ NIGHT_SHADE = dict(
 
 PAY_DAY = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 40,
 	accuracy = 100,
@@ -735,6 +824,7 @@ PAY_DAY = dict(
 
 PECK = dict(
  	element_type = "Flying",
+	element_type_data = pokemon_types.Flying(),
 	category = "Physical",
 	power = 35,
 	accuracy = 100,
@@ -743,14 +833,16 @@ PECK = dict(
 
 PETAL_DANCE = dict(
 	element_type = "Grass",
+	element_type_data = pokemon_types.Grass(),
 	category = "Special",
-	power = 12,0 
+	power = 120, 
 	accuracy = 100,
 	pp = 10,
 	description = "User attacks for 2-3 turns but then becomes confused.")
 
 PIN_MISSILE = dict(
 	element_type = "Bug",
+	element_type_data = pokemon_types.Bug(),
 	category = "Physical",
 	power = 25,
 	accuracy = 95,
@@ -759,6 +851,7 @@ PIN_MISSILE = dict(
 
 POISON_GAS = dict(
 	element_type = "Poison",
+	element_type_data = pokemon_types.Poison(),
 	category = "Status",
 	power = None, 
 	accuracy = 90,
@@ -767,6 +860,7 @@ POISON_GAS = dict(
 
 POISON_POWDER = dict(
 	element_type = "Poison",
+	element_type_data = pokemon_types.Poison(),
 	category = "Status",
 	power = None, 
 	accuracy = 75,
@@ -775,6 +869,7 @@ POISON_POWDER = dict(
 
 POISON_STING = dict(
 	element_type = "Poison",
+	element_type_data = pokemon_types.Poison(),
 	category = "Physical",
 	power = 15,
 	accuracy = 100,
@@ -783,6 +878,7 @@ POISON_STING = dict(
 
 POUND = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 40,
 	accuracy = 100,
@@ -791,6 +887,7 @@ POUND = dict(
 
 PSYBEAM = dict(
  	element_type = "Psychic",
+	element_type_data = pokemon_types.Psychic(),
 	category = "Special",
 	power = 65,
 	accuracy = 100,
@@ -799,6 +896,7 @@ PSYBEAM = dict(
 
 PSYCHIC = dict(
  	element_type = "Psychic",
+	element_type_data = pokemon_types.Psychic(),
 	category = "Special",
 	power = 90,
 	accuracy = 100,
@@ -807,6 +905,7 @@ PSYCHIC = dict(
 
 PSYWAVE = dict(
  	element_type = "Psychic",
+	element_type_data = pokemon_types.Psychic(),
 	category = "Special",
 	power = None,
 	accuracy = 80,
@@ -815,6 +914,7 @@ PSYWAVE = dict(
 
 QUICK_ATTACK = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 40,
 	accuracy = 100,
@@ -823,6 +923,7 @@ QUICK_ATTACK = dict(
 
 RAGE = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 20,
 	accuracy = 100,
@@ -831,6 +932,7 @@ RAGE = dict(
 
 RAZOR_LEAF = dict(
 	element_type = "Grass",
+	element_type_data = pokemon_types.Grass(),
 	category = "Physical",
 	power = 55,
 	accuracy = 95,
@@ -839,6 +941,7 @@ RAZOR_LEAF = dict(
 
 RAZOR_WIND = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Special",
 	power = 80, 
 	accuracy = 100,
@@ -847,6 +950,7 @@ RAZOR_WIND = dict(
 
 RECOVER = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -855,6 +959,7 @@ RECOVER = dict(
 
 REFLECT = dict(
  	element_type = "Psychic",
+	element_type_data = pokemon_types.Psychic(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -863,6 +968,7 @@ REFLECT = dict(
 
 REST = dict(
  	element_type = "Psychic",
+	element_type_data = pokemon_types.Psychic(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -871,6 +977,7 @@ REST = dict(
 
 ROAR = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -879,6 +986,7 @@ ROAR = dict(
 
 ROCK_SLIDE = dict(
 	element_type = "Rock",
+	element_type_data = pokemon_types.Rock(),
 	category = "Physical",
 	power = 75,
 	accuracy = 90,
@@ -887,6 +995,7 @@ ROCK_SLIDE = dict(
 
 ROCK_THROW = dict(
 	element_type = "Rock",
+	element_type_data = pokemon_types.Rock(),
 	category = "Physical",
 	power = 50,
 	accuracy = 90,
@@ -895,6 +1004,7 @@ ROCK_THROW = dict(
 
 ROLLING_KICK = dict(
 	element_type = "Fighting",
+	element_type_data = pokemon_types.Fighting(),
 	category = "Physical",
 	power = 60,
 	accuracy = 85,
@@ -903,6 +1013,7 @@ ROLLING_KICK = dict(
 
 SAND_ATTACK = dict(
 	element_type = "Ground",
+	element_type_data = pokemon_types.Ground(),
 	category = "Status",
 	power = None, 
 	accuracy = 100,
@@ -911,6 +1022,7 @@ SAND_ATTACK = dict(
 
 SCRATCH = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 40,
 	accuracy = 100,
@@ -919,6 +1031,7 @@ SCRATCH = dict(
 
 SCREECH = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = 85,
@@ -927,6 +1040,7 @@ SCREECH = dict(
 
 SEISMIC_TOSS = dict(
 	element_type = "Fighting",
+	element_type_data = pokemon_types.Fighting(),
 	category = "Physical",
 	power = None,
 	accuracy = 100,
@@ -935,6 +1049,7 @@ SEISMIC_TOSS = dict(
 
 SELF_DESTRUCT = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 200, 
 	accuracy = 100,
@@ -943,6 +1058,7 @@ SELF_DESTRUCT = dict(
 
 SHARPEN = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -951,6 +1067,7 @@ SHARPEN = dict(
 
 SING = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = 55,
@@ -959,6 +1076,7 @@ SING = dict(
 
 SKULL_BASH = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 130, 
 	accuracy = 100,
@@ -967,6 +1085,7 @@ SKULL_BASH = dict(
 
 SKY_ATTACK = dict(
 	element_type = "Flying",
+	element_type_data = pokemon_types.Flying(),
 	category = "Physical",
 	power = 140, 
 	accuracy = 90,
@@ -975,6 +1094,7 @@ SKY_ATTACK = dict(
 
 SLAM = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 80,
 	accuracy = 75,
@@ -983,6 +1103,7 @@ SLAM = dict(
 
 SLASH = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 70,
 	accuracy = 100,
@@ -991,6 +1112,7 @@ SLASH = dict(
 
 SLEEP_POWDER = dict(
 	element_type = "Grass",
+	element_type_data = pokemon_types.Grass(),
 	category = "Status",
 	power = None, 
 	accuracy = 75,
@@ -999,6 +1121,7 @@ SLEEP_POWDER = dict(
 
 SLUDGE = dict(
  	element_type = "Poison",
+	element_type_data = pokemon_types.Poison(),
 	category = "Special",
 	power = 65,
 	accuracy = 100,
@@ -1007,6 +1130,7 @@ SLUDGE = dict(
 
 SMOG = dict(
  	element_type = "Poison",
+	element_type_data = pokemon_types.Poison(),
 	category = "Special",
 	power = 30,
 	accuracy = 70,
@@ -1015,6 +1139,7 @@ SMOG = dict(
 
 SMOKESCREEN = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = 100,
@@ -1023,6 +1148,7 @@ SMOKESCREEN = dict(
 
 SOFT_BOILED = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None, 
 	accuracy = None,
@@ -1031,14 +1157,16 @@ SOFT_BOILED = dict(
 
 SOLAR_BEAM = dict(
 	element_type = "Grass",
+	element_type_data = pokemon_types.Grass(),
 	category = "Special",
-	power = 12,0 
+	power = 120, 
 	accuracy = 100,
 	pp = 10,
 	description = "Charges on first turn, attacks on second.")
 
 SONIC_BOOM = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Special",
 	power = None,
 	accuracy = 90,
@@ -1047,6 +1175,7 @@ SONIC_BOOM = dict(
 
 SPIKE_CANNON = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 20,
 	accuracy = 100,
@@ -1055,6 +1184,7 @@ SPIKE_CANNON = dict(
 
 SPLASH = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -1063,6 +1193,7 @@ SPLASH = dict(
 
 SPORE = dict(
  	element_type = "Grass",
+	element_type_data = pokemon_types.Grass(),
 	category = "Status",
 	power = None,
 	accuracy = 100,
@@ -1071,6 +1202,7 @@ SPORE = dict(
 
 STOMP = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 65,
 	accuracy = 100,
@@ -1079,6 +1211,7 @@ STOMP = dict(
 
 STRENGTH = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 80,
 	accuracy = 100,
@@ -1087,6 +1220,7 @@ STRENGTH = dict(
 
 STRING_SHOT = dict(
 	element_type = "Bug",
+	element_type_data = pokemon_types.Bug(),
 	category = "Status",
 	power = None, 
 	accuracy = 95,
@@ -1095,6 +1229,7 @@ STRING_SHOT = dict(
 
 STRUGGLE = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 50,
 	accuracy = 100,
@@ -1103,6 +1238,7 @@ STRUGGLE = dict(
 
 STUN_SPORE = dict(
 	element_type = "Grass",
+	element_type_data = pokemon_types.Grass(),
 	category = "Status",
 	power = None, 
 	accuracy = 75,
@@ -1111,6 +1247,7 @@ STUN_SPORE = dict(
 
 SUBMISSION = dict(
  	element_type = "Fighting",
+	element_type_data = pokemon_types.Fighting(),
 	category = "Physical",
 	power = 80,
 	accuracy = 80,
@@ -1119,6 +1256,7 @@ SUBMISSION = dict(
 
 SUBSTITUTE = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -1127,6 +1265,7 @@ SUBSTITUTE = dict(
 
 SUPER_FANG = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = None,
 	accuracy = 90,
@@ -1135,6 +1274,7 @@ SUPER_FANG = dict(
 
 SUPERSONIC = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = 55,
@@ -1143,6 +1283,7 @@ SUPERSONIC = dict(
 
 SURF = dict(
  	element_type = "Water",
+	element_type_data = pokemon_types.Water(),
 	category = "Special",
 	power = 90,
 	accuracy = 100,
@@ -1151,6 +1292,7 @@ SURF = dict(
 
 SWIFT = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Special",
 	power = 60,
 	accuracy = 100,
@@ -1159,6 +1301,7 @@ SWIFT = dict(
 
 SWORDS_DANCE = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None, 
 	accuracy = None,
@@ -1167,6 +1310,7 @@ SWORDS_DANCE = dict(
 
 TACKLE = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 40,
 	accuracy = 100,
@@ -1175,6 +1319,7 @@ TACKLE = dict(
 
 TAIL_WHIP = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None, 
 	accuracy = 100,
@@ -1183,6 +1328,7 @@ TAIL_WHIP = dict(
 
 TAKE_DOWN = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 90,
 	accuracy = 85,
@@ -1191,6 +1337,7 @@ TAKE_DOWN = dict(
 
 TELEPORT = dict(
  	element_type = "Psychic",
+	element_type_data = pokemon_types.Psychic(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -1199,6 +1346,7 @@ TELEPORT = dict(
 
 THRASH = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 120,
 	accuracy = 100,
@@ -1207,6 +1355,7 @@ THRASH = dict(
 
 THUNDER = dict(
  	element_type = "Electric",
+	element_type_data = pokemon_types.Electric(),
 	category = "Special",
 	power = 110,
 	accuracy = 70,
@@ -1215,6 +1364,7 @@ THUNDER = dict(
 
 THUNDER_PUNCH = dict(
 	element_type = "Electric",
+	element_type_data = pokemon_types.Electric(),
 	category = "Physical",
 	power = 75,
 	accuracy = 100,
@@ -1223,6 +1373,7 @@ THUNDER_PUNCH = dict(
 
 THUNDER_SHOCK = dict(
 	element_type = "Electric",
+	element_type_data = pokemon_types.Electric(),
 	category = "Special",
 	power = 40, 
 	accuracy = 100,
@@ -1231,6 +1382,7 @@ THUNDER_SHOCK = dict(
 
 THUNDER_WAVE = dict(
 	element_type = "Electric",
+	element_type_data = pokemon_types.Electric(),
 	category = "Status",
 	power = None, 
 	accuracy = 90,
@@ -1239,6 +1391,7 @@ THUNDER_WAVE = dict(
 
 THUNDERBOLT = dict(
  	element_type = "Electric",
+	element_type_data = pokemon_types.Electric(),
 	category = "Special",
 	power = 90,
 	accuracy = 100,
@@ -1247,6 +1400,7 @@ THUNDERBOLT = dict(
 
 TOXIC = dict(
  	element_type = "Poison",
+	element_type_data = pokemon_types.Poison(),
 	category = "Status",
 	power = None,
 	accuracy = 90,
@@ -1255,6 +1409,7 @@ TOXIC = dict(
 
 TRANSFORM = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -1263,6 +1418,7 @@ TRANSFORM = dict(
 
 TRI_ATTACK = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Special",
 	power = 80, 
 	accuracy = 100,
@@ -1271,6 +1427,7 @@ TRI_ATTACK = dict(
 
 TWINEEDLE = dict(
  	element_type = "Bug",
+	element_type_data = pokemon_types.Bug(),
 	category = "Physical",
 	power = 25,
 	accuracy = 100,
@@ -1279,6 +1436,7 @@ TWINEEDLE = dict(
 
 VICE_GRIP = dict(
 	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 55,
 	accuracy = 100,
@@ -1287,6 +1445,7 @@ VICE_GRIP = dict(
 
 VINE_WHIP = dict(
 	element_type = "Grass",
+	element_type_data = pokemon_types.Grass(),
 	category = "Physical",
 	power = 45,
 	accuracy = 100,
@@ -1295,6 +1454,7 @@ VINE_WHIP = dict(
 
 WATER_GUN = dict(
 	element_type = "Water",
+	element_type_data = pokemon_types.Water(),
 	category = "Special",
 	power = 40, 
 	accuracy = 100,
@@ -1303,6 +1463,7 @@ WATER_GUN = dict(
 
 WATERFALL = dict(
  	element_type = "Water",
+	element_type_data = pokemon_types.Water(),
 	category = "Physical",
 	power = 80,
 	accuracy = 100,
@@ -1311,6 +1472,7 @@ WATERFALL = dict(
 
 WHIRLWIND = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -1319,6 +1481,7 @@ WHIRLWIND = dict(
 
 WING_ATTACK = dict(
 	element_type = "Flying",
+	element_type_data = pokemon_types.Flying(),
 	category = "Physical",
 	power = 60,
 	accuracy = 100,
@@ -1327,6 +1490,7 @@ WING_ATTACK = dict(
 
 WITHDRAW = dict(
  	element_type = "Water",
+	element_type_data = pokemon_types.Water(),
 	category = "Status",
 	power = None,
 	accuracy = None,
@@ -1335,6 +1499,7 @@ WITHDRAW = dict(
 
 WRAP = dict(
  	element_type = "Normal",
+	element_type_data = pokemon_types.Normal(),
 	category = "Physical",
 	power = 15,
 	accuracy = 90,
@@ -1346,7 +1511,7 @@ WRAP = dict(
 Key contains collection of dictionaries containing move properties and statistics.
 """
 
-MOVES = (
+GROUPS = {
 	"ABSORB": ABSORB,
 	"ACID": ACID,
 	"ACID_ARMOUR": ACID_ARMOUR,
@@ -1510,14 +1675,14 @@ MOVES = (
 	"WHIRLWIND": WHIRLWIND,
 	"WING_ATTACK": WING_ATTACK,
 	"WITHDRAW": WITHDRAW,
-	"WRAP")
+	"WRAP": WRAP}
 
 """Tuple containing strings of Pokemon moves.
 
 Names are generated from initialised names. Requires Pokemon move is defined in Moveset dictionary.
 """
 
-NAMES = tuple(dict.keys(MOVES))
+NAMES = tuple(dict.keys(GROUPS))
 
 """String comprised of the different Pokemon moves."""
 
