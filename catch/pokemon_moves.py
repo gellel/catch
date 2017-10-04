@@ -21,7 +21,7 @@ __version__ = "1.0"
 ### Module constants ###
 ########################
 
-"""Tuple containing STRINGs of keys for Pokemon moves generator.
+"""Tuple containing strings of keys for Pokemon moves generator.
 
 Key names are base from Pokemon DB.
 """
@@ -34,13 +34,13 @@ KEYS = (
 	"PP", 
 	"DESCRIPTION")
 
-"""STRING comprised of the different Pokemon generator key subSTRINGs."""
+"""STRING comprised of the different Pokemon generator key substrings."""
 
 KEYS_STRS = " ".join(KEYS)
 
 
 ABSORB = dict(
-	element_type= "Grass",
+	element_type = "Grass",
 	category = "Special",
 	power = 20,
 	accuracy = 100,
