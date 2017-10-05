@@ -1915,10 +1915,9 @@ class Generate (namedtuple("Props", MOVE_SET_KEYS_STRS)):
 
 """Generate constants from defined properties. Overwrites previous properties.
 
-Composed to consume existing constants.
+Composed to consume existing declerations.
 """
 
 for i in range(0, len(MOVE_SET_NAMES)):
 	"""Set module properties. Sets package variable using defined names in move sets."""
 	setattr(sys.modules[__name__], MOVE_SET_NAMES[i], Generate(MOVE_SET_NAMES[i]))
-	

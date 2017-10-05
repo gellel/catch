@@ -799,7 +799,7 @@ class Water (Generate):
 
 """Generate constants from defined properties. Overwrites previous properties.
 
-Composed to consume existing constants.
+Composed to consume existing declerations.
 """
 
 for i in range(0, len(TYPE_NAMES)):
