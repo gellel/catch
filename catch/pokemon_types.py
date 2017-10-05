@@ -22,7 +22,7 @@ __all__ = [
 	"DARK",
 	"DRAGON",
 	"ELECTRIC",
-	"FAIRY"
+	"FAIRY",
 	"FIGHTING",
 	"FIRE",
 	"FLYING",
