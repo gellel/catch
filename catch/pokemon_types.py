@@ -6,6 +6,8 @@
 from collections import namedtuple
 # import random
 import random
+# import system
+import sys
 
 ########################
 ### File information ###
@@ -15,30 +17,11 @@ __author__  = "Lindsay Gelle (https://github.com/gellel)"
 
 __version__ = "1.0"
 
-__all__ = [
-	"BUG", 
-	"DARK", 
-	"DRAGON",
-	"ELECTRIC",
-	"FAIRY",
-	"FIGHTING",
-	"FIRE", 
-	"FLYING",
-	"GHOST",
-	"GRASS",
-	"GROUND",
-	"ICE", 
-	"NORMAL",
-	"POISON",
-	"PSYCHIC", 
-	"ROCK", 
-	"STEEL",
-
 ########################
 ### Module constants ###
 ########################
 
-BUG_TYPE = (
+BUG = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 0.5, "NOT_VERY_EFFECTIVE"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -58,7 +41,7 @@ BUG_TYPE = (
 	("STEEL", 0.5, "NOT_VERY_EFFECTIVE"),
 	("FAIRY", 0.5, "NOT_VERY_EFFECTIVE"))
 
-DARK_TYPE = (
+DARK = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 1, "NORMAL_EFFECT"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -78,7 +61,7 @@ DARK_TYPE = (
 	("STEEL", 1, "NORMAL_EFFECT"),
 	("FAIRY", 0.5, "NOT_VERY_EFFECTIVE"))
 
-DRAGON_TYPE = (
+DRAGON = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 1, "NORMAL_EFFECT"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -98,7 +81,7 @@ DRAGON_TYPE = (
 	("STEEL", 0.5, "NOT_VERY_EFFECTIVE"),
 	("FAIRY", 0, "NO_EFFECT"))
 
-ELECTRIC_TYPE = (
+ELECTRIC = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 1, "NORMAL_EFFECT"),
 	("WATER", 2, "SUPER_EFFECTIVE"),
@@ -118,7 +101,7 @@ ELECTRIC_TYPE = (
 	("STEEL", 1, "NORMAL_EFFECT"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-FAIRY_TYPE = (
+FAIRY = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 0.5, "NOT_VERY_EFFECTIVE"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -138,7 +121,7 @@ FAIRY_TYPE = (
 	("STEEL", 0.5, "NOT_VERY_EFFECTIVE"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-FIGHTING_TYPE = (
+FIGHTING = (
 	("NORMAL", 2, "SUPER_EFFECTIVE"),
 	("FIRE", 1, "NORMAL_EFFECT"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -158,7 +141,7 @@ FIGHTING_TYPE = (
 	("STEEL", 2, "SUPER_EFFECTIVE"),
 	("FAIRY", 0.5, "NOT_VERY_EFFECTIVE"))
 
-FIRE_TYPE = (
+FIRE = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 0.5, "NOT_VERY_EFFECTIVE"),
 	("WATER", 0.5, "NOT_VERY_EFFECTIVE"),
@@ -178,7 +161,7 @@ FIRE_TYPE = (
 	("STEEL", 2, "SUPER_EFFECTIVE"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-FLYING_TYPE = (
+FLYING = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 1, "NORMAL_EFFECT"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -198,7 +181,7 @@ FLYING_TYPE = (
 	("STEEL", 0.5, "NOT_VERY_EFFECTIVE"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-GHOST_TYPE = (
+GHOST = (
 	("NORMAL", 0, "NO_EFFECT"),
 	("FIRE", 1, "NORMAL_EFFECT"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -218,7 +201,7 @@ GHOST_TYPE = (
 	("STEEL", 1, "NORMAL_EFFECT"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-GRASS_TYPE = (
+GRASS = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 0.5, "NOT_VERY_EFFECTIVE"),
 	("WATER", 2, "SUPER_EFFECTIVE"),
@@ -238,7 +221,7 @@ GRASS_TYPE = (
 	("STEEL", 0.5, "NOT_VERY_EFFECTIVE"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-GROUND_TYPE = (
+GROUND = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 2, "SUPER_EFFECTIVE"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -258,7 +241,7 @@ GROUND_TYPE = (
 	("STEEL", 2, "SUPER_EFFECTIVE"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-ICE_TYPE = (
+ICE = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 0.5, "NOT_VERY_EFFECTIVE"),
 	("WATER", 0.5, "NOT_VERY_EFFECTIVE"),
@@ -278,7 +261,7 @@ ICE_TYPE = (
 	("STEEL", 0.5, "NOT_VERY_EFFECTIVE"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-NORMAL_TYPE = (
+NORMAL = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 1, "NORMAL_EFFECT"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -298,7 +281,7 @@ NORMAL_TYPE = (
 	("STEEL", 0.5, "NOT_VERY_EFFECTIVE"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-POISON_TYPE = (
+POISON = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 1, "NORMAL_EFFECT"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -318,7 +301,7 @@ POISON_TYPE = (
 	("STEEL", 0, "NO_EFFECT"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-PSYCHIC_TYPE = (
+PSYCHIC = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 1, "NORMAL_EFFECT"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -338,7 +321,7 @@ PSYCHIC_TYPE = (
 	("STEEL", 0.5, "NOT_VERY_EFFECTIVE"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-ROCK_TYPE = (
+ROCK = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 2, "SUPER_EFFECTIVE"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -358,7 +341,7 @@ ROCK_TYPE = (
 	("STEEL", 0.5, "NOT_VERY_EFFECTIVE"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-STEEL_TYPE = (
+STEEL = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 0.5, "NOT_VERY_EFFECTIVE"),
 	("WATER", 0.5, "NOT_VERY_EFFECTIVE"),
@@ -378,7 +361,7 @@ STEEL_TYPE = (
 	("STEEL", 0.5, "NOT_VERY_EFFECTIVE"),
 	("FAIRY", 2, "SUPER_EFFECTIVE"))
 
-WATER_TYPE = (
+WATER = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 2, "SUPER_EFFECTIVE"),
 	("WATER", 0.5, "NOT_VERY_EFFECTIVE"),
@@ -405,24 +388,24 @@ Strengths and resistances are presented as the same float or integer.
 """
 
 GROUPS = {
-	"BUG": BUG_TYPE,
-	"DARK": DARK_TYPE,
-	"DRAGON": DRAGON_TYPE,
-	"ELECTRIC": ELECTRIC_TYPE,
-	"FAIRY": FAIRY_TYPE,
-	"FIGHTING": FIGHTING_TYPE,
-	"FIRE": FIRE_TYPE,
-	"FLYING": FLYING_TYPE,
-	"GHOST": GHOST_TYPE,
-	"GRASS": GRASS_TYPE,
-	"GROUND": GROUND_TYPE,
-	"ICE": ICE_TYPE,
-	"NORMAL": NORMAL_TYPE,
-	"POISON": POISON_TYPE,
-	"PSYCHIC": PSYCHIC_TYPE,
-	"ROCK": ROCK_TYPE,
-	"STEEL": STEEL_TYPE,
-	"WATER": WATER_TYPE }
+	"BUG": BUG,
+	"DARK": DARK,
+	"DRAGON": DRAGON,
+	"ELECTRIC": ELECTRIC,
+	"FAIRY": FAIRY,
+	"FIGHTING": FIGHTING,
+	"FIRE": FIRE,
+	"FLYING": FLYING,
+	"GHOST": GHOST,
+	"GRASS": GRASS,
+	"GROUND": GROUND,
+	"ICE": ICE,
+	"NORMAL": NORMAL,
+	"POISON": POISON,
+	"PSYCHIC": PSYCHIC,
+	"ROCK": ROCK,
+	"STEEL": STEEL,
+	"WATER": WATER }
 
 """Dictionary containing the primary Pokemon types.
 
@@ -449,11 +432,11 @@ GROUPS_EFFECTS = { k: { v[i][0]: v[i][2]
 Names are generated from initialised names. Requires Pokemon type is defined in Groups dictionary.
 """
 
-NAMES = tuple(dict.keys(GROUPS))
+TYPE_NAMES = tuple(dict.keys(GROUPS))
 
 """String comprised of the different Pokemon type names."""
 
-NAMES_STRS = " ".join(NAMES)
+TYPE_NAMES_STRS = " ".join(TYPE_NAMES)
 
 ######################
 ### Module methods ###
@@ -506,10 +489,10 @@ def generate_type_sum_class (pokemon_type):
 	pokemon_type = str.upper(str(pokemon_type))
 
 	# confirm pokemon type is defined type otherwise select type at random.
-	pokemon_type = pokemon_type if pokemon_type in NAMES else random.choice(NAMES)
+	pokemon_type = pokemon_type if pokemon_type in TYPE_NAMES else random.choice(TYPE_NAMES)
 
 	# construct pseudo-class constant from named tuple. sets integer sums as corresponding type pair value.
-	pokemon_generated_type = namedtuple(pokemon_type, " ".join(NAMES))(**GROUPS_SUMS[pokemon_type])
+	pokemon_generated_type = namedtuple(pokemon_type, " ".join(TYPE_NAMES))(**GROUPS_SUMS[pokemon_type])
 
 	# return: @type: @class.__main__.STR_ARG_AS_CLS_NAME
 	return pokemon_generated_type
@@ -541,10 +524,10 @@ def generate_type_effect_class (pokemon_type):
 	pokemon_type = str.upper(str(pokemon_type))
 
 	# confirm pokemon type is defined type otherwise select type at random.
-	pokemon_type = pokemon_type if pokemon_type in NAMES else random.choice(NAMES)
+	pokemon_type = pokemon_type if pokemon_type in TYPE_NAMES else random.choice(TYPE_NAMES)
 
 	# construct pseudo-class constant from named tuple. sets integer sums as corresponding type pair value.
-	pokemon_generated_type = namedtuple(pokemon_type, NAMES_STRS)(**GROUPS_EFFECTS[pokemon_type])
+	pokemon_generated_type = namedtuple(pokemon_type, TYPE_NAMES_STRS)(**GROUPS_EFFECTS[pokemon_type])
 
 	# return: @type: @class.__main__.STR_ARG_AS_CLS_NAME
 	return pokemon_generated_type
@@ -578,7 +561,7 @@ def generate_type_stats_class (pokemon_type):
 	pokemon_type = str.upper(str(pokemon_type))
 
 	# confirm pokemon type is defined type otherwise select type at random.
-	pokemon_type = pokemon_type if pokemon_type in NAMES else random.choice(NAMES)
+	pokemon_type = pokemon_type if pokemon_type in TYPE_NAMES else random.choice(TYPE_NAMES)
 
 	# construct dictionary to contain collection of named tuples.
 	pokemon_type_stats = dict()
@@ -600,13 +583,13 @@ def generate_type_stats_class (pokemon_type):
 					EFFECT = pokemon_type_subgroups[i][2], SUM = pokemon_type_subgroups[i][1])})
 
 	# return: @type: @class.__main__.STR_ARG_AS_CLS_NAME
-	return namedtuple(pokemon_type, NAMES_STRS)(**pokemon_type_stats)
+	return namedtuple(pokemon_type, TYPE_NAMES_STRS)(**pokemon_type_stats)
 
 ######################
 ### Module classes ###
 ######################
 
-class Generate (namedtuple("Props", NAMES_STRS)):
+class Generate (namedtuple("Props", TYPE_NAMES_STRS)):
 	"""Generates type properties for defined Pokemon type."""
 
 	def __new__ (self, pokemon_type):
@@ -637,7 +620,7 @@ class Generate (namedtuple("Props", NAMES_STRS)):
 		pokemon_type = str.upper(str(pokemon_type))
 
 		# confirm pokemon type is defined type otherwise select type at random.
-		pokemon_type = pokemon_type if pokemon_type in NAMES else random.choice(NAMES)
+		pokemon_type = pokemon_type if pokemon_type in TYPE_NAMES else random.choice(TYPE_NAMES)
 		
 		# set sub group of properties for specific Pokemon type.
 		pokemon_type_subgroups = GROUPS[pokemon_type]
@@ -814,26 +797,12 @@ class Water (Generate):
 ### Module exports ###
 ######################
 
-"""Generate base constant export for type.
+"""Generate constants from defined properties. Overwrites previous properties.
 
-Type constant constructors are created from the Generator Pokemon Type typeclass base.
+Composed to consume existing constants.
 """
 
-BUG = Bug()
-DARK = Dark()
-DRAGON = Dragon()
-ELECTRIC = Electric()
-FAIRY = Fairy()
-FIGHTING = Fighting()
-FIRE = Fire()
-FLYING = Flying()
-GHOST = Ghost()
-GRASS = Grass()
-GROUND = Ground()
-ICE = Ice()
-NORMAL = Normal()
-POISON = Poison()
-PSYCHIC = Psychic()
-ROCK = Rock()
-STEEL = Steel()
-WATER = Water()
+for i in range(0, len(TYPE_NAMES)):
+	"""Set module properties. Sets package variable using defined names in move sets."""
+	setattr(sys.modules[__name__], TYPE_NAMES[i], 
+		getattr(sys.modules[__name__], str.title(str(TYPE_NAMES[i])))())

@@ -4,9 +4,13 @@
 
 # from collections import named tuple module.
 from collections import namedtuple
-# import random
+# import random module
 import random
-# import pokemon types
+# import regex module
+import re
+# import system module
+import sys
+# import pokemon types module
 import pokemon_types
 
 ########################
@@ -17,1501 +21,1667 @@ __author__  = "Lindsay Gelle (https://github.com/gellel)"
 
 __version__ = "1.0"
 
+__all__ = [
+	"ABSORB",
+	"ACID",
+	"ACID_ARMOUR",
+	"AGILITY",
+	"AMNESIA",
+	"AURORA_BEAM",
+	"BARRAGE",
+	"BARRIER",
+	"BIDE",
+	"BIND",
+	"BITE",
+	"BLIZZARD",
+	"BODY_SLAM",
+	"BONEMERANG",
+	"BONE_CLUB",
+	"BUBBLE",
+	"BUBBLE_BEAM",
+	"CLAMP",
+	"COMET_PUNCH",
+	"CONFUSE_RAY",
+	"CONFUSION",
+	"CONSTRICT",
+	"CONVERSION",
+	"COUNTER",
+	"CRABHAMMER",
+	"CUT",
+	"DEFENSE_CURL",
+	"DIG",
+	"DISABLE",
+	"DIZZY_PUNCH",
+	"DOUBLE_EDGE",
+	"DOUBLE_KICK",
+	"DOUBLE_SLAP",
+	"DOUBLE_TEAM",
+	"DRAGON_RAGE",
+	"DREAM_EATER",
+	"DRILL_PECK",
+	"EARTHQUAKE",
+	"EGG_BOMB",
+	"EMBER",
+	"EXPLOSION",
+	"FIRE_BLAST",
+	"FIRE_PUNCH",
+	"FIRE_SPIN",
+	"FISSURE",
+	"FLAMETHROWER",
+	"FLASH",
+	"FLY",
+	"FOCUS_ENERGY",
+	"FURY_ATTACK",
+	"FURY_SWIPES",
+	"GLARE",
+	"GROWL",
+	"GROWTH",
+	"GUILLOTINE",
+	"GUST",
+	"HARDEN",
+	"HAZE",
+	"HEADBUTT",
+	"HORN_ATTACK",
+	"HORN_DRILL",
+	"HYDRO_PUMP",
+	"HYPER_BEAM",
+	"HYPER_Fang",
+	"HYPNOSIS",
+	"ICE_BEAM",
+	"ICE_PUNCH",
+	"JUMP_KICK",
+	"KARATE_CHOP",
+	"KINESIS",
+	"LEECH_LIFE",
+	"LEECH_SEED",
+	"LEER",
+	"LICK",
+	"LIGHT_SCREEN",
+	"LOVELY_KISS",
+	"LOW_KICK",
+	"MEDITATE",
+	"MEGA_DRAIN",
+	"MEGA_KICK",
+	"MEGA_PUNCH",
+	"METRONOME",
+	"MIMIC",
+	"MINIMIZE",
+	"MIRROR_MOVE",
+	"MIST",
+	"NIGHT_SHADE",
+	"PAY_DAY",
+	"PECK",
+	"PETAL_DANCE",
+	"PIN_MISSILE",
+	"POISON_GAS",
+	"POISON_POWDER",
+	"POISON_STING",
+	"POUND",
+	"PSYBEAM",
+	"PSYCHIC",
+	"PSYWAVE",
+	"QUICK_ATTACK",
+	"RAGE",
+	"RAZOR_LEAF",
+	"RAZOR_WIND",
+	"RECOVER",
+	"REFLECT",
+	"REST",
+	"ROAR",
+	"ROCK_SLIDE",
+	"ROCK_THROW",
+	"ROLLING_KICK",
+	"SAND_ATTACK",
+	"SCRATCH",
+	"SCREECH",
+	"SEISMIC_TOSS",
+	"SELF_DESTRUCT",
+	"SHARPEN",
+	"SING",
+	"SKULL_BASH",
+	"SKY_ATTACK",
+	"SLAM",
+	"SLASH",
+	"SLEEP_POWDER",
+	"SLUDGE",
+	"SMOG",
+	"SMOKESCREEN",
+	"SOFT_BOILED",
+	"SOLAR_BEAM",
+	"SONIC_BOOM",
+	"SPIKE_CANNON",
+	"SPLASH",
+	"SPORE",
+	"STOMP",
+	"STRENGTH",
+	"STRING_SHOT",
+	"STRUGGLE",
+	"STUN_SPORE",
+	"SUBMISSION",
+	"SUBSTITUTE",
+	"SUPERSONIC",
+	"SUPER_FANG",
+	"SURF",
+	"SWIFT",
+	"SWORDS_DANCE",
+	"TACKLE",
+	"TAIL_WHIP",
+	"TAKE_DOWN",
+	"TELEPORT",
+	"THRASH",
+	"THUNDER",
+	"THUNDERBOLT",
+	"THUNDER_PUNCH",
+	"THUNDER_SHOCK",
+	"THUNDER_WAVE",
+	"TOXIC",
+	"TRANSFORM",
+	"TRI_ATTACK",
+	"TWINEEDLE",
+	"VICE_GRIP",
+	"VINE_WHIP",
+	"WATERFALL",
+	"WATER_GUN",
+	"WHIRLWIND",
+	"WING_ATTACK",
+	"WITHDRAW",
+	"WATER"]
+
 ########################
 ### Module constants ###
 ########################
 
 ABSORB = dict(
-	ELEMENT_TYPE = "Grass",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.GRASS,
-	category = "Special",
+	ELEMENT_TYPE = "GRASS",
+	ATTRIBUTES = pokemon_types.GRASS,
+	CATEGORY = "Special",
 	POWER = 20,
-	accuracy = 100,
-	pp = 25,
-	description = "User recovers half the HP inflicted on opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 25,
+	DESCRIPTION = "User recovers half the HP inflicted on opponent.")
 
 ACID = dict(
-	ELEMENT_TYPE = "Poison",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.POISON,
-	category = "Special",
+	ELEMENT_TYPE = "POISON",
+	ATTRIBUTES = pokemon_types.POISON,
+	CATEGORY = "Special",
 	POWER = 40,
-	accuracy = 100,
-	pp = 30,
-	description = "May lower opponent's Special Defense.")
+	ACCURACY = 100,
+	POWER_POINTS = 30,
+	DESCRIPTION = "May lower opponent's Special Defense.")
 
 ACID_ARMOUR = dict(
-	ELEMENT_TYPE = "Poison",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.POISON,
-	category = "Status",
+	ELEMENT_TYPE = "POISON",
+	ATTRIBUTES = pokemon_types.POISON,
+	CATEGORY = "Status",
 	POWER = None, 
-	accuracy = None,
-	pp = 20,
-	description = "Sharply raises user's Defense.")
+	ACCURACY = None,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Sharply raises user's Defense.")
 
 AGILITY = dict(
-	ELEMENT_TYPE = "Psychic",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.PSYCHIC,
-	category = "Status",
+	ELEMENT_TYPE = "PSYCHIC",
+	ATTRIBUTES = pokemon_types.PSYCHIC,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 30,
-	description = "Sharply raises user's Speed.")
+	ACCURACY = None,
+	POWER_POINTS = 30,
+	DESCRIPTION = "Sharply raises user's Speed.")
 
 AMNESIA = dict(
-	ELEMENT_TYPE = "Psychic",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.PSYCHIC,
-	category = "Status",
+	ELEMENT_TYPE = "PSYCHIC",
+	ATTRIBUTES = pokemon_types.PSYCHIC,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 20,
-	description = "Sharply raises user's Special Defense.")
+	ACCURACY = None,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Sharply raises user's Special Defense.")
 
 AURORA_BEAM = dict(
-	ELEMENT_TYPE = "Ice",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.ICE,
-	category = "Special",
+	ELEMENT_TYPE = "ICE",
+	ATTRIBUTES = pokemon_types.ICE,
+	CATEGORY = "Special",
 	POWER = 65, 
-	accuracy = 100,
-	pp = 20,
-	description = "May lower opponent's Attack.")
+	ACCURACY = 100,
+	POWER_POINTS = 20,
+	DESCRIPTION = "May lower opponent's Attack.")
 
 BARRAGE = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 15,
-	accuracy = 85,
-	pp = 20,
-	description = "Hits 2-5 times in one turn.")
+	ACCURACY = 85,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Hits 2-5 times in one turn.")
 
 BARRIER = dict(
- 	ELEMENT_TYPE = "Psychic",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.PSYCHIC,
-	category = "Status",
+ 	ELEMENT_TYPE = "PSYCHIC",
+	ATTRIBUTES = pokemon_types.PSYCHIC,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 20,
-	description = "Sharply raises user's Defense.")
+	ACCURACY = None,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Sharply raises user's Defense.")
 
 BIDE = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = None,
-	accuracy = None,
-	pp = 10,
-	description = "User takes damage for two turns then strikes back double.")
+	ACCURACY = None,
+	POWER_POINTS = 10,
+	DESCRIPTION = "User takes damage for two turns then strikes back double.")
 
 BIND = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 15,
-	accuracy = 85,
-	pp = 20,
-	description = "Traps opponent, damaging them for 4-5 turns.")
+	ACCURACY = 85,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Traps opponent, damaging them for 4-5 turns.")
 
 BITE = dict(
- 	ELEMENT_TYPE = "Dark",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.DARK,
-	category = "Physical",
+ 	ELEMENT_TYPE = "DARK",
+	ATTRIBUTES = pokemon_types.DARK,
+	CATEGORY = "Physical",
 	POWER = 60,
-	accuracy = 100,
-	pp = 25,
-	description = "May cause flinching.")
+	ACCURACY = 100,
+	POWER_POINTS = 25,
+	DESCRIPTION = "May cause flinching.")
 
 BLIZZARD = dict(
- 	ELEMENT_TYPE = "Ice",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.ICE,
-	category = "Special",
+ 	ELEMENT_TYPE = "ICE",
+	ATTRIBUTES = pokemon_types.ICE,
+	CATEGORY = "Special",
 	POWER = 110,
-	accuracy = 70,
-	pp = 5,
-	description = "May freeze opponent.")
+	ACCURACY = 70,
+	POWER_POINTS = 5,
+	DESCRIPTION = "May freeze opponent.")
 
 BODY_SLAM = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 85,
-	accuracy = 100,
-	pp = 15,
-	description = "May paralyze opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 15,
+	DESCRIPTION = "May paralyze opponent.")
 
 BONE_CLUB = dict(
-	ELEMENT_TYPE = "Ground",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.GROUND,
-	category = "Physical",
+	ELEMENT_TYPE = "GROUND",
+	ATTRIBUTES = pokemon_types.GROUND,
+	CATEGORY = "Physical",
 	POWER = 65,
-	accuracy = 85,
-	pp = 20,
-	description = "May cause flinching.")
+	ACCURACY = 85,
+	POWER_POINTS = 20,
+	DESCRIPTION = "May cause flinching.")
 
 BONEMERANG = dict(
- 	ELEMENT_TYPE = "Ground",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.GROUND,
-	category = "Physical",
+ 	ELEMENT_TYPE = "GROUND",
+	ATTRIBUTES = pokemon_types.GROUND,
+	CATEGORY = "Physical",
 	POWER = 50,
-	accuracy = 90,
-	pp = 10,
-	description = "Hits twice in one turn.")
+	ACCURACY = 90,
+	POWER_POINTS = 10,
+	DESCRIPTION = "Hits twice in one turn.")
 
 BUBBLE = dict(
- 	ELEMENT_TYPE = "Water",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.WATER,
-	category = "Special",
+ 	ELEMENT_TYPE = "WATER",
+	ATTRIBUTES = pokemon_types.WATER,
+	CATEGORY = "Special",
 	POWER = 40,
-	accuracy = 100,
-	pp = 30,
-	description = "May lower opponent's Speed.")
+	ACCURACY = 100,
+	POWER_POINTS = 30,
+	DESCRIPTION = "May lower opponent's Speed.")
 
 BUBBLE_BEAM = dict(
-	ELEMENT_TYPE = "Water",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.WATER,
-	category = "Special",
+	ELEMENT_TYPE = "WATER",
+	ATTRIBUTES = pokemon_types.WATER,
+	CATEGORY = "Special",
 	POWER = 65, 
-	accuracy = 100,
-	pp = 20,
-	description = "May lower opponent's Speed.")
+	ACCURACY = 100,
+	POWER_POINTS = 20,
+	DESCRIPTION = "May lower opponent's Speed.")
 
 CLAMP = dict(
- 	ELEMENT_TYPE = "Water",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.WATER,
-	category = "Physical",
+ 	ELEMENT_TYPE = "WATER",
+	ATTRIBUTES = pokemon_types.WATER,
+	CATEGORY = "Physical",
 	POWER = 35,
-	accuracy = 85,
-	pp = 10,
-	description = "Traps opponent, damaging them for 4-5 turns.")
+	ACCURACY = 85,
+	POWER_POINTS = 10,
+	DESCRIPTION = "Traps opponent, damaging them for 4-5 turns.")
 
 COMET_PUNCH = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 18,
-	accuracy = 85,
-	pp = 15,
-	description = "Hits 2-5 times in one turn.")
+	ACCURACY = 85,
+	POWER_POINTS = 15,
+	DESCRIPTION = "Hits 2-5 times in one turn.")
 
 CONFUSE_RAY = dict(
-	ELEMENT_TYPE = "Ghost",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.GHOST,
-	category = "Status",
+	ELEMENT_TYPE = "GHOST",
+	ATTRIBUTES = pokemon_types.GHOST,
+	CATEGORY = "Status",
 	POWER = None, 
-	accuracy = 100,
-	pp = 10,
-	description = "Confuses opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 10,
+	DESCRIPTION = "Confuses opponent.")
 
 CONFUSION = dict(
- 	ELEMENT_TYPE = "Psychic",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.PSYCHIC,
-	category = "Special",
+ 	ELEMENT_TYPE = "PSYCHIC",
+	ATTRIBUTES = pokemon_types.PSYCHIC,
+	CATEGORY = "Special",
 	POWER = 50,
-	accuracy = 100,
-	pp = 25,
-	description = "May confuse opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 25,
+	DESCRIPTION = "May confuse opponent.")
 
 CONSTRICT = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 10,
-	accuracy = 100,
-	pp = 35,
-	description = "May lower opponent's Speed by one stage.")
+	ACCURACY = 100,
+	POWER_POINTS = 35,
+	DESCRIPTION = "May lower opponent's Speed by one stage.")
 
 CONVERSION = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 30,
-	description = "Changes user's type to that of its first move.")
+	ACCURACY = None,
+	POWER_POINTS = 30,
+	DESCRIPTION = "Changes user's type to that of its first move.")
 
 COUNTER = dict(
- 	ELEMENT_TYPE = "Fighting",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.FIGHTING,
-	category = "Physical",
+ 	ELEMENT_TYPE = "FIGHTING",
+	ATTRIBUTES = pokemon_types.FIGHTING,
+	CATEGORY = "Physical",
 	POWER = None,
-	accuracy = 100,
-	pp = 20,
-	description = "When hit by a Physical Attack, user strikes back with 2x POWER.")
+	ACCURACY = 100,
+	POWER_POINTS = 20,
+	DESCRIPTION = "When hit by a Physical Attack, user strikes back with 2x POWER.")
 
 CRABHAMMER = dict(
- 	ELEMENT_TYPE = "Water",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.WATER,
-	category = "Physical",
+ 	ELEMENT_TYPE = "WATER",
+	ATTRIBUTES = pokemon_types.WATER,
+	CATEGORY = "Physical",
 	POWER = 100,
-	accuracy = 90,
-	pp = 10,
-	description = "High critical hit ratio.")
+	ACCURACY = 90,
+	POWER_POINTS = 10,
+	DESCRIPTION = "High critical hit ratio.")
 
 CUT = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 50,
-	accuracy = 95,
-	pp = 30,
-	description = "")
+	ACCURACY = 95,
+	POWER_POINTS = 30,
+	DESCRIPTION = "")
 
 DEFENSE_CURL = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None, 
-	accuracy = None,
-	pp = 40,
-	description = "Raises user's Defense.")
+	ACCURACY = None,
+	POWER_POINTS = 40,
+	DESCRIPTION = "Raises user's Defense.")
 
 DIG = dict(
- 	ELEMENT_TYPE = "Ground",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.GROUND,
-	category = "Physical",
+ 	ELEMENT_TYPE = "GROUND",
+	ATTRIBUTES = pokemon_types.GROUND,
+	CATEGORY = "Physical",
 	POWER = 80,
-	accuracy = 100,
-	pp = 10,
-	description = "Digs underground on first turn, attacks on second. Can also escape from caves.")
+	ACCURACY = 100,
+	POWER_POINTS = 10,
+	DESCRIPTION = "Digs underground on first turn, attacks on second. Can also escape from caves.")
 
 DISABLE = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = 100,
-	pp = 20,
-	description = "Opponent can't use its last attack for a few turns.")
+	ACCURACY = 100,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Opponent can't use its last attack for a few turns.")
 
 DIZZY_PUNCH = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 70,
-	accuracy = 100,
-	pp = 10,
-	description = "May confuse opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 10,
+	DESCRIPTION = "May confuse opponent.")
 
 DOUBLE_KICK = dict(
-	ELEMENT_TYPE = "Fighting",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.FIGHTING,
-	category = "Physical",
+	ELEMENT_TYPE = "FIGHTING",
+	ATTRIBUTES = pokemon_types.FIGHTING,
+	CATEGORY = "Physical",
 	POWER = 30,
-	accuracy = 100,
-	pp = 30,
-	description = "Hits twice in one turn.")
+	ACCURACY = 100,
+	POWER_POINTS = 30,
+	DESCRIPTION = "Hits twice in one turn.")
 
 DOUBLE_SLAP = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 15,
-	accuracy = 85,
-	pp = 10,
-	description = "Hits 2-5 times in one turn.")
+	ACCURACY = 85,
+	POWER_POINTS = 10,
+	DESCRIPTION = "Hits 2-5 times in one turn.")
 
 DOUBLE_TEAM = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None, 
-	accuracy = None,
-	pp = 15,
-	description = "Raises user's Evasiveness.")
+	ACCURACY = None,
+	POWER_POINTS = 15,
+	DESCRIPTION = "Raises user's Evasiveness.")
 
 DOUBLE_EDGE = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 120, 
-	accuracy = 100,
-	pp = 15,
-	description = "User receives recoil damage.")
+	ACCURACY = 100,
+	POWER_POINTS = 15,
+	DESCRIPTION = "User receives recoil damage.")
 
 DRAGON_RAGE = dict(
 	ELEMENT_TYPE = "Dragon",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.DRAGON,
-	category = "Special",
+	ATTRIBUTES = pokemon_types.DRAGON,
+	CATEGORY = "Special",
 	POWER = None,
-	accuracy = 100,
-	pp = 10,
-	description = "Always inflicts 40 HP.")
+	ACCURACY = 100,
+	POWER_POINTS = 10,
+	DESCRIPTION = "Always inflicts 40 HP.")
 
 DREAM_EATER = dict(
-	ELEMENT_TYPE = "Psychic",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.PSYCHIC,
-	category = "Special",
+	ELEMENT_TYPE = "PSYCHIC",
+	ATTRIBUTES = pokemon_types.PSYCHIC,
+	CATEGORY = "Special",
 	POWER = 100,
-	accuracy = 100,
-	pp = 15,
-	description = "User recovers half the HP inflicted on a sleeping opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 15,
+	DESCRIPTION = "User recovers half the HP inflicted on a sleeping opponent.")
 
 DRILL_PECK = dict(
-	ELEMENT_TYPE = "Flying",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.FLYING,
-	category = "Physical",
+	ELEMENT_TYPE = "FLYING",
+	ATTRIBUTES = pokemon_types.FLYING,
+	CATEGORY = "Physical",
 	POWER = 80,
-	accuracy = 100,
-	pp = 20,
-	description = "")
+	ACCURACY = 100,
+	POWER_POINTS = 20,
+	DESCRIPTION = "")
 
 EARTHQUAKE = dict(
- 	ELEMENT_TYPE = "Ground",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.GROUND,
-	category = "Physical",
+ 	ELEMENT_TYPE = "GROUND",
+	ATTRIBUTES = pokemon_types.GROUND,
+	CATEGORY = "Physical",
 	POWER = 100,
-	accuracy = 100,
-	pp = 10,
-	description = "POWER is doubled if opponent is underground from using Dig.")
+	ACCURACY = 100,
+	POWER_POINTS = 10,
+	DESCRIPTION = "POWER is doubled if opponent is underground from using Dig.")
 
 EGG_BOMB = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 100, 
-	accuracy = 75,
-	pp = 10,
-	description = "")
+	ACCURACY = 75,
+	POWER_POINTS = 10,
+	DESCRIPTION = "")
 
 EMBER = dict(
- 	ELEMENT_TYPE = "Fire",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.FIRE,
-	category = "Special",
+ 	ELEMENT_TYPE = "FIRE",
+	ATTRIBUTES = pokemon_types.FIRE,
+	CATEGORY = "Special",
 	POWER = 40,
-	accuracy = 100,
-	pp = 25,
-	description = "May burn opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 25,
+	DESCRIPTION = "May burn opponent.")
 
 EXPLOSION = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 250,
-	accuracy = 100,
-	pp = 5,
-	description = "User faints.")
+	ACCURACY = 100,
+	POWER_POINTS = 5,
+	DESCRIPTION = "User faints.")
 
 FIRE_BLAST = dict(
-	ELEMENT_TYPE = "Fire",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.FIRE,
-	category = "Special",
+	ELEMENT_TYPE = "FIRE",
+	ATTRIBUTES = pokemon_types.FIRE,
+	CATEGORY = "Special",
 	POWER = 110, 
-	accuracy = 85,
-	pp = 5,
-	description = "May burn opponent.")
+	ACCURACY = 85,
+	POWER_POINTS = 5,
+	DESCRIPTION = "May burn opponent.")
 
 FIRE_PUNCH = dict(
-	ELEMENT_TYPE = "Fire",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.FIRE,
-	category = "Physical",
+	ELEMENT_TYPE = "FIRE",
+	ATTRIBUTES = pokemon_types.FIRE,
+	CATEGORY = "Physical",
 	POWER = 75,
-	accuracy = 100,
-	pp = 15,
-	description = "May burn opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 15,
+	DESCRIPTION = "May burn opponent.")
 
 FIRE_SPIN = dict(
-	ELEMENT_TYPE = "Fire",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.FIRE,
-	category = "Special",
+	ELEMENT_TYPE = "FIRE",
+	ATTRIBUTES = pokemon_types.FIRE,
+	CATEGORY = "Special",
 	POWER = 35, 
-	accuracy = 85,
-	pp = 15,
-	description = "Traps opponent, damaging them for 4-5 turns.")
+	ACCURACY = 85,
+	POWER_POINTS = 15,
+	DESCRIPTION = "Traps opponent, damaging them for 4-5 turns.")
 
 FISSURE = dict(
- 	ELEMENT_TYPE = "Ground",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.GROUND,
-	category = "Physical",
+ 	ELEMENT_TYPE = "GROUND",
+	ATTRIBUTES = pokemon_types.GROUND,
+	CATEGORY = "Physical",
 	POWER = None,
-	accuracy = None,
-	pp = 5,
-	description = "One-Hit-KO, if it hits.")
+	ACCURACY = None,
+	POWER_POINTS = 5,
+	DESCRIPTION = "One-Hit-KO, if it hits.")
 
 FLAMETHROWER = dict(
- 	ELEMENT_TYPE = "Fire",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.FIRE,
-	category = "Special",
+ 	ELEMENT_TYPE = "FIRE",
+	ATTRIBUTES = pokemon_types.FIRE,
+	CATEGORY = "Special",
 	POWER = 90,
-	accuracy = 100,
-	pp = 15,
-	description = "May burn opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 15,
+	DESCRIPTION = "May burn opponent.")
 
 FLASH = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = 100,
-	pp = 20,
-	description = "Lowers opponent's ACCURACY.")
+	ACCURACY = 100,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Lowers opponent's ACCURACY.")
 
 FLY = dict(
- 	ELEMENT_TYPE = "Flying",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.FLYING,
-	category = "Physical",
+ 	ELEMENT_TYPE = "FLYING",
+	ATTRIBUTES = pokemon_types.FLYING,
+	CATEGORY = "Physical",
 	POWER = 90,
-	accuracy = 95,
-	pp = 15,
-	description = "Flies up on first turn, attacks on second turn.")
+	ACCURACY = 95,
+	POWER_POINTS = 15,
+	DESCRIPTION = "Flies up on first turn, attacks on second turn.")
 
 FOCUS_ENERGY = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None, 
-	accuracy = None,
-	pp = 30,
-	description = "Increases critical hit ratio.")
+	ACCURACY = None,
+	POWER_POINTS = 30,
+	DESCRIPTION = "Increases critical hit ratio.")
 
 FURY_ATTACK = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 15,
-	accuracy = 85,
-	pp = 20,
-	description = "Hits 2-5 times in one turn.")
+	ACCURACY = 85,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Hits 2-5 times in one turn.")
 
 FURY_SWIPES = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 18,
-	accuracy = 80,
-	pp = 15,
-	description = "Hits 2-5 times in one turn.")
+	ACCURACY = 80,
+	POWER_POINTS = 15,
+	DESCRIPTION = "Hits 2-5 times in one turn.")
 
 GLARE = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = 100,
-	pp = 30,
-	description = "Paralyzes opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 30,
+	DESCRIPTION = "Paralyzes opponent.")
 
 GROWL = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = 100,
-	pp = 40,
-	description = "Lowers opponent's Attack.")
+	ACCURACY = 100,
+	POWER_POINTS = 40,
+	DESCRIPTION = "Lowers opponent's Attack.")
 
 GROWTH = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 40,
-	description = "Raises user's Attack and Special Attack.")
+	ACCURACY = None,
+	POWER_POINTS = 40,
+	DESCRIPTION = "Raises user's Attack and Special Attack.")
 
 GUILLOTINE = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = None,
-	accuracy = None,
-	pp = 5,
-	description = "One-Hit-KO, if it hits.")
+	ACCURACY = None,
+	POWER_POINTS = 5,
+	DESCRIPTION = "One-Hit-KO, if it hits.")
 
 GUST = dict(
- 	ELEMENT_TYPE = "Flying",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.FLYING,
-	category = "Special",
+ 	ELEMENT_TYPE = "FLYING",
+	ATTRIBUTES = pokemon_types.FLYING,
+	CATEGORY = "Special",
 	POWER = 40,
-	accuracy = 100,
-	pp = 35,
-	description = "Hits Pokemon using Fly/Bounce with double POWER.")
+	ACCURACY = 100,
+	POWER_POINTS = 35,
+	DESCRIPTION = "Hits Pokemon using Fly/Bounce with double POWER.")
 
 HARDEN = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 30,
-	description = "Raises user's Defense.")
+	ACCURACY = None,
+	POWER_POINTS = 30,
+	DESCRIPTION = "Raises user's Defense.")
 
 HAZE = dict(
- 	ELEMENT_TYPE = "Ice",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.ICE,
-	category = "Status",
+ 	ELEMENT_TYPE = "ICE",
+	ATTRIBUTES = pokemon_types.ICE,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 30,
-	description = "Resets all stat changes.")
+	ACCURACY = None,
+	POWER_POINTS = 30,
+	DESCRIPTION = "Resets all stat changes.")
 
 HEADBUTT = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 70,
-	accuracy = 100,
-	pp = 15,
-	description = "May cause flinching.")
+	ACCURACY = 100,
+	POWER_POINTS = 15,
+	DESCRIPTION = "May cause flinching.")
 
 HIGH_JUMP_KICK = dict(
-	ELEMENT_TYPE = "Fighting",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.FIGHTING,
-	category = "Physical",
+	ELEMENT_TYPE = "FIGHTING",
+	ATTRIBUTES = pokemon_types.FIGHTING,
+	CATEGORY = "Physical",
 	POWER = 130, 
-	accuracy = 90,
-	pp = 10,
-	description = "If it misses, the user loses half their HP.")
+	ACCURACY = 90,
+	POWER_POINTS = 10,
+	DESCRIPTION = "If it misses, the user loses half their HP.")
 
 HORN_ATTACK = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 65,
-	accuracy = 100,
-	pp = 25,
-	description = "")
+	ACCURACY = 100,
+	POWER_POINTS = 25,
+	DESCRIPTION = "")
 
 HORN_DRILL = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = None,
-	accuracy = None,
-	pp = 5,
-	description = "One-Hit-KO, if it hits.")
+	ACCURACY = None,
+	POWER_POINTS = 5,
+	DESCRIPTION = "One-Hit-KO, if it hits.")
 
 HYDRO_PUMP = dict(
-	ELEMENT_TYPE = "Water",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.WATER,
-	category = "Special",
+	ELEMENT_TYPE = "WATER",
+	ATTRIBUTES = pokemon_types.WATER,
+	CATEGORY = "Special",
 	POWER = 110, 
-	accuracy = 80,
-	pp = 5,
-	description = "")
+	ACCURACY = 80,
+	POWER_POINTS = 5,
+	DESCRIPTION = "")
 
 HYPER_BEAM = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Special",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Special",
 	POWER = 150, 
-	accuracy = 90,
-	pp = 5,
-	description = "User must recharge next turn.")
+	ACCURACY = 90,
+	POWER_POINTS = 5,
+	DESCRIPTION = "User must recharge next turn.")
 
 HYPER_Fang = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 80,
-	accuracy = 90,
-	pp = 15,
-	description = "May cause flinching.")
+	ACCURACY = 90,
+	POWER_POINTS = 15,
+	DESCRIPTION = "May cause flinching.")
 
 HYPNOSIS = dict(
- 	ELEMENT_TYPE = "Psychic",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.PSYCHIC,
-	category = "Status",
+ 	ELEMENT_TYPE = "PSYCHIC",
+	ATTRIBUTES = pokemon_types.PSYCHIC,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = 60,
-	pp = 20,
-	description = "Puts opponent to sleep.")
+	ACCURACY = 60,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Puts opponent to sleep.")
 
 ICE_BEAM = dict(
-	ELEMENT_TYPE = "Ice",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.ICE,
-	category = "Special",
+	ELEMENT_TYPE = "ICE",
+	ATTRIBUTES = pokemon_types.ICE,
+	CATEGORY = "Special",
 	POWER = 90, 
-	accuracy = 100,
-	pp = 10,
-	description = "May freeze opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 10,
+	DESCRIPTION = "May freeze opponent.")
 
 ICE_PUNCH = dict(
-	ELEMENT_TYPE = "Ice",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.ICE,
-	category = "Physical",
+	ELEMENT_TYPE = "ICE",
+	ATTRIBUTES = pokemon_types.ICE,
+	CATEGORY = "Physical",
 	POWER = 75,
-	accuracy = 100,
-	pp = 15,
-	description = "May freeze opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 15,
+	DESCRIPTION = "May freeze opponent.")
 
 JUMP_KICK = dict(
-	ELEMENT_TYPE = "Fighting",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.FIGHTING,
-	category = "Physical",
+	ELEMENT_TYPE = "FIGHTING",
+	ATTRIBUTES = pokemon_types.FIGHTING,
+	CATEGORY = "Physical",
 	POWER = 100, 
-	accuracy = 95,
-	pp = 10,
-	description = "If it misses, the user loses half their HP.")
+	ACCURACY = 95,
+	POWER_POINTS = 10,
+	DESCRIPTION = "If it misses, the user loses half their HP.")
 
 KARATE_CHOP = dict(
-	ELEMENT_TYPE = "Fighting",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.FIGHTING,
-	category = "Physical",
+	ELEMENT_TYPE = "FIGHTING",
+	ATTRIBUTES = pokemon_types.FIGHTING,
+	CATEGORY = "Physical",
 	POWER = 50,
-	accuracy = 100,
-	pp = 25,
-	description = "High critical hit ratio.")
+	ACCURACY = 100,
+	POWER_POINTS = 25,
+	DESCRIPTION = "High critical hit ratio.")
 
 KINESIS = dict(
- 	ELEMENT_TYPE = "Psychic",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.PSYCHIC,
-	category = "Status",
+ 	ELEMENT_TYPE = "PSYCHIC",
+	ATTRIBUTES = pokemon_types.PSYCHIC,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = 80,
-	pp = 15,
-	description = "Lowers opponent's ACCURACY.")
+	ACCURACY = 80,
+	POWER_POINTS = 15,
+	DESCRIPTION = "Lowers opponent's ACCURACY.")
 
 LEECH_LIFE = dict(
-	ELEMENT_TYPE = "Bug",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.BUG,
-	category = "Physical",
+	ELEMENT_TYPE = "BUG",
+	ATTRIBUTES = pokemon_types.BUG,
+	CATEGORY = "Physical",
 	POWER = 80,
-	accuracy = 100,
-	pp = 10,
-	description = "User recovers half the HP inflicted on opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 10,
+	DESCRIPTION = "User recovers half the HP inflicted on opponent.")
 
 LEECH_SEED = dict(
-	ELEMENT_TYPE = "Grass",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.GRASS,
-	category = "Status",
+	ELEMENT_TYPE = "GRASS",
+	ATTRIBUTES = pokemon_types.GRASS,
+	CATEGORY = "Status",
 	POWER = None, 
-	accuracy = 90,
-	pp = 10,
-	description = "User steals HP from opponent each turn.")
+	ACCURACY = 90,
+	POWER_POINTS = 10,
+	DESCRIPTION = "User steals HP from opponent each turn.")
 
 LEER = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = 100,
-	pp = 30,
-	description = "Lowers opponent's Defense.")
+	ACCURACY = 100,
+	POWER_POINTS = 30,
+	DESCRIPTION = "Lowers opponent's Defense.")
 
 LICK = dict(
- 	ELEMENT_TYPE = "Ghost",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.GHOST,
-	category = "Physical",
+ 	ELEMENT_TYPE = "GHOST",
+	ATTRIBUTES = pokemon_types.GHOST,
+	CATEGORY = "Physical",
 	POWER = 30,
-	accuracy = 100,
-	pp = 30,
-	description = "May paralyze opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 30,
+	DESCRIPTION = "May paralyze opponent.")
 
 LIGHT_SCREEN = dict(
-	ELEMENT_TYPE = "Psychic",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.PSYCHIC,
-	category = "Status",
+	ELEMENT_TYPE = "PSYCHIC",
+	ATTRIBUTES = pokemon_types.PSYCHIC,
+	CATEGORY = "Status",
 	POWER = None, 
-	accuracy = None,
-	pp = 30,
-	description = "Halves damage from Special attacks for 5 turns.")
+	ACCURACY = None,
+	POWER_POINTS = 30,
+	DESCRIPTION = "Halves damage from Special attacks for 5 turns.")
 
 LOVELY_KISS = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None, 
-	accuracy = 75,
-	pp = 10,
-	description = "Puts opponent to sleep.")
+	ACCURACY = 75,
+	POWER_POINTS = 10,
+	DESCRIPTION = "Puts opponent to sleep.")
 
 LOW_KICK = dict(
-	ELEMENT_TYPE = "Fighting",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.FIGHTING,
-	category = "Physical",
+	ELEMENT_TYPE = "FIGHTING",
+	ATTRIBUTES = pokemon_types.FIGHTING,
+	CATEGORY = "Physical",
 	POWER = None,
-	accuracy = 100,
-	pp = 20,
-	description = "The heavier the opponent, the stronger the attack.")
+	ACCURACY = 100,
+	POWER_POINTS = 20,
+	DESCRIPTION = "The heavier the opponent, the stronger the attack.")
 
 MEDITATE = dict(
- 	ELEMENT_TYPE = "Psychic",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.PSYCHIC,
-	category = "Status",
+ 	ELEMENT_TYPE = "PSYCHIC",
+	ATTRIBUTES = pokemon_types.PSYCHIC,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 40,
-	description = "Raises user's Attack.")
+	ACCURACY = None,
+	POWER_POINTS = 40,
+	DESCRIPTION = "Raises user's Attack.")
 
 MEGA_DRAIN = dict(
-	ELEMENT_TYPE = "Grass",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.GRASS,
-	category = "Special",
+	ELEMENT_TYPE = "GRASS",
+	ATTRIBUTES = pokemon_types.GRASS,
+	CATEGORY = "Special",
 	POWER = 40, 
-	accuracy = 100,
-	pp = 15,
-	description = "User recovers half the HP inflicted on opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 15,
+	DESCRIPTION = "User recovers half the HP inflicted on opponent.")
 
 MEGA_KICK = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 120, 
-	accuracy = 75,
-	pp = 5,
-	description = "")
+	ACCURACY = 75,
+	POWER_POINTS = 5,
+	DESCRIPTION = "")
 
 MEGA_PUNCH = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 80,
-	accuracy = 85,
-	pp = 20,
-	description = "")
+	ACCURACY = 85,
+	POWER_POINTS = 20,
+	DESCRIPTION = "")
 
 METRONOME = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 10,
-	description = "User performs any move in the game at random.")
+	ACCURACY = None,
+	POWER_POINTS = 10,
+	DESCRIPTION = "User performs any move in the game at random.")
 
 MIMIC = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 10,
-	description = "Copies the opponent's last move.")
+	ACCURACY = None,
+	POWER_POINTS = 10,
+	DESCRIPTION = "Copies the opponent's last move.")
 
 MINIMIZE = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 10,
-	description = "Sharply raises user's Evasiveness.")
+	ACCURACY = None,
+	POWER_POINTS = 10,
+	DESCRIPTION = "Sharply raises user's Evasiveness.")
 
 MIRROR_MOVE = dict(
-	ELEMENT_TYPE = "Flying",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.FLYING,
-	category = "Status",
+	ELEMENT_TYPE = "FLYING",
+	ATTRIBUTES = pokemon_types.FLYING,
+	CATEGORY = "Status",
 	POWER = None, 
-	accuracy = None,
-	pp = 20,
-	description = "User performs the opponent's last move.")
+	ACCURACY = None,
+	POWER_POINTS = 20,
+	DESCRIPTION = "User performs the opponent's last move.")
 
 MIST = dict(
- 	ELEMENT_TYPE = "Ice",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.ICE,
-	category = "Status",
+ 	ELEMENT_TYPE = "ICE",
+	ATTRIBUTES = pokemon_types.ICE,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 30,
-	description = "User's stats cannot be changed for a period of time.")
+	ACCURACY = None,
+	POWER_POINTS = 30,
+	DESCRIPTION = "User's stats cannot be changed for a period of time.")
 
 NIGHT_SHADE = dict(
-	ELEMENT_TYPE = "Ghost",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.GHOST,
-	category = "Special",
+	ELEMENT_TYPE = "GHOST",
+	ATTRIBUTES = pokemon_types.GHOST,
+	CATEGORY = "Special",
 	POWER = None,
-	accuracy = 100,
-	pp = 15,
-	description = "Inflicts damage equal to user's level.")
+	ACCURACY = 100,
+	POWER_POINTS = 15,
+	DESCRIPTION = "Inflicts damage equal to user's level.")
 
 PAY_DAY = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 40,
-	accuracy = 100,
-	pp = 20,
-	description = "A small amount of money is gained after the battle resolves.")
+	ACCURACY = 100,
+	POWER_POINTS = 20,
+	DESCRIPTION = "A small amount of money is gained after the battle resolves.")
 
 PECK = dict(
- 	ELEMENT_TYPE = "Flying",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.FLYING,
-	category = "Physical",
+ 	ELEMENT_TYPE = "FLYING",
+	ATTRIBUTES = pokemon_types.FLYING,
+	CATEGORY = "Physical",
 	POWER = 35,
-	accuracy = 100,
-	pp = 35,
-	description = "")
+	ACCURACY = 100,
+	POWER_POINTS = 35,
+	DESCRIPTION = "")
 
 PETAL_DANCE = dict(
-	ELEMENT_TYPE = "Grass",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.GRASS,
-	category = "Special",
+	ELEMENT_TYPE = "GRASS",
+	ATTRIBUTES = pokemon_types.GRASS,
+	CATEGORY = "Special",
 	POWER = 120, 
-	accuracy = 100,
-	pp = 10,
-	description = "User attacks for 2-3 turns but then becomes confused.")
+	ACCURACY = 100,
+	POWER_POINTS = 10,
+	DESCRIPTION = "User attacks for 2-3 turns but then becomes confused.")
 
 PIN_MISSILE = dict(
-	ELEMENT_TYPE = "Bug",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.BUG,
-	category = "Physical",
+	ELEMENT_TYPE = "BUG",
+	ATTRIBUTES = pokemon_types.BUG,
+	CATEGORY = "Physical",
 	POWER = 25,
-	accuracy = 95,
-	pp = 20,
-	description = "Hits 2-5 times in one turn.")
+	ACCURACY = 95,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Hits 2-5 times in one turn.")
 
 POISON_GAS = dict(
-	ELEMENT_TYPE = "Poison",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.POISON,
-	category = "Status",
+	ELEMENT_TYPE = "POISON",
+	ATTRIBUTES = pokemon_types.POISON,
+	CATEGORY = "Status",
 	POWER = None, 
-	accuracy = 90,
-	pp = 40,
-	description = "Poisons opponent.")
+	ACCURACY = 90,
+	POWER_POINTS = 40,
+	DESCRIPTION = "Poisons opponent.")
 
 POISON_POWDER = dict(
-	ELEMENT_TYPE = "Poison",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.POISON,
-	category = "Status",
+	ELEMENT_TYPE = "POISON",
+	ATTRIBUTES = pokemon_types.POISON,
+	CATEGORY = "Status",
 	POWER = None, 
-	accuracy = 75,
-	pp = 35,
-	description = "Poisons opponent.")
+	ACCURACY = 75,
+	POWER_POINTS = 35,
+	DESCRIPTION = "Poisons opponent.")
 
 POISON_STING = dict(
-	ELEMENT_TYPE = "Poison",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.POISON,
-	category = "Physical",
+	ELEMENT_TYPE = "POISON",
+	ATTRIBUTES = pokemon_types.POISON,
+	CATEGORY = "Physical",
 	POWER = 15,
-	accuracy = 100,
-	pp = 35,
-	description = "May poison the opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 35,
+	DESCRIPTION = "May poison the opponent.")
 
 POUND = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 40,
-	accuracy = 100,
-	pp = 35,
-	description = "")
+	ACCURACY = 100,
+	POWER_POINTS = 35,
+	DESCRIPTION = "")
 
 PSYBEAM = dict(
- 	ELEMENT_TYPE = "Psychic",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.PSYCHIC,
-	category = "Special",
+ 	ELEMENT_TYPE = "PSYCHIC",
+	ATTRIBUTES = pokemon_types.PSYCHIC,
+	CATEGORY = "Special",
 	POWER = 65,
-	accuracy = 100,
-	pp = 20,
-	description = "May confuse opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 20,
+	DESCRIPTION = "May confuse opponent.")
 
 PSYCHIC = dict(
- 	ELEMENT_TYPE = "Psychic",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.PSYCHIC,
-	category = "Special",
+ 	ELEMENT_TYPE = "PSYCHIC",
+	ATTRIBUTES = pokemon_types.PSYCHIC,
+	CATEGORY = "Special",
 	POWER = 90,
-	accuracy = 100,
-	pp = 10,
-	description = "May lower opponent's Special Defense.")
+	ACCURACY = 100,
+	POWER_POINTS = 10,
+	DESCRIPTION = "May lower opponent's Special Defense.")
 
 PSYWAVE = dict(
- 	ELEMENT_TYPE = "Psychic",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.PSYCHIC,
-	category = "Special",
+ 	ELEMENT_TYPE = "PSYCHIC",
+	ATTRIBUTES = pokemon_types.PSYCHIC,
+	CATEGORY = "Special",
 	POWER = None,
-	accuracy = 80,
-	pp = 15,
-	description = "Inflicts damage 50-150% of user's level.")
+	ACCURACY = 80,
+	POWER_POINTS = 15,
+	DESCRIPTION = "Inflicts damage 50-150% of user's level.")
 
 QUICK_ATTACK = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 40,
-	accuracy = 100,
-	pp = 30,
-	description = "User attacks first.")
+	ACCURACY = 100,
+	POWER_POINTS = 30,
+	DESCRIPTION = "User attacks first.")
 
 RAGE = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 20,
-	accuracy = 100,
-	pp = 20,
-	description = "Raises user's Attack when hit.")
+	ACCURACY = 100,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Raises user's Attack when hit.")
 
 RAZOR_LEAF = dict(
-	ELEMENT_TYPE = "Grass",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.GRASS,
-	category = "Physical",
+	ELEMENT_TYPE = "GRASS",
+	ATTRIBUTES = pokemon_types.GRASS,
+	CATEGORY = "Physical",
 	POWER = 55,
-	accuracy = 95,
-	pp = 25,
-	description = "High critical hit ratio.")
+	ACCURACY = 95,
+	POWER_POINTS = 25,
+	DESCRIPTION = "High critical hit ratio.")
 
 RAZOR_WIND = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Special",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Special",
 	POWER = 80, 
-	accuracy = 100,
-	pp = 10,
-	description = "Charges on first turn, attacks on second. High critical hit ratio.")
+	ACCURACY = 100,
+	POWER_POINTS = 10,
+	DESCRIPTION = "Charges on first turn, attacks on second. High critical hit ratio.")
 
 RECOVER = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 10,
-	description = "User recovers half its max HP.")
+	ACCURACY = None,
+	POWER_POINTS = 10,
+	DESCRIPTION = "User recovers half its max HP.")
 
 REFLECT = dict(
- 	ELEMENT_TYPE = "Psychic",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.PSYCHIC,
-	category = "Status",
+ 	ELEMENT_TYPE = "PSYCHIC",
+	ATTRIBUTES = pokemon_types.PSYCHIC,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 20,
-	description = "Halves damage from Physical attacks for 5 turns.")
+	ACCURACY = None,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Halves damage from Physical attacks for 5 turns.")
 
 REST = dict(
- 	ELEMENT_TYPE = "Psychic",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.PSYCHIC,
-	category = "Status",
+ 	ELEMENT_TYPE = "PSYCHIC",
+	ATTRIBUTES = pokemon_types.PSYCHIC,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 10,
-	description = "User sleeps for 2 turns, but user is fully healed.")
+	ACCURACY = None,
+	POWER_POINTS = 10,
+	DESCRIPTION = "User sleeps for 2 turns, but user is fully healed.")
 
 ROAR = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 20,
-	description = "In battles, the opponent switches. In the wild, the Pokemon runs.")
+	ACCURACY = None,
+	POWER_POINTS = 20,
+	DESCRIPTION = "In battles, the opponent switches. In the wild, the Pokemon runs.")
 
 ROCK_SLIDE = dict(
-	ELEMENT_TYPE = "Rock",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.ROCK,
-	category = "Physical",
+	ELEMENT_TYPE = "ROCK",
+	ATTRIBUTES = pokemon_types.ROCK,
+	CATEGORY = "Physical",
 	POWER = 75,
-	accuracy = 90,
-	pp = 10,
-	description = "May cause flinching.")
+	ACCURACY = 90,
+	POWER_POINTS = 10,
+	DESCRIPTION = "May cause flinching.")
 
 ROCK_THROW = dict(
-	ELEMENT_TYPE = "Rock",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.ROCK,
-	category = "Physical",
+	ELEMENT_TYPE = "ROCK",
+	ATTRIBUTES = pokemon_types.ROCK,
+	CATEGORY = "Physical",
 	POWER = 50,
-	accuracy = 90,
-	pp = 15,
-	description = "")
+	ACCURACY = 90,
+	POWER_POINTS = 15,
+	DESCRIPTION = "")
 
 ROLLING_KICK = dict(
-	ELEMENT_TYPE = "Fighting",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.FIGHTING,
-	category = "Physical",
+	ELEMENT_TYPE = "FIGHTING",
+	ATTRIBUTES = pokemon_types.FIGHTING,
+	CATEGORY = "Physical",
 	POWER = 60,
-	accuracy = 85,
-	pp = 15,
-	description = "May cause flinching.")
+	ACCURACY = 85,
+	POWER_POINTS = 15,
+	DESCRIPTION = "May cause flinching.")
 
 SAND_ATTACK = dict(
-	ELEMENT_TYPE = "Ground",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.GROUND,
-	category = "Status",
+	ELEMENT_TYPE = "GROUND",
+	ATTRIBUTES = pokemon_types.GROUND,
+	CATEGORY = "Status",
 	POWER = None, 
-	accuracy = 100,
-	pp = 15,
-	description = "Lowers opponent's ACCURACY.")
+	ACCURACY = 100,
+	POWER_POINTS = 15,
+	DESCRIPTION = "Lowers opponent's ACCURACY.")
 
 SCRATCH = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 40,
-	accuracy = 100,
-	pp = 35,
-	description = "")
+	ACCURACY = 100,
+	POWER_POINTS = 35,
+	DESCRIPTION = "")
 
 SCREECH = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = 85,
-	pp = 40,
-	description = "Sharply lowers opponent's Defense.")
+	ACCURACY = 85,
+	POWER_POINTS = 40,
+	DESCRIPTION = "Sharply lowers opponent's Defense.")
 
 SEISMIC_TOSS = dict(
-	ELEMENT_TYPE = "Fighting",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.FIGHTING,
-	category = "Physical",
+	ELEMENT_TYPE = "FIGHTING",
+	ATTRIBUTES = pokemon_types.FIGHTING,
+	CATEGORY = "Physical",
 	POWER = None,
-	accuracy = 100,
-	pp = 20,
-	description = "Inflicts damage equal to user's level.")
+	ACCURACY = 100,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Inflicts damage equal to user's level.")
 
 SELF_DESTRUCT = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 200, 
-	accuracy = 100,
-	pp = 5,
-	description = "User faints.")
+	ACCURACY = 100,
+	POWER_POINTS = 5,
+	DESCRIPTION = "User faints.")
 
 SHARPEN = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 30,
-	description = "Raises user's Attack.")
+	ACCURACY = None,
+	POWER_POINTS = 30,
+	DESCRIPTION = "Raises user's Attack.")
 
 SING = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = 55,
-	pp = 15,
-	description = "Puts opponent to sleep.")
+	ACCURACY = 55,
+	POWER_POINTS = 15,
+	DESCRIPTION = "Puts opponent to sleep.")
 
 SKULL_BASH = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 130, 
-	accuracy = 100,
-	pp = 10,
-	description = "Raises Defense on first turn, attacks on second.")
+	ACCURACY = 100,
+	POWER_POINTS = 10,
+	DESCRIPTION = "Raises Defense on first turn, attacks on second.")
 
 SKY_ATTACK = dict(
-	ELEMENT_TYPE = "Flying",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.FLYING,
-	category = "Physical",
+	ELEMENT_TYPE = "FLYING",
+	ATTRIBUTES = pokemon_types.FLYING,
+	CATEGORY = "Physical",
 	POWER = 140, 
-	accuracy = 90,
-	pp = 5,
-	description = "Charges on first turn, attacks on second. May cause flinching.")
+	ACCURACY = 90,
+	POWER_POINTS = 5,
+	DESCRIPTION = "Charges on first turn, attacks on second. May cause flinching.")
 
 SLAM = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 80,
-	accuracy = 75,
-	pp = 20,
-	description = "")
+	ACCURACY = 75,
+	POWER_POINTS = 20,
+	DESCRIPTION = "")
 
 SLASH = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 70,
-	accuracy = 100,
-	pp = 20,
-	description = "High critical hit ratio.")
+	ACCURACY = 100,
+	POWER_POINTS = 20,
+	DESCRIPTION = "High critical hit ratio.")
 
 SLEEP_POWDER = dict(
-	ELEMENT_TYPE = "Grass",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.GRASS,
-	category = "Status",
+	ELEMENT_TYPE = "GRASS",
+	ATTRIBUTES = pokemon_types.GRASS,
+	CATEGORY = "Status",
 	POWER = None, 
-	accuracy = 75,
-	pp = 15,
-	description = "Puts opponent to sleep.")
+	ACCURACY = 75,
+	POWER_POINTS = 15,
+	DESCRIPTION = "Puts opponent to sleep.")
 
 SLUDGE = dict(
- 	ELEMENT_TYPE = "Poison",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.POISON,
-	category = "Special",
+ 	ELEMENT_TYPE = "POISON",
+	ATTRIBUTES = pokemon_types.POISON,
+	CATEGORY = "Special",
 	POWER = 65,
-	accuracy = 100,
-	pp = 20,
-	description = "May poison opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 20,
+	DESCRIPTION = "May poison opponent.")
 
 SMOG = dict(
- 	ELEMENT_TYPE = "Poison",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.POISON,
-	category = "Special",
+ 	ELEMENT_TYPE = "POISON",
+	ATTRIBUTES = pokemon_types.POISON,
+	CATEGORY = "Special",
 	POWER = 30,
-	accuracy = 70,
-	pp = 20,
-	description = "May poison opponent.")
+	ACCURACY = 70,
+	POWER_POINTS = 20,
+	DESCRIPTION = "May poison opponent.")
 
 SMOKESCREEN = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = 100,
-	pp = 20,
-	description = "Lowers opponent's ACCURACY.")
+	ACCURACY = 100,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Lowers opponent's ACCURACY.")
 
 SOFT_BOILED = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None, 
-	accuracy = None,
-	pp = 10,
-	description = "User recovers half its max HP.")
+	ACCURACY = None,
+	POWER_POINTS = 10,
+	DESCRIPTION = "User recovers half its max HP.")
 
 SOLAR_BEAM = dict(
-	ELEMENT_TYPE = "Grass",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.GRASS,
-	category = "Special",
+	ELEMENT_TYPE = "GRASS",
+	ATTRIBUTES = pokemon_types.GRASS,
+	CATEGORY = "Special",
 	POWER = 120, 
-	accuracy = 100,
-	pp = 10,
-	description = "Charges on first turn, attacks on second.")
+	ACCURACY = 100,
+	POWER_POINTS = 10,
+	DESCRIPTION = "Charges on first turn, attacks on second.")
 
 SONIC_BOOM = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Special",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Special",
 	POWER = None,
-	accuracy = 90,
-	pp = 20,
-	description = "Always inflicts 20 HP.")
+	ACCURACY = 90,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Always inflicts 20 HP.")
 
 SPIKE_CANNON = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 20,
-	accuracy = 100,
-	pp = 15,
-	description = "Hits 2-5 times in one turn.")
+	ACCURACY = 100,
+	POWER_POINTS = 15,
+	DESCRIPTION = "Hits 2-5 times in one turn.")
 
 SPLASH = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 40,
-	description = "Doesn't do ANYTHING.")
+	ACCURACY = None,
+	POWER_POINTS = 40,
+	DESCRIPTION = "Doesn't do ANYTHING.")
 
 SPORE = dict(
- 	ELEMENT_TYPE = "Grass",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.GRASS,
-	category = "Status",
+ 	ELEMENT_TYPE = "GRASS",
+	ATTRIBUTES = pokemon_types.GRASS,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = 100,
-	pp = 15,
-	description = "Puts opponent to sleep.")
+	ACCURACY = 100,
+	POWER_POINTS = 15,
+	DESCRIPTION = "Puts opponent to sleep.")
 
 STOMP = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 65,
-	accuracy = 100,
-	pp = 20,
-	description = "May cause flinching.")
+	ACCURACY = 100,
+	POWER_POINTS = 20,
+	DESCRIPTION = "May cause flinching.")
 
 STRENGTH = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 80,
-	accuracy = 100,
-	pp = 15,
-	description = "")
+	ACCURACY = 100,
+	POWER_POINTS = 15,
+	DESCRIPTION = "")
 
 STRING_SHOT = dict(
-	ELEMENT_TYPE = "Bug",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.BUG,
-	category = "Status",
+	ELEMENT_TYPE = "BUG",
+	ATTRIBUTES = pokemon_types.BUG,
+	CATEGORY = "Status",
 	POWER = None, 
-	accuracy = 95,
-	pp = 40,
-	description = "Sharply lowers opponent's Speed.")
+	ACCURACY = 95,
+	POWER_POINTS = 40,
+	DESCRIPTION = "Sharply lowers opponent's Speed.")
 
 STRUGGLE = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 50,
-	accuracy = 100,
-	pp = None,
-	description = "Only usable when all PP are gone. Hurts the user.")
+	ACCURACY = 100,
+	POWER_POINTS = None,
+	DESCRIPTION = "Only usable when all PP are gone. Hurts the user.")
 
 STUN_SPORE = dict(
-	ELEMENT_TYPE = "Grass",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.GRASS,
-	category = "Status",
+	ELEMENT_TYPE = "GRASS",
+	ATTRIBUTES = pokemon_types.GRASS,
+	CATEGORY = "Status",
 	POWER = None, 
-	accuracy = 75,
-	pp = 30,
-	description = "Paralyzes opponent.")
+	ACCURACY = 75,
+	POWER_POINTS = 30,
+	DESCRIPTION = "Paralyzes opponent.")
 
 SUBMISSION = dict(
- 	ELEMENT_TYPE = "Fighting",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.FIGHTING,
-	category = "Physical",
+ 	ELEMENT_TYPE = "FIGHTING",
+	ATTRIBUTES = pokemon_types.FIGHTING,
+	CATEGORY = "Physical",
 	POWER = 80,
-	accuracy = 80,
-	pp = 20,
-	description = "User receives recoil damage.")
+	ACCURACY = 80,
+	POWER_POINTS = 20,
+	DESCRIPTION = "User receives recoil damage.")
 
 SUBSTITUTE = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 10,
-	description = "Uses HP to creates a decoy that takes hits.")
+	ACCURACY = None,
+	POWER_POINTS = 10,
+	DESCRIPTION = "Uses HP to creates a decoy that takes hits.")
 
 SUPER_FANG = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = None,
-	accuracy = 90,
-	pp = 10,
-	description = "Always takes off half of the opponent's HP.")
+	ACCURACY = 90,
+	POWER_POINTS = 10,
+	DESCRIPTION = "Always takes off half of the opponent's HP.")
 
 SUPERSONIC = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = 55,
-	pp = 20,
-	description = "Confuses opponent.")
+	ACCURACY = 55,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Confuses opponent.")
 
 SURF = dict(
- 	ELEMENT_TYPE = "Water",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.WATER,
-	category = "Special",
+ 	ELEMENT_TYPE = "WATER",
+	ATTRIBUTES = pokemon_types.WATER,
+	CATEGORY = "Special",
 	POWER = 90,
-	accuracy = 100,
-	pp = 15,
-	description = "Hits all adjacent Pokemon.")
+	ACCURACY = 100,
+	POWER_POINTS = 15,
+	DESCRIPTION = "Hits all adjacent Pokemon.")
 
 SWIFT = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Special",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Special",
 	POWER = 60,
-	accuracy = 100,
-	pp = 20,
-	description = "Ignores ACCURACY and Evasiveness.")
+	ACCURACY = 100,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Ignores ACCURACY and Evasiveness.")
 
 SWORDS_DANCE = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None, 
-	accuracy = None,
-	pp = 20,
-	description = "Sharply raises user's Attack.")
+	ACCURACY = None,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Sharply raises user's Attack.")
 
 TACKLE = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 40,
-	accuracy = 100,
-	pp = 35,
-	description = "")
+	ACCURACY = 100,
+	POWER_POINTS = 35,
+	DESCRIPTION = "")
 
 TAIL_WHIP = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None, 
-	accuracy = 100,
-	pp = 30,
-	description = "Lowers opponent's Defense.")
+	ACCURACY = 100,
+	POWER_POINTS = 30,
+	DESCRIPTION = "Lowers opponent's Defense.")
 
 TAKE_DOWN = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 90,
-	accuracy = 85,
-	pp = 20,
-	description = "User receives recoil damage.")
+	ACCURACY = 85,
+	POWER_POINTS = 20,
+	DESCRIPTION = "User receives recoil damage.")
 
 TELEPORT = dict(
- 	ELEMENT_TYPE = "Psychic",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.PSYCHIC,
-	category = "Status",
+ 	ELEMENT_TYPE = "PSYCHIC",
+	ATTRIBUTES = pokemon_types.PSYCHIC,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 20,
-	description = "Allows user to flee wild battles; also warps player to last PokeCenter.")
+	ACCURACY = None,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Allows user to flee wild battles; also warps player to last PokeCenter.")
 
 THRASH = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 120,
-	accuracy = 100,
-	pp = 10,
-	description = "User attacks for 2-3 turns but then becomes confused.")
+	ACCURACY = 100,
+	POWER_POINTS = 10,
+	DESCRIPTION = "User attacks for 2-3 turns but then becomes confused.")
 
 THUNDER = dict(
- 	ELEMENT_TYPE = "Electric",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.ELECTRIC,
-	category = "Special",
+ 	ELEMENT_TYPE = "ELECTRIC",
+	ATTRIBUTES = pokemon_types.ELECTRIC,
+	CATEGORY = "Special",
 	POWER = 110,
-	accuracy = 70,
-	pp = 10,
-	description = "May paralyze opponent.")
+	ACCURACY = 70,
+	POWER_POINTS = 10,
+	DESCRIPTION = "May paralyze opponent.")
 
 THUNDER_PUNCH = dict(
-	ELEMENT_TYPE = "Electric",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.ELECTRIC,
-	category = "Physical",
+	ELEMENT_TYPE = "ELECTRIC",
+	ATTRIBUTES = pokemon_types.ELECTRIC,
+	CATEGORY = "Physical",
 	POWER = 75,
-	accuracy = 100,
-	pp = 15,
-	description = "May paralyze opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 15,
+	DESCRIPTION = "May paralyze opponent.")
 
 THUNDER_SHOCK = dict(
-	ELEMENT_TYPE = "Electric",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.ELECTRIC,
-	category = "Special",
+	ELEMENT_TYPE = "ELECTRIC",
+	ATTRIBUTES = pokemon_types.ELECTRIC,
+	CATEGORY = "Special",
 	POWER = 40, 
-	accuracy = 100,
-	pp = 30,
-	description = "May paralyze opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 30,
+	DESCRIPTION = "May paralyze opponent.")
 
 THUNDER_WAVE = dict(
-	ELEMENT_TYPE = "Electric",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.ELECTRIC,
-	category = "Status",
+	ELEMENT_TYPE = "ELECTRIC",
+	ATTRIBUTES = pokemon_types.ELECTRIC,
+	CATEGORY = "Status",
 	POWER = None, 
-	accuracy = 90,
-	pp = 20,
-	description = "Paralyzes opponent.")
+	ACCURACY = 90,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Paralyzes opponent.")
 
 THUNDERBOLT = dict(
- 	ELEMENT_TYPE = "Electric",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.ELECTRIC,
-	category = "Special",
+ 	ELEMENT_TYPE = "ELECTRIC",
+	ATTRIBUTES = pokemon_types.ELECTRIC,
+	CATEGORY = "Special",
 	POWER = 90,
-	accuracy = 100,
-	pp = 15,
-	description = "May paralyze opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 15,
+	DESCRIPTION = "May paralyze opponent.")
 
 TOXIC = dict(
- 	ELEMENT_TYPE = "Poison",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.POISON,
-	category = "Status",
+ 	ELEMENT_TYPE = "POISON",
+	ATTRIBUTES = pokemon_types.POISON,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = 90,
-	pp = 10,
-	description = "Badly poisons opponent.")
+	ACCURACY = 90,
+	POWER_POINTS = 10,
+	DESCRIPTION = "Badly poisons opponent.")
 
 TRANSFORM = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 10,
-	description = "User takes on the form and attacks of the opponent.")
+	ACCURACY = None,
+	POWER_POINTS = 10,
+	DESCRIPTION = "User takes on the form and attacks of the opponent.")
 
 TRI_ATTACK = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Special",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Special",
 	POWER = 80, 
-	accuracy = 100,
-	pp = 10,
-	description = "May paralyze, burn or freeze opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 10,
+	DESCRIPTION = "May paralyze, burn or freeze opponent.")
 
 TWINEEDLE = dict(
- 	ELEMENT_TYPE = "Bug",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.BUG,
-	category = "Physical",
+ 	ELEMENT_TYPE = "BUG",
+	ATTRIBUTES = pokemon_types.BUG,
+	CATEGORY = "Physical",
 	POWER = 25,
-	accuracy = 100,
-	pp = 20,
-	description = "Hits twice in one turn. May poison opponent.")
+	ACCURACY = 100,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Hits twice in one turn. May poison opponent.")
 
 VICE_GRIP = dict(
-	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 55,
-	accuracy = 100,
-	pp = 30,
-	description = "")
+	ACCURACY = 100,
+	POWER_POINTS = 30,
+	DESCRIPTION = "")
 
 VINE_WHIP = dict(
-	ELEMENT_TYPE = "Grass",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.GRASS,
-	category = "Physical",
+	ELEMENT_TYPE = "GRASS",
+	ATTRIBUTES = pokemon_types.GRASS,
+	CATEGORY = "Physical",
 	POWER = 45,
-	accuracy = 100,
-	pp = 25,
-	description = "")
+	ACCURACY = 100,
+	POWER_POINTS = 25,
+	DESCRIPTION = "")
 
 WATER_GUN = dict(
-	ELEMENT_TYPE = "Water",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.WATER,
-	category = "Special",
+	ELEMENT_TYPE = "WATER",
+	ATTRIBUTES = pokemon_types.WATER,
+	CATEGORY = "Special",
 	POWER = 40, 
-	accuracy = 100,
-	pp = 25,
-	description = "")
+	ACCURACY = 100,
+	POWER_POINTS = 25,
+	DESCRIPTION = "")
 
 WATERFALL = dict(
- 	ELEMENT_TYPE = "Water",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.WATER,
-	category = "Physical",
+ 	ELEMENT_TYPE = "WATER",
+	ATTRIBUTES = pokemon_types.WATER,
+	CATEGORY = "Physical",
 	POWER = 80,
-	accuracy = 100,
-	pp = 15,
-	description = "May cause flinching.")
+	ACCURACY = 100,
+	POWER_POINTS = 15,
+	DESCRIPTION = "May cause flinching.")
 
 WHIRLWIND = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Status",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 20,
-	description = "In battles, the opponent switches. In the wild, the Pokemon runs.")
+	ACCURACY = None,
+	POWER_POINTS = 20,
+	DESCRIPTION = "In battles, the opponent switches. In the wild, the Pokemon runs.")
 
 WING_ATTACK = dict(
-	ELEMENT_TYPE = "Flying",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.FLYING,
-	category = "Physical",
+	ELEMENT_TYPE = "FLYING",
+	ATTRIBUTES = pokemon_types.FLYING,
+	CATEGORY = "Physical",
 	POWER = 60,
-	accuracy = 100,
-	pp = 35,
-	description = "")
+	ACCURACY = 100,
+	POWER_POINTS = 35,
+	DESCRIPTION = "")
 
 WITHDRAW = dict(
- 	ELEMENT_TYPE = "Water",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.WATER,
-	category = "Status",
+ 	ELEMENT_TYPE = "WATER",
+	ATTRIBUTES = pokemon_types.WATER,
+	CATEGORY = "Status",
 	POWER = None,
-	accuracy = None,
-	pp = 40,
-	description = "Raises user's Defense.")
+	ACCURACY = None,
+	POWER_POINTS = 40,
+	DESCRIPTION = "Raises user's Defense.")
 
 WRAP = dict(
- 	ELEMENT_TYPE = "Normal",
-	ELEMENT_TYPE_PROPERTIES = pokemon_types.NORMAL,
-	category = "Physical",
+ 	ELEMENT_TYPE = "NORMAL",
+	ATTRIBUTES = pokemon_types.NORMAL,
+	CATEGORY = "Physical",
 	POWER = 15,
-	accuracy = 90,
-	pp = 20,
-	description = "Traps opponent, damaging them for 4-5 turns.")
+	ACCURACY = 90,
+	POWER_POINTS = 20,
+	DESCRIPTION = "Traps opponent, damaging them for 4-5 turns.")
 
 """Dictionary containing the primary Pokemon moves.
 
 Key contains collection of dictionaries containing move properties and statistics.
 """
 
-GROUPS = {
+MOVE_SET = {
 	"ABSORB": ABSORB,
 	"ACID": ACID,
 	"ACID_ARMOUR": ACID_ARMOUR,
@@ -1682,16 +1852,73 @@ GROUPS = {
 Names are generated from initialised names. Requires Pokemon move is defined in Moveset dictionary.
 """
 
-NAMES = tuple(dict.keys(GROUPS))
+MOVE_SET_NAMES = tuple(dict.keys(MOVE_SET))
 
-"""String comprised of the different Pokemon moves."""
+"""String generated from the required keys for Pokemon moves."""
 
-NAMES_STRS = " ".join(NAMES)
+MOVE_SET_KEYS_STRS = " ".join([
+	"ELEMENT_TYPE",
+	"ATTRIBUTES",
+	"CATEGORY",
+	"POWER", 
+	"ACCURACY",
+	"POWER_POINTS",
+	"DESCRIPTION"])
 
+######################
+### Module classes ###
+######################
 
-class Generate (namedtuple("Props", NAMES_STRS)):
-	"""Generates moveset properties."""
+class Generate (namedtuple("Props", MOVE_SET_KEYS_STRS)):
+	"""Generates type properties for defined Pokemon type."""
 
-	def __new__ (self, pokemon_type):
+	def __new__ (self, pokemon_move):
+		"""Inherit constants for class from named tuple Props.
 		
-		return super(Generate, self).__new__(self, **{})
+		Anticipated to be consumed in Pokemon base type class constructor. 
+		"""
+
+		"""
+		>>> import pokemon_moves
+		>>> pokemon_moves.Generate("DOUBLE EDGE")
+
+		Props(
+			ELEMENT_TYPE='NORMAL', 
+			ATTRIBUTES=Props(GHOST=GhostTypeMeta(EFFECT='NO_EFFECT', SUM=0), ...), 
+			CATEGORY='Physical', 
+			POWER=120, 
+			ACCURACY=100, 
+			POWER_POINTS=15, 
+			DESCRIPTION='User receives recoil damage.')
+		"""
+
+		# Named arguments #
+
+		# @parameter: <pokemon_move>, @type: <str>, @required: <true>
+		# @description: Pokemon move class type to generate.
+
+		# set pokemon type argument as string and uppercase for comparisons and collections.
+		pokemon_move = str.upper(str(pokemon_move))
+
+		# set substring substitution on whitespaces.
+		pokemon_move = re.sub(r'\s', '_', pokemon_move)
+
+		# confirm pokemon move is defined move otherwise select move at random.
+		pokemon_move = pokemon_move if pokemon_move in MOVE_SET_NAMES else random.choice(MOVE_SET_NAMES)
+
+		# return: @type: @class.main.Generate
+		return super(Generate, self).__new__(self, **MOVE_SET[pokemon_move])
+
+######################
+### Module exports ###
+######################
+
+"""Generate constants from defined properties. Overwrites previous properties.
+
+Composed to consume existing constants.
+"""
+
+for i in range(0, len(MOVE_SET_NAMES)):
+	"""Set module properties. Sets package variable using defined names in move sets."""
+	setattr(sys.modules[__name__], MOVE_SET_NAMES[i], Generate(MOVE_SET_NAMES[i]))
+	
