@@ -17,6 +17,26 @@ __author__  = "Lindsay Gelle (https://github.com/gellel)"
 
 __version__ = "1.0"
 
+__all__ = [
+	"BUG",
+	"DARK",
+	"DRAGON",
+	"ELECTRIC",
+	"FAIRY"
+	"FIGHTING",
+	"FIRE",
+	"FLYING",
+	"GHOST",
+	"GRASS",
+	"GROUND",
+	"ICE",
+	"NORMAL",
+	"POISON",
+	"PSYCHIC",
+	"ROCK",
+	"STEEL",
+	"WATER"]
+
 ########################
 ### Module constants ###
 ########################
@@ -791,7 +811,6 @@ class Water (Generate):
 
 		# return: @type: @class.__main__.Ground
 		return super(Water, self).__new__(self, "WATER")
-
 
 ######################
 ### Module exports ###
