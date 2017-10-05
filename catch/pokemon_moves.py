@@ -1884,7 +1884,11 @@ class Generate (namedtuple("Props", MOVE_SET_KEYS_STRS)):
 
 		Props(
 			ELEMENT_TYPE='NORMAL', 
-			ATTRIBUTES=Props(GHOST=GhostTypeMeta(EFFECT='NO_EFFECT', SUM=0), ...), 
+			ATTRIBUTES=Props(
+				GHOST=GhostTypeMeta(
+					EFFECT='NO_EFFECT', 
+					SUM=0), 
+			...), 
 			CATEGORY='Physical', 
 			POWER=120, 
 			ACCURACY=100, 
@@ -1906,7 +1910,7 @@ class Generate (namedtuple("Props", MOVE_SET_KEYS_STRS)):
 		# confirm pokemon move is defined move otherwise select move at random.
 		pokemon_move = pokemon_move if pokemon_move in MOVE_SET_NAMES else random.choice(MOVE_SET_NAMES)
 
-		# return: @type: @class.main.Generate
+		# return: @type: @class.__main__.Generate
 		return super(Generate, self).__new__(self, **MOVE_SET[pokemon_move])
 
 ######################
