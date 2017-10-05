@@ -19,7 +19,7 @@ __version__ = "1.0"
 ### Module constants ###
 ########################
 
-BUG = (
+BUG_TYPE = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 0.5, "NOT_VERY_EFFECTIVE"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -39,7 +39,7 @@ BUG = (
 	("STEEL", 0.5, "NOT_VERY_EFFECTIVE"),
 	("FAIRY", 0.5, "NOT_VERY_EFFECTIVE"))
 
-DARK = (
+DARK_TYPE = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 1, "NORMAL_EFFECT"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -59,7 +59,7 @@ DARK = (
 	("STEEL", 1, "NORMAL_EFFECT"),
 	("FAIRY", 0.5, "NOT_VERY_EFFECTIVE"))
 
-DRAGON = (
+DRAGON_TYPE = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 1, "NORMAL_EFFECT"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -79,7 +79,7 @@ DRAGON = (
 	("STEEL", 0.5, "NOT_VERY_EFFECTIVE"),
 	("FAIRY", 0, "NO_EFFECT"))
 
-ELECTRIC = (
+ELECTRIC_TYPE = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 1, "NORMAL_EFFECT"),
 	("WATER", 2, "SUPER_EFFECTIVE"),
@@ -99,7 +99,7 @@ ELECTRIC = (
 	("STEEL", 1, "NORMAL_EFFECT"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-FAIRY = (
+FAIRY_TYPE = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 0.5, "NOT_VERY_EFFECTIVE"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -119,7 +119,7 @@ FAIRY = (
 	("STEEL", 0.5, "NOT_VERY_EFFECTIVE"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-FIGHTING = (
+FIGHTING_TYPE = (
 	("NORMAL", 2, "SUPER_EFFECTIVE"),
 	("FIRE", 1, "NORMAL_EFFECT"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -139,7 +139,7 @@ FIGHTING = (
 	("STEEL", 2, "SUPER_EFFECTIVE"),
 	("FAIRY", 0.5, "NOT_VERY_EFFECTIVE"))
 
-FIRE = (
+FIRE_TYPE = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 0.5, "NOT_VERY_EFFECTIVE"),
 	("WATER", 0.5, "NOT_VERY_EFFECTIVE"),
@@ -159,7 +159,7 @@ FIRE = (
 	("STEEL", 2, "SUPER_EFFECTIVE"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-FLYING = (
+FLYING_TYPE = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 1, "NORMAL_EFFECT"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -179,7 +179,7 @@ FLYING = (
 	("STEEL", 0.5, "NOT_VERY_EFFECTIVE"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-GHOST = (
+GHOST_TYPE = (
 	("NORMAL", 0, "NO_EFFECT"),
 	("FIRE", 1, "NORMAL_EFFECT"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -199,7 +199,7 @@ GHOST = (
 	("STEEL", 1, "NORMAL_EFFECT"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-GRASS = (
+GRASS_TYPE = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 0.5, "NOT_VERY_EFFECTIVE"),
 	("WATER", 2, "SUPER_EFFECTIVE"),
@@ -219,7 +219,7 @@ GRASS = (
 	("STEEL", 0.5, "NOT_VERY_EFFECTIVE"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-GROUND = (
+GROUND_TYPE = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 2, "SUPER_EFFECTIVE"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -239,7 +239,7 @@ GROUND = (
 	("STEEL", 2, "SUPER_EFFECTIVE"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-ICE = (
+ICE_TYPE = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 0.5, "NOT_VERY_EFFECTIVE"),
 	("WATER", 0.5, "NOT_VERY_EFFECTIVE"),
@@ -259,7 +259,7 @@ ICE = (
 	("STEEL", 0.5, "NOT_VERY_EFFECTIVE"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-NORMAL = (
+NORMAL_TYPE = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 1, "NORMAL_EFFECT"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -279,7 +279,7 @@ NORMAL = (
 	("STEEL", 0.5, "NOT_VERY_EFFECTIVE"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-POISON = (
+POISON_TYPE = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 1, "NORMAL_EFFECT"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -299,7 +299,7 @@ POISON = (
 	("STEEL", 0, "NO_EFFECT"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-PSYCHIC = (
+PSYCHIC_TYPE = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 1, "NORMAL_EFFECT"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -319,7 +319,7 @@ PSYCHIC = (
 	("STEEL", 0.5, "NOT_VERY_EFFECTIVE"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-ROCK = (
+ROCK_TYPE = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 2, "SUPER_EFFECTIVE"),
 	("WATER", 1, "NORMAL_EFFECT"),
@@ -339,7 +339,7 @@ ROCK = (
 	("STEEL", 0.5, "NOT_VERY_EFFECTIVE"),
 	("FAIRY", 1, "NORMAL_EFFECT"))
 
-STEEL = (
+STEEL_TYPE = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 0.5, "NOT_VERY_EFFECTIVE"),
 	("WATER", 0.5, "NOT_VERY_EFFECTIVE"),
@@ -359,7 +359,7 @@ STEEL = (
 	("STEEL", 0.5, "NOT_VERY_EFFECTIVE"),
 	("FAIRY", 2, "SUPER_EFFECTIVE"))
 
-WATER = (
+WATER_TYPE = (
 	("NORMAL", 1, "NORMAL_EFFECT"),
 	("FIRE", 2, "SUPER_EFFECTIVE"),
 	("WATER", 0.5, "NOT_VERY_EFFECTIVE"),
@@ -386,24 +386,24 @@ Strengths and resistances are presented as the same float or integer.
 """
 
 GROUPS = {
-	"BUG": BUG,
-	"DARK": DARK,
-	"DRAGON": DRAGON,
-	"ELECTRIC": ELECTRIC,
-	"FAIRY": FAIRY,
-	"FIGHTING": FIGHTING,
-	"FIRE": FIRE,
-	"FLYING": FLYING,
-	"GHOST": GHOST,
-	"GRASS": GRASS,
-	"GROUND": GROUND,
-	"ICE": ICE,
-	"NORMAL": NORMAL,
-	"POISON": POISON,
-	"PSYCHIC": PSYCHIC,
-	"ROCK": ROCK,
-	"STEEL": STEEL,
-	"WATER": WATER }
+	"BUG": BUG_TYPE,
+	"DARK": DARK_TYPE,
+	"DRAGON": DRAGON_TYPE,
+	"ELECTRIC": ELECTRIC_TYPE,
+	"FAIRY": FAIRY_TYPE,
+	"FIGHTING": FIGHTING_TYPE,
+	"FIRE": FIRE_TYPE,
+	"FLYING": FLYING_TYPE,
+	"GHOST": GHOST_TYPE,
+	"GRASS": GRASS_TYPE,
+	"GROUND": GROUND_TYPE,
+	"ICE": ICE_TYPE,
+	"NORMAL": NORMAL_TYPE,
+	"POISON": POISON_TYPE,
+	"PSYCHIC": PSYCHIC_TYPE,
+	"ROCK": ROCK_TYPE,
+	"STEEL": STEEL_TYPE,
+	"WATER": WATER_TYPE }
 
 """Dictionary containing the primary Pokemon types.
 
@@ -789,3 +789,32 @@ class Water (Generate):
 
 		# return: @type: @class.__main__.Ground
 		return super(Water, self).__new__(self, "WATER")
+
+
+######################
+### Module exports ###
+######################
+
+"""Generate base constant export for type.
+
+Type constant constructors are created from the Generator Pokemon Type typeclass base.
+"""
+
+BUG = Bug()
+DARK = Dark()
+DRAGON = Dragon()
+ELECTRIC = Electric()
+FAIRY = Fairy()
+FIGHTING = Fighting()
+FIRE = Fire()
+FLYING = Flying()
+GHOST = Ghost()
+GRASS = Grass()
+GROUND = Ground()
+ICE = Ice()
+NORMAL = Normal()
+POISON = Poison()
+PSYCHIC = Psychic()
+ROCK = Rock()
+STEEL = Steel()
+WATER = Water()
