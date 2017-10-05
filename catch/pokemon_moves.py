@@ -1847,12 +1847,192 @@ MOVE_SET = {
 	"WITHDRAW": WITHDRAW,
 	"WRAP": WRAP}
 
+"""Dictionary containing the moves for Bug type Pokemon."""
+
+BUG_TYPE_MOVE_SET = { 
+	k: v for (k,v) in MOVE_SET.iteritems() 
+	if v["ELEMENT_TYPE"] == "BUG"}
+
+"""Dictionary containing the moves for Dark type Pokemon."""
+
+DARK_TYPE_MOVE_SET = { 
+	k: v for (k,v) in MOVE_SET.iteritems() 
+	if v["ELEMENT_TYPE"] == "DARK"}
+
+"""Dictionary containing the moves for Dragon type Pokemon."""
+
+DRAGON_TYPE_MOVE_SET = { 
+	k: v for (k,v) in MOVE_SET.iteritems() 
+	if v["ELEMENT_TYPE"] == "DRAGON"}
+
+"""Dictionary containing the moves for Electric type Pokemon."""
+
+ELECTRIC_TYPE_MOVE_SET = { 
+	k: v for (k,v) in MOVE_SET.iteritems() 
+	if v["ELEMENT_TYPE"] == "ELECTRIC"}
+
+"""Dictionary containing the moves for Fairy type Pokemon."""
+
+FAIRY_TYPE_MOVE_SET = { 
+	k: v for (k,v) in MOVE_SET.iteritems() 
+	if v["ELEMENT_TYPE"] == "FAIRY" }
+
+"""Dictionary containing the moves for Fighting type Pokemon."""
+
+FIGHTING_TYPE_MOVE_SET = { 
+	k: v for (k,v) in MOVE_SET.iteritems() 
+	if v["ELEMENT_TYPE"] == "FIGHTING"}
+
+"""Dictionary containing the moves for Fire type Pokemon."""
+
+FIRE_TYPE_MOVE_SET = { 
+	k: v for (k,v) in MOVE_SET.iteritems() 
+	if v["ELEMENT_TYPE"] == "FIRE"}
+
+"""Dictionary containing the moves for Flying type Pokemon."""
+
+FLYING_TYPE_MOVE_SET = { 
+	k: v for (k,v) in MOVE_SET.iteritems() 
+	if v["ELEMENT_TYPE"] == "FLYING"}
+
+"""Dictionary containing the moves for Ghost type Pokemon."""
+
+GHOST_TYPE_MOVE_SET = { 
+	k: v for (k,v) in MOVE_SET.iteritems() 
+	if v["ELEMENT_TYPE"] == "GHOST"}
+
+"""Dictionary containing the moves for Grass type Pokemon."""
+
+GRASS_TYPE_MOVE_SET = { 
+	k: v for (k,v) in MOVE_SET.iteritems() 
+	if v["ELEMENT_TYPE"] == "GRASS"}
+
+"""Dictionary containing the moves for Ground type Pokemon."""
+
+GROUND_TYPE_MOVE_SET = { 
+	k: v for (k,v) in MOVE_SET.iteritems() 
+	if v["ELEMENT_TYPE"] == "GROUND"}
+
+"""Dictionary containing the moves for Ice type Pokemon."""
+
+ICE_TYPE_MOVE_SET = { 
+	k: v for (k,v) in MOVE_SET.iteritems() 
+	if v["ELEMENT_TYPE"] == "ICE"}
+
+"""Dictionary containing the moves for Normal type Pokemon."""
+
+NORMAL_TYPE_MOVE_SET = { 
+	k: v for (k,v) in MOVE_SET.iteritems() 
+	if v["ELEMENT_TYPE"] == "NORMAL"}
+
+"""Dictionary containing the moves for Poison type Pokemon."""
+
+POISON_TYPE_MOVE_SET = { 
+	k: v for (k,v) in MOVE_SET.iteritems() 
+	if v["ELEMENT_TYPE"] == "POISON"}
+
+"""Dictionary containing the moves for Psychic type Pokemon."""
+
+PSYCHIC_TYPE_MOVE_SET = { 
+	k: v for (k,v) in MOVE_SET.iteritems() 
+	if v["ELEMENT_TYPE"] == "PSYCHIC"}
+
+"""Dictionary containing the moves for Rock type Pokemon."""
+
+ROCK_TYPE_MOVE_SET = { 
+	k: v for (k,v) in MOVE_SET.iteritems() 
+	if v["ELEMENT_TYPE"] == "ROCK"}
+
+"""Dictionary containing the moves for Steel type Pokemon."""
+
+STEEL_TYPE_MOVE_SET = { 
+	k: v for (k,v) in MOVE_SET.iteritems() 
+	if v["ELEMENT_TYPE"] == "STEEL"}
+
+"""Dictionary containing the moves for Water type Pokemon."""
+
+WATER_TYPE_MOVE_SET = { 
+	k: v for (k,v) in MOVE_SET.iteritems() 
+	if v["ELEMENT_TYPE"] == "WATER"}
+
 """Tuple containing strings of Pokemon moves.
 
-Names are generated from initialised names. Requires Pokemon move is defined in Moveset dictionary.
+Names are generated from initialised names. Requires Pokemon move is defined in Move Set dictionary.
 """
 
-MOVE_SET_NAMES = tuple(dict.keys(MOVE_SET))
+MOVE_NAMES = tuple(dict.keys(MOVE_SET))
+
+"""Tuple containing strings of moves for Bug type Pokemon."""
+
+BUG_TYPE_MOVE_NAMES = tuple(dict.keys(BUG_TYPE_MOVE_SET))
+
+"""Tuple containing strings of moves for Dark type Pokemon."""
+
+DARK_TYPE_MOVE_NAMES = tuple(dict.keys(DARK_TYPE_MOVE_SET))
+
+"""Tuple containing strings of moves for Dragon type Pokemon."""
+
+DRAGON_TYPE_MOVE_NAMES = tuple(dict.keys(DRAGON_TYPE_MOVE_SET))
+
+"""Tuple containing strings of moves for Electric type Pokemon."""
+
+ELECTRIC_TYPE_MOVE_NAMES = tuple(dict.keys(ELECTRIC_TYPE_MOVE_SET))
+
+"""Tuple containing strings of moves for Fairy type Pokemon."""
+
+FAIRY_TYPE_MOVE_NAMES = tuple(dict.keys(FAIRY_TYPE_MOVE_SET))
+
+"""Tuple containing strings of moves for Fighting type Pokemon."""
+
+FIGHTING_TYPE_MOVE_NAMES = tuple(dict.keys(FIGHTING_TYPE_MOVE_SET))
+
+"""Tuple containing strings of moves for Fire type Pokemon."""
+
+FIRE_TYPE_MOVE_NAMES = tuple(dict.keys(FIRE_TYPE_MOVE_SET))
+
+"""Tuple containing strings of moves for Flying type Pokemon."""
+
+FLYING_TYPE_MOVE_NAMES = tuple(dict.keys(FLYING_TYPE_MOVE_SET))
+
+"""Tuple containing strings of moves for Ghost type Pokemon."""
+
+GHOST_TYPE_MOVE_NAMES = tuple(dict.keys(GHOST_TYPE_MOVE_SET))
+
+"""Tuple containing strings of moves for Grass type Pokemon."""
+
+GRASS_TYPE_MOVE_NAMES = tuple(dict.keys(GRASS_TYPE_MOVE_SET))
+
+"""Tuple containing strings of moves for Ground type Pokemon."""
+
+GROUND_TYPE_MOVE_NAMES = tuple(dict.keys(GROUND_TYPE_MOVE_SET))
+
+"""Tuple containing strings of moves for Ice type Pokemon."""
+
+ICE_TYPE_MOVE_NAMES = tuple(dict.keys(ICE_TYPE_MOVE_SET))
+
+"""Tuple containing strings of moves for Normal type Pokemon."""
+
+NORMAL_TYPE_MOVE_NAMES = tuple(dict.keys(NORMAL_TYPE_MOVE_SET))
+
+"""Tuple containing strings of moves for Poison type Pokemon."""
+
+POISON_TYPE_MOVE_NAMES = tuple(dict.keys(POISON_TYPE_MOVE_SET))
+
+"""Tuple containing strings of moves for Psychic type Pokemon."""
+
+PSYCHIC_TYPE_MOVE_NAMES = tuple(dict.keys(PSYCHIC_TYPE_MOVE_SET))
+
+"""Tuple containing strings of moves for Rock type Pokemon."""
+
+ROCK_TYPE_MOVE_NAMES = tuple(dict.keys(ROCK_TYPE_MOVE_SET))
+
+"""Tuple containing strings of moves for Steel type Pokemon."""
+
+STEEL_TYPE_MOVE_NAMES = tuple(dict.keys(STEEL_TYPE_MOVE_SET))
+
+"""Tuple containing strings of moves for Water type Pokemon."""
+
+WATER_TYPE_MOVE_NAMES = tuple(dict.keys(WATER_TYPE_MOVE_SET))
 
 """String generated from the required keys for Pokemon moves."""
 
@@ -1908,7 +2088,7 @@ class Generate (namedtuple("Props", MOVE_SET_KEYS_STRS)):
 		pokemon_move = re.sub(r'\s', '_', pokemon_move)
 
 		# confirm pokemon move is defined move otherwise select move at random.
-		pokemon_move = pokemon_move if pokemon_move in MOVE_SET_NAMES else random.choice(MOVE_SET_NAMES)
+		pokemon_move = pokemon_move if pokemon_move in MOVE_NAMES else random.choice(MOVE_NAMES)
 
 		# return: @type: @class.__main__.Generate
 		return super(Generate, self).__new__(self, **MOVE_SET[pokemon_move])
@@ -1922,6 +2102,6 @@ class Generate (namedtuple("Props", MOVE_SET_KEYS_STRS)):
 Composed to consume existing declerations.
 """
 
-for i in range(0, len(MOVE_SET_NAMES)):
+for i in range(0, len(MOVE_NAMES)):
 	"""Set module properties. Sets package variable using defined names in move sets."""
-	setattr(sys.modules[__name__], MOVE_SET_NAMES[i], Generate(MOVE_SET_NAMES[i]))
+	setattr(sys.modules[__name__], MOVE_NAMES[i], Generate(MOVE_NAMES[i]))

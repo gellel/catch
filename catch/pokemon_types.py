@@ -407,7 +407,7 @@ Key contains collection of tuples containing element type resistances and streng
 Strengths and resistances are presented as the same float or integer.
 """
 
-GROUPS = {
+TYPE_GROUPS = {
 	"BUG": BUG,
 	"DARK": DARK,
 	"DRAGON": DRAGON,
@@ -433,9 +433,9 @@ Key value is collection of dictionaries containing element type numerical scale.
 Strengths and resistances are presented as the same float or integer for the corresponding key.
 """
 
-GROUPS_SUMS = { k: { v[i][0]: v[i][1] 
+TYPE_GROUPS_SUMS = { k: { v[i][0]: v[i][1] 
 	for i in range(0, len(v)) } 
-	for (k,v) in GROUPS.iteritems() }
+	for (k,v) in TYPE_GROUPS.iteritems() }
 
 """Dictionary containing the primary Pokemon types.
 
@@ -443,16 +443,16 @@ Key value is collection of dictionaries containing element type numerical scale 
 Strengths and resistances are presented as either "no_effect", "not_very_effective", "normal_effect", "super_effective".
 """
 
-GROUPS_EFFECTS = { k: { v[i][0]: v[i][2] 
+TYPE_GROUPS_EFFECTS = { k: { v[i][0]: v[i][2] 
 	for i in range(0, len(v)) } 
-	for (k,v) in GROUPS.iteritems() }
+	for (k,v) in TYPE_GROUPS.iteritems() }
 
 """Tuple containing strings of primary Pokemon types.
 
 Names are generated from initialised names. Requires Pokemon type is defined in Groups dictionary.
 """
 
-TYPE_NAMES = tuple(dict.keys(GROUPS))
+TYPE_NAMES = tuple(dict.keys(TYPE_GROUPS))
 
 """String comprised of the different Pokemon type names."""
 
@@ -512,7 +512,7 @@ def generate_type_sum_class (pokemon_type):
 	pokemon_type = pokemon_type if pokemon_type in TYPE_NAMES else random.choice(TYPE_NAMES)
 
 	# construct pseudo-class constant from named tuple. sets integer sums as corresponding type pair value.
-	pokemon_generated_type = namedtuple(pokemon_type, " ".join(TYPE_NAMES))(**GROUPS_SUMS[pokemon_type])
+	pokemon_generated_type = namedtuple(pokemon_type, " ".join(TYPE_NAMES))(**TYPE_GROUPS_SUMS[pokemon_type])
 
 	# return: @type: @class.__main__.STR_ARG_AS_CLS_NAME
 	return pokemon_generated_type
@@ -547,7 +547,7 @@ def generate_type_effect_class (pokemon_type):
 	pokemon_type = pokemon_type if pokemon_type in TYPE_NAMES else random.choice(TYPE_NAMES)
 
 	# construct pseudo-class constant from named tuple. sets integer sums as corresponding type pair value.
-	pokemon_generated_type = namedtuple(pokemon_type, TYPE_NAMES_STRS)(**GROUPS_EFFECTS[pokemon_type])
+	pokemon_generated_type = namedtuple(pokemon_type, TYPE_NAMES_STRS)(**TYPE_GROUPS_EFFECTS[pokemon_type])
 
 	# return: @type: @class.__main__.STR_ARG_AS_CLS_NAME
 	return pokemon_generated_type
@@ -587,7 +587,7 @@ def generate_type_stats_class (pokemon_type):
 	pokemon_type_stats = dict()
 
 	# set sub group of properties for specific Pokemon type.
-	pokemon_type_subgroups = GROUPS[pokemon_type]
+	pokemon_type_subgroups = TYPE_GROUPS[pokemon_type]
 
 	# iterate for keys of pokemon type groups.
 	for i in range(0, len(pokemon_type_subgroups)):
@@ -643,7 +643,7 @@ class Generate (namedtuple("Props", TYPE_NAMES_STRS)):
 		pokemon_type = pokemon_type if pokemon_type in TYPE_NAMES else random.choice(TYPE_NAMES)
 		
 		# set sub group of properties for specific Pokemon type.
-		pokemon_type_subgroups = GROUPS[pokemon_type]
+		pokemon_type_subgroups = TYPE_GROUPS[pokemon_type]
 
 		# return: @type: @class.__main__.Generate
 		return super(Generate, self).__new__(self, **{pokemon_type_subgroups[i][0]: namedtuple(
