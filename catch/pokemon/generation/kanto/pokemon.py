@@ -194,59 +194,26 @@ BULBASAUR = dict(
 		("SOLAR_BEAM", 48),
 		("TACKLE", 1),
 		("VINE_WHIP", 13)),
-	TRAINING = dict(
-		EV_YIELD = dict(
-			SUM = 1,
-			STR = "SPECIAL_ATTACK"),
-		CATCH_RATE = dict(
-			SUM = 45,
-			POKEBALL = "POKEBALL",
-			FULL_HP_RATE = 5.9),
-		BASE_HAPPINESS = dict(
-			SUM = 70,
-			STR = "NORMAL"),
-		BASE_EXP = dict(
-			SUM = 64),
-		GROWTH_RATE = dict(
-			STR = "MEDIUM_SLOW")),
-	BREEDING = dict(
-		GROUPS = (
-			("GRASS", 1), 
-			("MONSTER", 2)),
-		GENDER = dict(
-			MALE = 87.5,
-			FEMALE = 12.5),
-		EGG_CYCLES = dict(
-			SUM = 20,
-			STEPS = 5120)),
-	STATS = dict(
-		HP = dict(
-			BASE = 45,
-			MIN = 200,
-			MAX = 294),
-		ATTACK = dict(
-			BASE = 49,
-			MIN = 92,
-			MAX = 216),
-		DEFENSE = dict(
-			BASE = 49,
-			MIN = 92,
-			MAX = 216),
-		SP_ATTACK = dict(
-			BASE = 65,
-			MIN = 121,
-			MAX = 251),
-		SP_DEFENSE = dict(
-			BASE = 65,
-			MIN = 121,
-			MAX = 251),
-		SPEED = dict(
-			BASE = 45,
-			MIN = 85,
-			MAX = 207)),
+	TRAINING = (
+		("EV_YIELD", 1, "SPECIAL_ATTACK"),
+		("CATCH_RATE", 45, 5.9, "POKEBALL"),
+		("BASE_HAPPINESS", 70, "NORMAL"),
+		("BASE_EXP" 64),
+		("GROWTH_RATE", "MEDIUM_SLOW")),
+	BREEDING = (
+		("GROUPS", (("GRASS", 1), ("MONSTER", 2))),
+		("GENDER", (("MALE", 87.5), ("FEMALE", 12.5))),
+		("EGG_CYCLES", 20, 5120)),
+	STATS = (
+		("HP", 45, 200, 294),
+		("ATTACK", 49, 92, 216),
+		("DEFENSE", 49, 92, 216),
+		("SP_ATTACK", 65, 121, 251),
+		("SP_DEFENSE", 65, 121, 251),
+		("SPEED", 45, 85, 207)),
 	EVOLUTION = (
-		("IVYSAUR", 2, "#002"),
-		("VENUSAUR", 3, "#003")))
+		("IVYSAUR", 2, "002", 16),
+		("VENUSAUR", 3, "003", 32)))
 
 
 """Dictionary containing the Pokemon names and their corresponding properties.
@@ -284,7 +251,7 @@ POKEMON_KEYS_STRS = " ".join([
 ######################
 
 class Generate (namedtuple("Props", POKEMON_KEYS_STRS)):
-	"""Generates base properties for defined Pokemon."""
+	"""Generates base attributes and properties for defined Pokemon."""
 
 	def __new__ (self, pokemon):
 
@@ -302,13 +269,13 @@ class Generate (namedtuple("Props", POKEMON_KEYS_STRS)):
 		# @parameter: <pokemon>, @type: <str>, @required: <true>
 		# @description: Pokemon base to generate.
 
-		# set pokemon type argument as string and uppercase for comparisons and collections.
+		# set pokemon argument as string and uppercase for comparisons and collections.
 		pokemon = str.upper(str(pokemon))
 
 		# set substring substitution on whitespaces.
 		pokemon = re.sub(r'\s', '_', pokemon)
 
-		# confirm pokemon move is defined move otherwise select move at random.
+		# confirm pokemon is defined otherwise select pokemon at random.
 		pokemon = pokemon if pokemon in POKEMON_NAMES else random.choice(POKEMON_NAMES)
 
 		# return: @type: @class.__main__.Generate
