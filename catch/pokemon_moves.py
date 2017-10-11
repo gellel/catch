@@ -2046,6 +2046,36 @@ MOVE_SET_KEYS_STRS = " ".join([
 	"DESCRIPTION"])
 
 ######################
+### Module methods ###
+######################
+
+def generate_abilities_class (*args):
+	"""Construct psuedo-class property. Contains Pokemon abilities as accessible attribute properties.
+	
+	Arguments passed serve the basis for the keys constructed for class. Should ability not exist, key will not appear.
+	"""
+	
+	"""
+	>>> import pokemon_types
+	>>> pokemon_types.generate_types_class("BUG", "NULL")
+
+	Typeset(
+		POUND=(('NORMAL', 1, 'NORMAL_EFFECT'),
+			...)
+	"""
+
+	# set args as unique sequence. set arguments as uppercase strings.
+	args = map(str.upper, map(str, set(args))) 
+
+	# iterate for arguments sequence. 
+	abilities = { args[i]: Generate(MOVE_SET[args[i]])
+		# confirm Pokemon ability argument exists in Pokemon moves set.
+		for i in range(0, len(args)) if args[i] in MOVE_NAMES }
+
+	# @return: @type. @class.__main__.Abilities
+	return namedtuple("Abilities", " ".join(dict.keys(abilities)))(**abilities)
+
+######################
 ### Module classes ###
 ######################
 

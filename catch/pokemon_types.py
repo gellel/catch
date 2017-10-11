@@ -615,7 +615,7 @@ def generate_types_class (*args):
 	>>> import pokemon_types
 	>>> pokemon_types.generate_types_class("BUG", "NULL")
 
-	Typeset(
+	Types(
 		BUG=(('NORMAL', 1, 'NORMAL_EFFECT'),
 			...)
 	"""
@@ -624,15 +624,12 @@ def generate_types_class (*args):
 	args = map(str.upper, map(str, set(args))) 
 
 	# iterate for arguments sequence. 
-	types = { args[i]: TYPE_GROUPS[args[i]] 
+	types = { args[i]: getattr(sys.modules[__name__], args[i])
 		# confirm Pokemon type argument exists in Pokemon types.
 		for i in range(0, len(args)) if args[i] in TYPE_NAMES }
 
-	# construct named tuple using keys from found types.
-	types = namedtuple("Types", " ".join(dict.keys(types)))
-
 	# @return: @type. @class.__main__.Types
-	return types(**types)
+	return namedtuple("Types", " ".join(dict.keys(types)))(**types)
 
 ######################
 ### Module classes ###

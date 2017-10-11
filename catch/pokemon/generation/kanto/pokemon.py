@@ -282,6 +282,11 @@ class Generate (namedtuple("Props", POKEMON_KEYS_STRS)):
 		return super(Generate, self).__new__(self, **POKEMON_KANTO_GROUP[pokemon])
 
 
+class Pokemon:
+
+	def __init__ (self):
+		pass
+
 ######################
 ### Module exports ###
 ######################
