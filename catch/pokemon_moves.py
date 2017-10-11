@@ -1960,79 +1960,98 @@ WATER_TYPE_MOVE_SET = {
 Names are generated from initialised names. Requires Pokemon move is defined in Move Set dictionary.
 """
 
-MOVE_NAMES = tuple(dict.keys(MOVE_SET))
+MOVE_NAMES = tuple(
+	dict.keys(MOVE_SET))
 
 """Tuple containing strings of moves for Bug type Pokemon."""
 
-BUG_TYPE_MOVE_NAMES = tuple(dict.keys(BUG_TYPE_MOVE_SET))
+BUG_TYPE_MOVE_NAMES = tuple(
+	dict.keys(BUG_TYPE_MOVE_SET))
 
 """Tuple containing strings of moves for Dark type Pokemon."""
 
-DARK_TYPE_MOVE_NAMES = tuple(dict.keys(DARK_TYPE_MOVE_SET))
+DARK_TYPE_MOVE_NAMES = tuple(
+	dict.keys(DARK_TYPE_MOVE_SET))
 
 """Tuple containing strings of moves for Dragon type Pokemon."""
 
-DRAGON_TYPE_MOVE_NAMES = tuple(dict.keys(DRAGON_TYPE_MOVE_SET))
+DRAGON_TYPE_MOVE_NAMES = tuple(
+	dict.keys(DRAGON_TYPE_MOVE_SET))
 
 """Tuple containing strings of moves for Electric type Pokemon."""
 
-ELECTRIC_TYPE_MOVE_NAMES = tuple(dict.keys(ELECTRIC_TYPE_MOVE_SET))
+ELECTRIC_TYPE_MOVE_NAMES = tuple(
+	dict.keys(ELECTRIC_TYPE_MOVE_SET))
 
 """Tuple containing strings of moves for Fairy type Pokemon."""
 
-FAIRY_TYPE_MOVE_NAMES = tuple(dict.keys(FAIRY_TYPE_MOVE_SET))
+FAIRY_TYPE_MOVE_NAMES = tuple(
+	dict.keys(FAIRY_TYPE_MOVE_SET))
 
 """Tuple containing strings of moves for Fighting type Pokemon."""
 
-FIGHTING_TYPE_MOVE_NAMES = tuple(dict.keys(FIGHTING_TYPE_MOVE_SET))
+FIGHTING_TYPE_MOVE_NAMES = tuple(
+	dict.keys(FIGHTING_TYPE_MOVE_SET))
 
 """Tuple containing strings of moves for Fire type Pokemon."""
 
-FIRE_TYPE_MOVE_NAMES = tuple(dict.keys(FIRE_TYPE_MOVE_SET))
+FIRE_TYPE_MOVE_NAMES = tuple(
+	dict.keys(FIRE_TYPE_MOVE_SET))
 
 """Tuple containing strings of moves for Flying type Pokemon."""
 
-FLYING_TYPE_MOVE_NAMES = tuple(dict.keys(FLYING_TYPE_MOVE_SET))
+FLYING_TYPE_MOVE_NAMES = tuple(
+	dict.keys(FLYING_TYPE_MOVE_SET))
 
 """Tuple containing strings of moves for Ghost type Pokemon."""
 
-GHOST_TYPE_MOVE_NAMES = tuple(dict.keys(GHOST_TYPE_MOVE_SET))
+GHOST_TYPE_MOVE_NAMES = tuple(
+	dict.keys(GHOST_TYPE_MOVE_SET))
 
 """Tuple containing strings of moves for Grass type Pokemon."""
 
-GRASS_TYPE_MOVE_NAMES = tuple(dict.keys(GRASS_TYPE_MOVE_SET))
+GRASS_TYPE_MOVE_NAMES = tuple(
+	dict.keys(GRASS_TYPE_MOVE_SET))
 
 """Tuple containing strings of moves for Ground type Pokemon."""
 
-GROUND_TYPE_MOVE_NAMES = tuple(dict.keys(GROUND_TYPE_MOVE_SET))
+GROUND_TYPE_MOVE_NAMES = tuple(
+	dict.keys(GROUND_TYPE_MOVE_SET))
 
 """Tuple containing strings of moves for Ice type Pokemon."""
 
-ICE_TYPE_MOVE_NAMES = tuple(dict.keys(ICE_TYPE_MOVE_SET))
+ICE_TYPE_MOVE_NAMES = tuple(
+	dict.keys(ICE_TYPE_MOVE_SET))
 
 """Tuple containing strings of moves for Normal type Pokemon."""
 
-NORMAL_TYPE_MOVE_NAMES = tuple(dict.keys(NORMAL_TYPE_MOVE_SET))
+NORMAL_TYPE_MOVE_NAMES = tuple(
+	dict.keys(NORMAL_TYPE_MOVE_SET))
 
 """Tuple containing strings of moves for Poison type Pokemon."""
 
-POISON_TYPE_MOVE_NAMES = tuple(dict.keys(POISON_TYPE_MOVE_SET))
+POISON_TYPE_MOVE_NAMES = tuple(
+	dict.keys(POISON_TYPE_MOVE_SET))
 
 """Tuple containing strings of moves for Psychic type Pokemon."""
 
-PSYCHIC_TYPE_MOVE_NAMES = tuple(dict.keys(PSYCHIC_TYPE_MOVE_SET))
+PSYCHIC_TYPE_MOVE_NAMES = tuple(
+	dict.keys(PSYCHIC_TYPE_MOVE_SET))
 
 """Tuple containing strings of moves for Rock type Pokemon."""
 
-ROCK_TYPE_MOVE_NAMES = tuple(dict.keys(ROCK_TYPE_MOVE_SET))
+ROCK_TYPE_MOVE_NAMES = tuple(
+	dict.keys(ROCK_TYPE_MOVE_SET))
 
 """Tuple containing strings of moves for Steel type Pokemon."""
 
-STEEL_TYPE_MOVE_NAMES = tuple(dict.keys(STEEL_TYPE_MOVE_SET))
+STEEL_TYPE_MOVE_NAMES = tuple(
+	dict.keys(STEEL_TYPE_MOVE_SET))
 
 """Tuple containing strings of moves for Water type Pokemon."""
 
-WATER_TYPE_MOVE_NAMES = tuple(dict.keys(WATER_TYPE_MOVE_SET))
+WATER_TYPE_MOVE_NAMES = tuple(
+	dict.keys(WATER_TYPE_MOVE_SET))
 
 """String generated from the required keys for Pokemon moves."""
 
