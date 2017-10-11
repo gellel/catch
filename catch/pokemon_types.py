@@ -623,9 +623,9 @@ def generate_types_class (*args):
 	# set args as unique sequence. set arguments as uppercase strings.
 	args = map(str.upper, map(str, set(args))) 
 
-	# iterate for arguments. 
+	# iterate for arguments sequence. 
 	types = { args[i]: TYPE_GROUPS[args[i]] 
-		# confirm type argument exists in Pokemon types
+		# confirm Pokemon type argument exists in Pokemon types.
 		for i in range(0, len(args)) if args[i] in TYPE_NAMES }
 
 	# construct named tuple using keys from found types.
