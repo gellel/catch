@@ -605,6 +605,35 @@ def generate_type_stats_class (pokemon_type):
 	# return: @type: @class.__main__.STR_ARG_AS_CLS_NAME
 	return namedtuple(pokemon_type, TYPE_NAMES_STRS)(**pokemon_type_stats)
 
+def generate_types_class (*args):
+	"""Construct psuedo-class property. Contains Pokemon types as accessible attribute properties.
+	
+	Arguments passed serve the basis for the keys constructed for class. Should type not exist, key will not appear.
+	"""
+	
+	"""
+	>>> import pokemon_types
+	>>> pokemon_types.generate_types_class("BUG", "NULL")
+
+	Typeset(
+		BUG=(('NORMAL', 1, 'NORMAL_EFFECT'),
+			...)
+	"""
+
+	# set args as unique sequence. set arguments as uppercase strings.
+	args = map(str.upper, map(str, set(args))) 
+
+	# iterate for arguments. 
+	types = { args[i]: TYPE_GROUPS[args[i]] 
+		# confirm type argument exists in Pokemon types
+		for i in range(0, len(args)) if args[i] in TYPE_NAMES }
+
+	# construct named tuple using keys from found types.
+	types = namedtuple("Types", " ".join(dict.keys(types)))
+
+	# @return: @type. @class.__main__.Types
+	return types(**types)
+
 ######################
 ### Module classes ###
 ######################
