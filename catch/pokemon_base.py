@@ -4,14 +4,12 @@
 
 # from collections import named tuple module.
 from collections import namedtuple
-# import random
+# import random module
 import random
-# import system
+# import regex module
+import re
+# import system module
 import sys
-
-from pokemon_types import generate_types_class
-
-from pokemon_moves import generate_abilities_class
 
 ########################
 ### File information ###
@@ -23,23 +21,64 @@ __version__ = "1.0"
 
 __all__ = []
 
-######################
-### Module methods ###
-######################
+########################
+### Module constants ###
+########################
 
+TRAINING_KEYS_STRS = " ".join([
+	"EV_YIELD", 
+	"CATCH_RATE", 
+	"BASE_HAPPINESS", 
+	"BASE_EXP", 
+	"GROWTH_RATE"])
 
-def generate_training_class ():
-	pass
+BREEDING_KEYS_STRS = " ".join([
+	"GROUPS",
+	"GENDER",
+	"EGG_CYCLES"])
 
-def generate_breeding_class ():
-	pass
+STATS_KEYS_STRS = " ".join([
+	"HP",
+	"ATTACK",
+	"DEFENSE",
+	"SP_ATTACK",
+	"SP_DEFENSE",
+	"SPEED"])
 
-def generate_stats_class ():
-	pass
+ARCHETYPE_KEY_STRS = " ".join([
+	"POKEDEX",
+	"EN_NAME",
+	"JP_NAME",
+	"SPECIES",
+	"TYPES",
+	"ABILITIES",
+	"EVOLUTION",
+	"TRAINING",
+	"BREEDING",
+	"STATS"])
 
-def generate_evolution_class ():
-	pass
+	
+def generate_training_class (pokemon_training):
 
+	return namedtuple("Training", TRAINING_KEYS_STRS)(
+		EV_YIELD = generate_training_ev_yield_stats_class(*pokemon_training["EV_YIELD"]),
+		CATCH_RATE = generate_training_catch_rate_stats_class(*pokemon_training["CATCH_RATE"]),
+		BASE_HAPPINESS = generate_training_happiness_stats_class(*pokemon_training["BASE_HAPPINESS"]),
+		BASE_EXP = generate_training_exp_stats_class(pokemon_training["BASE_EXP"]),
+		GROWTH_RATE = generate_training_growth_rate_stats_class(pokemon_training["GROWTH_RATE"]))
+
+def generate_breeding_class (pokemon_breeding):
+
+	return namedtuple("Breeding", BREEDING_KEYS_STRS)(
+		GROUPS = generate_breeding_groups_stats_class(pokemon_breeding["GROUPS"]), 
+		GENDER = generate_breeding_gender_stats_class(pokemon_breeding["GENDER"]), 
+		EGG_CYCLES = generate_breeding_egg_cycles_stats_class(*pokemon_breeding["EGG_CYCLES"]))
+
+def generate_stats_class (pokemon_stats):
+
+	return namedtuple("Stats", STATS_KEYS_STRS)(**{ 
+		key: namedtuple(re.sub(r'\s|_', "", str.title(key)), "BASE MIN MAX")(*value) 
+		for key, value in pokemon_stats.iteritems() })
 
 def generate_training_ev_yield_stats_class (pokemon_ev_yield_sum, pokemon_ev_yield_str):
 	""""""
@@ -90,7 +129,7 @@ def generate_breeding_gender_stats_class (pokemon_gender_sequence):
 def generate_breeding_egg_cycles_stats_class (pokemon_egg_cycles_sum, pokemon_egg_cycles_steps):
 
 	# @return: @type: @class.__main__.EggCycles
-	return namedtuple("EggCycles", " ".join(["SUM", "STEPS"]))(
+	return namedtuple("Eggs", " ".join(["SUM", "STEPS"]))(
 		SUM = pokemon_egg_cycles_sum, STEPS = pokemon_egg_cycles_steps)
 
 def generate_stats_attack_stats_class (pokemon_attack_stats_base, pokemon_attack_stats_min, pokemon_attack_stats_max):
@@ -112,38 +151,81 @@ def generate_stats_sp_defense_stats_class (pokemon_sp_defense_stats_base, pokemo
 
 	return namedtuple("SpDefense", " ".join(["BASE", "MIN", "MAX"]))(
 		BASE = pokemon_sp_defense_stats_base, MIN = pokemon_sp_defense_stats_min, MAX = pokemon_sp_defense_stats_max)
-	
 
 
-	"""
+######################
+### Module classes ###
+######################
 
-	
-	STATS = (
-		("HP", 45, 200, 294),
-		("ATTACK", 49, 92, 216),
-		("DEFENSE", 49, 92, 216),
-		("SP_ATTACK", 65, 121, 251),
-		("SP_DEFENSE", 65, 121, 251),
-		("SPEED", 45, 85, 207)),
+class Archetype (namedtuple("Props", ARCHETYPE_KEY_STRS)):
 
-	EVOLUTION = (
-		("IVYSAUR", 2, "002", 16),
-		("VENUSAUR", 3, "003", 32)))
-	
-	TRAINING
-		("EV_YIELD", 1, "SPECIAL_ATTACK"),
-		("CATCH_RATE", 45, 5.9, "POKEBALL"),
-		("BASE_HAPPINESS", 70, "NORMAL"),
-		("BASE_EXP" 64),
-		("GROWTH_RATE", "MEDIUM_SLOW")),
+	def __new__ (self, 
+			POKEDEX,
+			EN_NAME,
+			JP_NAME,
+			SPECIES,
+			TYPES,
+			ABILITIES,
+			EVOLUTION,
+			TRAINING,
+			BREEDING,
+			STATS):
 
-	BREEDING = (
-		("GROUPS", (("GRASS", 1), ("MONSTER", 2))),
-		("GENDER", (("MALE", 87.5), ("FEMALE", 12.5))),
-		("EGG_CYCLES", 20, 5120)),
-	"""
+		return super(Archetype, self).__new__(self, 
+			POKEDEX = POKEDEX,
+			EN_NAME = EN_NAME,
+			JP_NAME = JP_NAME,
+			SPECIES = SPECIES,
+			TYPES = TYPES,
+			ABILITIES = ABILITIES,
+			EVOLUTION = EVOLUTION,
+			TRAINING = generate_training_class(TRAINING),
+			BREEDING = generate_breeding_class(BREEDING),
+			STATS = generate_stats_class(STATS))
+		
 
-print(
-	generate_gender_stats_class((("MALE", 87.5), ("FEMALE", 12.5)))
-)
+
+
+B = Archetype(
+
+		POKEDEX = 1,
+		EN_NAME = "BULBASAUR",
+		JP_NAME = "FUSHIGIDANE",
+		SPECIES = "SEED",
+		TYPES = (
+			("GRASS", 1), 
+			("POISON", 2)),
+		ABILITIES = (
+			("GROWL", 1),
+			("GROWTH", 34),
+			("LEECH_SEED", 7),
+			("POISON_POWDER", 20),
+			("RAZOR_LEAF", 27),
+			("SLEEP_POWDER", 41),
+			("SOLAR_BEAM", 48),
+			("TACKLE", 1),
+			("VINE_WHIP", 13)),
+		EVOLUTION = (
+			("IVYSAUR", 2, 16),
+			("VENUSAUR", 3, 32)),
+		TRAINING = dict(
+			EV_YIELD = (1, "SPECIAL_ATTACK"),
+			CATCH_RATE = (45, 5.9, "POKEBALL"),
+			BASE_HAPPINESS = (70, "NORMAL"),
+			BASE_EXP = (64),
+			GROWTH_RATE = ("MEDIUM_SLOW")),
+		BREEDING = dict(
+			GROUPS = (("GRASS", 1), ("MONSTER", 2)),
+			GENDER = (("MALE", 87.5), ("FEMALE", 12.5)),
+			EGG_CYCLES = (20, 5120)),
+		STATS = dict(
+			HP = (45, 200, 294),
+			ATTACK = (49, 92, 216),
+			DEFENSE = (49, 92, 216),
+			SP_ATTACK = (65, 121, 251),
+			SP_DEFENSE = (65, 121, 251),
+			SPEED = (45, 85, 207))
+
+	)
+
 

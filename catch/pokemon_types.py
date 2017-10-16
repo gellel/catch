@@ -469,7 +469,7 @@ def generate_type_meta_name (pokemon_type_name):
 	>>> import pokemon_types
 	>>> pokemon_types.generate_type_meta_name("BUG")
 	
-	'BugTypeMeta'
+	'Bug'
 	"""
 
 	# Named arguments #
@@ -479,7 +479,7 @@ def generate_type_meta_name (pokemon_type_name):
 
 	# @return: @type: <str>
 	return "".join([str.capitalize(
-		str.lower(str(pokemon_type_name))), "Type", "Meta"])
+		str.lower(str(pokemon_type_name)))])
 
 def generate_type_sum_class (pokemon_type):
 	"""Construct psuedo-class property. Contains type numerical scale for property parent.
@@ -563,11 +563,11 @@ def generate_type_stats_class (pokemon_type):
 	>>> pokemon_types.generate_type_stats_class("BUG")
 
 	BUG(
-		GHOST=GhostTypeMeta(
+		GHOST=Ghost(
 			EFFECT='NORMAL_EFFECT', SUM=1), 
-		STEEL=SteelTypeMeta(
+		STEEL=Steel(
 			EFFECT='SUPER_EFFECTIVE', SUM=2), 
-		ELECTRIC=ElectricTypeMeta(
+		ELECTRIC=Electric(
 			EFFECT='SUPER_EFFECTIVE', SUM=2),
 			...)
 	"""
@@ -605,32 +605,6 @@ def generate_type_stats_class (pokemon_type):
 	# return: @type: @class.__main__.STR_ARG_AS_CLS_NAME
 	return namedtuple(pokemon_type, TYPE_NAMES_STRS)(**pokemon_type_stats)
 
-def generate_types_class (*args):
-	"""Construct psuedo-class property. Contains Pokemon types as accessible attribute properties.
-	
-	Arguments passed serve the basis for the keys constructed for class. Should type not exist, key will not appear.
-	"""
-	
-	"""
-	>>> import pokemon_types
-	>>> pokemon_types.generate_types_class("BUG", "NULL")
-
-	Types(
-		BUG=(('NORMAL', 1, 'NORMAL_EFFECT'),
-			...)
-	"""
-
-	# set args as unique sequence. set arguments as uppercase strings.
-	args = map(str.upper, map(str, set(args))) 
-
-	# iterate for arguments sequence. 
-	types = { args[i]: getattr(sys.modules[__name__], args[i])
-		# confirm Pokemon type argument exists in Pokemon types.
-		for i in range(0, len(args)) if args[i] in TYPE_NAMES }
-
-	# @return: @type. @class.__main__.Types
-	return namedtuple("Types", " ".join(dict.keys(types)))(**types)
-
 ######################
 ### Module classes ###
 ######################
@@ -649,11 +623,11 @@ class Generate (namedtuple("Props", TYPE_NAMES_STRS)):
 		>>> pokemon_types.Generate("BUG")
 
 		Props(
-			GHOST=GhostTypeMeta(
+			GHOST=Ghost(
 				EFFECT='NOT_VERY_EFFECTIVE', SUM=0.5), 
-			STEEL=SteelTypeMeta(
+			STEEL=Steel(
 				EFFECT='NOT_VERY_EFFECTIVE', SUM=0.5), 
-			ELECTRIC=ElectricTypeMeta(
+			ELECTRIC=Electric(
 				EFFECT='NORMAL_EFFECT', SUM=1), ...)
 		"""
 
