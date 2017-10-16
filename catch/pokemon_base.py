@@ -136,7 +136,7 @@ def generate_breeding_gender_stats_class (pokemon_gender_sequence):
 def generate_breeding_egg_cycles_stats_class (pokemon_egg_cycles_sum, 
 	pokemon_egg_cycles_steps):
 
-	# @return: @type: @class.__main__.EggCycles
+	# @return: @type: @class.__main__.Eggs
 	return namedtuple("Eggs", " ".join(["SUM", "STEPS"]))(
 		SUM = pokemon_egg_cycles_sum, STEPS = pokemon_egg_cycles_steps)
 
@@ -183,7 +183,7 @@ def generate_stats_sp_defense_stats_class (pokemon_sp_defense_stats_base,
 def generate_stats_speed_stats_class (pokemon_speed_stats_base, 
 		pokemon_speed_stats_min, pokemon_speed_stats_max):
 
-	# @return: @type: @class.__main__.Hp
+	# @return: @type: @class.__main__.Speed
 	return namedtuple("Speed", " ".join(["BASE", "MIN", "MAX"]))(
 		BASE = pokemon_speed_stats_base, MIN = pokemon_speed_stats_min, 
 			MAX = pokemon_speed_stats_max)
@@ -260,7 +260,6 @@ B = Archetype(
 			SP_ATTACK = (65, 121, 251),
 			SP_DEFENSE = (65, 121, 251),
 			SPEED = (45, 85, 207))
-
 	)
 
 
