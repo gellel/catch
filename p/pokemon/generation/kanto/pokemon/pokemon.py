@@ -196,8 +196,7 @@ BULBASAUR = dict(
 				UNITS = "FEET"),
 			WEIGHT = dict(
 				SUM = 15.2,
-				UNITS = "POUNDS"))
-		),
+				UNITS = "POUNDS"))),
 	TYPES = dict(
 		PRIMARY = "GRASS",
 		SECONDARY = "POISON"),
@@ -217,8 +216,7 @@ BULBASAUR = dict(
 		BASE_EXP = dict(
 			SUM = 64),
 		GROWTH_RATE = dict(
-			STR = "MEDIUM_SLOW")
-		),
+			STR = "MEDIUM_SLOW")),
 	BREEDING = dict(
 		GROUPS = dict(
 			PRIMARY = "GRASS", 
@@ -229,8 +227,7 @@ BULBASAUR = dict(
 			GENDERLESS = 0.0),
 		EGG_CYCLES = dict(
 			SUM = 20,
-			STEPS = 5120)
-		),
+			STEPS = 5120)),
 	STATS = dict(
 		HP = dict(
 			BASE = 45,
@@ -255,8 +252,7 @@ BULBASAUR = dict(
 		SPEED = dict(
 			BASE = 45,
 			MIN = 85,
-			MAX = 207)
-		),
+			MAX = 207)),
 	EVOLUTION = dict(
 		IVYSAUR = IVYSAUR))
 
@@ -279,8 +275,7 @@ IVYSAUR = dict(
 				UNITS = "FEET"),
 			WEIGHT = dict(
 				SUM = 28.7,
-				UNITS = "POUNDS"))
-		),
+				UNITS = "POUNDS"))),
 	TYPES = dict(
 		PRIMARY = "GRASS",
 		SECONDARY = "POISON"),
@@ -301,8 +296,7 @@ IVYSAUR = dict(
 		BASE_EXP = dict(
 			SUM = 141),
 		GROWTH_RATE = dict(
-			STR = "MEDIUM_SLOW")
-		),
+			STR = "MEDIUM_SLOW")),
 	BREEDING = dict(
 		GROUPS = dict(
 			PRIMARY = "GRASS", 
@@ -313,8 +307,7 @@ IVYSAUR = dict(
 			GENDERLESS = 0),
 		EGG_CYCLES = dict(
 			SUM = 20,
-			STEPS = 5120)
-		),
+			STEPS = 5120)),
 	STATS = dict(
 		HP = dict(
 			BASE = 60,
@@ -363,8 +356,7 @@ VENUSAUR = dict(
 				UNITS = "FEET"),
 			WEIGHT = dict(
 				SUM = 220.5,
-				UNITS = "POUNDS"))
-		),
+				UNITS = "POUNDS"))),
 	TYPES = dict(
 		PRIMARY = "GRASS",
 		SECONDARY = "POISON"),
@@ -385,8 +377,7 @@ VENUSAUR = dict(
 		BASE_EXP = dict(
 			SUM = 208),
 		GROWTH_RATE = dict(
-			STR = "MEDIUM_SLOW")
-		),
+			STR = "MEDIUM_SLOW")),
 	BREEDING = dict(
 		GROUPS = dict(
 			PRIMARY = "GRASS", 
@@ -397,8 +388,7 @@ VENUSAUR = dict(
 			GENDERLESS = 0),
 		EGG_CYCLES = dict(
 			SUM = 20,
-			STEPS = 5120)
-		),
+			STEPS = 5120)),
 	STATS = dict(
 		HP = dict(
 			BASE = 80,
@@ -445,8 +435,7 @@ CHARMANDER = dict(
 				UNITS = "FEET"),
 			WEIGHT = dict(
 				SUM = 18.7,
-				UNITS = "POUNDS"))
-		),
+				UNITS = "POUNDS"))),
 	TYPES = dict(
 		PRIMARY = "FIRE",
 		SECONDARY = None),
@@ -466,8 +455,7 @@ CHARMANDER = dict(
 		BASE_EXP = dict(
 			SUM = 65),
 		GROWTH_RATE = dict(
-			STR = "MEDIUM_SLOW")
-		),
+			STR = "MEDIUM_SLOW")),
 	BREEDING = dict(
 		GROUPS = dict(
 			PRIMARY = "DRAGON", 
@@ -478,8 +466,7 @@ CHARMANDER = dict(
 			GENDERLESS = 0),
 		EGG_CYCLES = dict(
 			SUM = 20,
-			STEPS = 5120)
-		),
+			STEPS = 5120)),
 	STATS = dict(
 		HP = dict(
 			BASE = 39,
@@ -559,8 +546,7 @@ CHARMELEON = dict(
 			GENDERLESS = 0),
 		EGG_CYCLES = dict(
 			SUM = 20,
-			STEPS = 5120)
-		),
+			STEPS = 5120)),
 	STATS = dict(
 		HP = dict(
 			BASE = 58,
@@ -640,8 +626,7 @@ CHARIZARD = dict(
 			GENDERLESS = 0),
 		EGG_CYCLES = dict(
 			SUM = 20,
-			STEPS = 5120)
-		),
+			STEPS = 5120)),
 	STATS = dict(
 		HP = dict(
 			BASE = 78,
@@ -720,8 +705,7 @@ SQUIRTLE = dict(
 			GENDERLESS = 0),
 		EGG_CYCLES = dict(
 			SUM = 20,
-			STEPS = 5120)
-		),
+			STEPS = 5120)),
 	STATS = dict(
 		HP = dict(
 			BASE = 44,
