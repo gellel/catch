@@ -2,6 +2,14 @@
 # -*- coding: utf-8 -*- 
 
 ###########################
+### Required ##############
+###########################
+
+from collections import namedtuple
+
+import sys
+
+###########################
 ### About #################
 ###########################
 
@@ -75,7 +83,7 @@ __all__ = [
 	"HORN_DRILL",
 	"HYDRO_PUMP",
 	"HYPER_BEAM",
-	"HYPER_Fang",
+	"HYPER_FANG",
 	"HYPNOSIS",
 	"ICE_BEAM",
 	"ICE_PUNCH",
@@ -1570,7 +1578,7 @@ MOVES = dict(
 	HORN_DRILL = HORN_DRILL,
 	HYDRO_PUMP = HYDRO_PUMP,
 	HYPER_BEAM = HYPER_BEAM,
-	HYPER_Fang = HYPER_Fang,
+	HYPER_FANG = HYPER_FANG,
 	HYPNOSIS = HYPNOSIS,
 	ICE_BEAM = ICE_BEAM,
 	ICE_PUNCH = ICE_PUNCH,
@@ -1669,8 +1677,7 @@ MOVES = dict(
 	WATER_GUN = WATER_GUN,
 	WHIRLWIND = WHIRLWIND,
 	WING_ATTACK = WING_ATTACK,
-	WITHDRAW = WITHDRAW,
-	WATER = WATER) 
+	WITHDRAW = WITHDRAW) 
 
 """Tuple containing the names for the different Pokemon moves.
 
