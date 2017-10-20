@@ -253,8 +253,8 @@ BULBASAUR = dict(
 			BASE = 45,
 			MIN = 85,
 			MAX = 207)),
-	EVOLUTION = dict(
-		IVYSAUR = IVYSAUR))
+	EVOLUTION = (
+		"IVYSAUR"))
 
 IVYSAUR = dict(
 	POKEDEX = 2,
@@ -333,8 +333,8 @@ IVYSAUR = dict(
 			BASE = 60,
 			MIN = 112,
 			MAX = 240)),
-	EVOLUTION = dict(
-		VENUSAUR = VENUSAUR))
+	EVOLUTION = (
+		"VENUSAUR"))
 
 VENUSAUR = dict(
 	POKEDEX = 3,
@@ -413,7 +413,7 @@ VENUSAUR = dict(
 			BASE = 80,
 			MIN = 148,
 			MAX = 284)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 CHARMANDER = dict(
 	POKEDEX = 4,
@@ -491,8 +491,8 @@ CHARMANDER = dict(
 			BASE = 65,
 			MIN = 121,
 			MAX = 251)),
-	EVOLUTION = dict(
-		CHARMELEON = CHARMELEON))
+	EVOLUTION = (
+		 "CHARMELEON"))
 
 CHARMELEON = dict(
 	POKEDEX = 5,
@@ -571,8 +571,8 @@ CHARMELEON = dict(
 			BASE = 80,
 			MIN = 148,
 			MAX = 284)),
-	EVOLUTION = dict(
-		CHARIZARD = CHARIZARD))
+	EVOLUTION = (
+		"CHARIZARD"))
 
 CHARIZARD = dict(
 	POKEDEX = 6,
@@ -651,7 +651,7 @@ CHARIZARD = dict(
 			BASE = 100,
 			MIN = 184,
 			MAX = 328)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 SQUIRTLE = dict(
 	POKEDEX = 7,
@@ -730,8 +730,8 @@ SQUIRTLE = dict(
 			BASE = 43,
 			MIN = 81,
 			MAX = 203)),
-	EVOLUTION = dict(
-		WARTORTLE = WARTORTLE))
+	EVOLUTION = (
+		"WARTORTLE"))
 
 WARTORTLE = dict(
 	POKEDEX = 8,
@@ -810,8 +810,8 @@ WARTORTLE = dict(
 			BASE = 58,
 			MIN = 108,
 			MAX = 236)),
-	EVOLUTION = dict(
-		BLASTOISE = BLASTOISE))
+	EVOLUTION = (
+		"BLASTOISE"))
 
 BLASTOISE = dict(
 	POKEDEX = 9,
@@ -889,7 +889,7 @@ BLASTOISE = dict(
 			BASE = 78,
 			MIN = 144,
 			MAX = 280)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 CATERPIE = dict(
 	POKEDEX = 10,
@@ -928,7 +928,7 @@ CATERPIE = dict(
 			SUM = 53,
 			STR = "NORMAL"),
 		BASE_EXP = dict(
-			SUM =),
+			SUM = 53),
 		GROWTH_RATE = dict(
 			STR = "MEDIUM_FAST")),
 	BREEDING = dict(
@@ -967,8 +967,8 @@ CATERPIE = dict(
 			BASE = 45,
 			MIN = 85,
 			MAX = 207)),
-	EVOLUTION = dict(
-		METAPOD = METAPOD))
+	EVOLUTION = (
+		"METAPOD"))
 
 METAPOD = dict(
 	POKEDEX = 11,
@@ -1046,8 +1046,8 @@ METAPOD = dict(
 			BASE = 30,
 			MIN = 58,
 			MAX = 174)),
-	EVOLUTION = dict(
-		BUTTERFREE = BUTTERFREE))
+	EVOLUTION = (
+		 "BUTTERFREE"))
 
 BUTTERFREE = dict(
 	POKEDEX = 12,
@@ -1126,7 +1126,7 @@ BUTTERFREE = dict(
 			BASE = 70,
 			MIN = 130,
 			MAX = 262)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 WEEDLE = dict(
 	POKEDEX = 13,
@@ -1204,8 +1204,8 @@ WEEDLE = dict(
 			BASE = 50,
 			MIN = 94,
 			MAX = 218)),
-	EVOLUTION = dict(
-		KAKUNA = KAKUNA))
+	EVOLUTION = (
+		"KAKUNA"))
 
 KAKUNA = dict(
 	POKEDEX = 14,
@@ -1283,8 +1283,8 @@ KAKUNA = dict(
 			BASE = 35,
 			MIN = 67,
 			MAX = 185)),
-	EVOLUTION = dict(
-		BEEDRILL = BEEDRILL))
+	EVOLUTION = (
+		"BEEDRILL"))
 
 BEEDRILL = dict(
 	POKEDEX = 15,
@@ -1363,7 +1363,7 @@ BEEDRILL = dict(
 			BASE = 75,
 			MIN = 139,
 			MAX = 273)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 PIDGEY = dict(
 	POKEDEX = 16,
@@ -1441,8 +1441,8 @@ PIDGEY = dict(
 			BASE = 56,
 			MIN = 105,
 			MAX = 232)),
-	EVOLUTION = dict(
-		PIDGEOTTO = PIDGEOTTO))
+	EVOLUTION = (
+		"PIDGEOTTO"))
 
 PIDGEOTTO = dict(
 	POKEDEX = 17,
@@ -1520,8 +1520,8 @@ PIDGEOTTO = dict(
 			BASE = 71,
 			MIN = 132,
 			MAX = 265)),
-	EVOLUTION = dict(
-		PIDGEOT = PIDGEOT))
+	EVOLUTION = (
+		"IDGEOT"))
 
 PIDGEOT = dict(
 	POKEDEX = 18,
@@ -1599,7 +1599,7 @@ PIDGEOT = dict(
 			BASE = 101,
 			MIN = 186,
 			MAX = 331)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 RATTATA = dict(
 	POKEDEX = 19,
@@ -1677,8 +1677,8 @@ RATTATA = dict(
 			BASE = 72,
 			MIN = 134,
 			MAX = 267)),
-	EVOLUTION = dict(
-		RATICATE = RATICATE))
+	EVOLUTION = (
+		"RATICATE"))
 
 RATICATE = dict(
 	POKEDEX = 20,
@@ -1756,7 +1756,7 @@ RATICATE = dict(
 			BASE = 97,
 			MIN = 179,
 			MAX = 322)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 SPEAROW = dict(
 	POKEDEX = 21,
@@ -1834,8 +1834,8 @@ SPEAROW = dict(
 			BASE = 70,
 			MIN = 130,
 			MAX = 262)),
-	EVOLUTION = dict(
-		FEAROW = FEAROW))
+	EVOLUTION = (
+		"FEAROW"))
 
 FEAROW = dict(
 	POKEDEX = 22,
@@ -1913,7 +1913,7 @@ FEAROW = dict(
 			BASE = 100,
 			MIN = 184,
 			MAX = 328)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 EKANS = dict(
 	POKEDEX = 23,
@@ -1991,8 +1991,8 @@ EKANS = dict(
 			BASE = 55,
 			MIN = 103,
 			MAX = 229)),
-	EVOLUTION = dict(
-		ARBOK = ARBOK))
+	EVOLUTION = (
+	"ARBOK"))
 
 ARBOK = dict(
 	POKEDEX = 24,
@@ -2070,7 +2070,7 @@ ARBOK = dict(
 			BASE = 80,
 			MIN = 148,
 			MAX = 284)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 PIKACHU = dict(
 	POKEDEX = 25,
@@ -2148,8 +2148,8 @@ PIKACHU = dict(
 			BASE = 90,
 			MIN = 166,
 			MAX = 306)),
-	EVOLUTION = dict(
-		RAICHU = RAICHU))
+	EVOLUTION = (
+		"RAICHU"))
 
 RAICHU = dict(
 	POKEDEX = 26,
@@ -2227,7 +2227,7 @@ RAICHU = dict(
 			BASE = 110,
 			MIN = 202,
 			MAX = 350)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 SANDSHREW = dict(
 	POKEDEX = 27,
@@ -2305,8 +2305,8 @@ SANDSHREW = dict(
 			BASE = 40,
 			MIN = 76,
 			MAX = 196)),
-	EVOLUTION = dict(
-		SANDSLASH = SANDSLASH))
+	EVOLUTION = (
+		"SANDSLASH"))
 
 SANDSLASH = dict(
 	POKEDEX = 28,
@@ -2384,7 +2384,7 @@ SANDSLASH = dict(
 			BASE = 65,
 			MIN = 121,
 			MAX = 251)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 NIDORAN_FEMALE = dict(
 	POKEDEX = 29,
@@ -2462,8 +2462,8 @@ NIDORAN_FEMALE = dict(
 			BASE = 41,
 			MIN = 78,
 			MAX = 199)),
-	EVOLUTION = dict(
-		NIDORINA = NIDORINA))
+	EVOLUTION = (
+		"NIDORINA"))
 
 NIDORINA = dict(
 	POKEDEX = 30,
@@ -2541,8 +2541,8 @@ NIDORINA = dict(
 			BASE = 56,
 			MIN = 105,
 			MAX = 232)),
-	EVOLUTION = dict(
-		NIDOQUEEN = NIDOQUEEN))
+	EVOLUTION = (
+		"NIDOQUEEN"))
 
 NIDOQUEEN = dict(
 	POKEDEX = 31,
@@ -2620,7 +2620,7 @@ NIDOQUEEN = dict(
 			BASE = 76,
 			MIN = 141,
 			MAX = 276)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 NIDORAN_MALE = dict(
 	POKEDEX = 32,
@@ -2698,8 +2698,8 @@ NIDORAN_MALE = dict(
 			BASE = 50,
 			MIN = 94,
 			MAX = 218)),
-	EVOLUTION = dict(
-		NIDORINO = NIDORINO))
+	EVOLUTION = (
+		"NIDORINO"))
 
 NIDORINO = dict(
 	POKEDEX = 33,
@@ -2743,8 +2743,8 @@ NIDORINO = dict(
 			STR = "MEDIUM_SLOW")),
 	BREEDING = dict(
 		GROUPS = dict(
-			PRIMARY = , 
-			SECONDARY = ),
+			PRIMARY = "FIELD", 
+			SECONDARY = "MONSTER"),
 		GENDERS = dict(
 			MALE = 100.0, 
 			FEMALE = 0, 
@@ -2777,8 +2777,8 @@ NIDORINO = dict(
 			BASE = 65,
 			MIN = 121,
 			MAX = 251)),
-	EVOLUTION = dict(
-		NIDOKING = NIDOKING))
+	EVOLUTION = (
+		"NIDOKING"))
 
 NIDOKING = dict(
 	POKEDEX = 34,
@@ -2856,7 +2856,7 @@ NIDOKING = dict(
 			BASE = 85,
 			MIN = 157,
 			MAX = 295)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 CLEFAIRY = dict(
 	POKEDEX = 35,
@@ -2934,8 +2934,8 @@ CLEFAIRY = dict(
 			BASE = 35,
 			MIN = 67,
 			MAX = 185)),
-	EVOLUTION = dict(
-		CLEFABLE = CLEFABLE))
+	EVOLUTION = (
+		"CLEFABLE"))
 
 CLEFABLE = dict(
 	POKEDEX = 36,
@@ -3013,7 +3013,7 @@ CLEFABLE = dict(
 			BASE = 60,
 			MIN = 112,
 			MAX = 240)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 VULPIX = dict(
 	POKEDEX = 37,
@@ -3091,8 +3091,8 @@ VULPIX = dict(
 			BASE = 65,
 			MIN = 121,
 			MAX = 251)),
-	EVOLUTION = dict(
-		NINETALES = NINETALES))
+	EVOLUTION = (
+		"NINETALES"))
 
 NINETALES = dict(
 	POKEDEX = 38,
@@ -3171,7 +3171,7 @@ NINETALES = dict(
 			BASE = 100,
 			MIN = 184,
 			MAX = 328)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 JIGGLYPUFF = dict(
 	POKEDEX = 39,
@@ -3249,7 +3249,7 @@ JIGGLYPUFF = dict(
 			BASE = 20,
 			MIN = 40,
 			MAX = 152)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 WIGGLYTUFF = dict(
 	POKEDEX = 40,
@@ -3327,7 +3327,7 @@ WIGGLYTUFF = dict(
 			BASE = 45,
 			MIN = 85,
 			MAX = 207)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 ZUBAT = dict(
 	POKEDEX = 41,
@@ -3405,8 +3405,8 @@ ZUBAT = dict(
 			BASE = 55,
 			MIN = 103,
 			MAX = 229)),
-	EVOLUTION = dict(
-		GOLBAT = GOLBAT))
+	EVOLUTION = (
+		"GOLBAT"))
 
 GOLBAT = dict(
 	POKEDEX = 42,
@@ -3484,7 +3484,7 @@ GOLBAT = dict(
 			BASE = 90,
 			MIN = 166,
 			MAX = 306)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 ODDISH = dict(
 	POKEDEX = 43,
@@ -3562,8 +3562,8 @@ ODDISH = dict(
 			BASE = 30,
 			MIN = 58,
 			MAX = 174)),
-	EVOLUTION = dict(
-		GLOOM = GLOOM))
+	EVOLUTION = (
+		"GLOOM"))
 
 GLOOM = dict(
 	POKEDEX = 44,
@@ -3608,7 +3608,7 @@ GLOOM = dict(
 	BREEDING = dict(
 		GROUPS = dict(
 			PRIMARY = "GRASS", 
-			SECONDARY = ),
+			SECONDARY = None),
 		GENDERS = dict(
 			MALE = 50.0, 
 			FEMALE = 50.0, 
@@ -3641,8 +3641,8 @@ GLOOM = dict(
 			BASE = 40,
 			MIN = 76,
 			MAX = 196)),
-	EVOLUTION = dict(
-		VILEPLUME = VILEPLUME))
+	EVOLUTION = (
+		"VILEPLUME"))
 
 VILEPLUME = dict(
 	POKEDEX = 45,
@@ -3720,7 +3720,7 @@ VILEPLUME = dict(
 			BASE = 50,
 			MIN = 94,
 			MAX = 218)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 PARAS = dict(
 	POKEDEX = 46,
@@ -3798,8 +3798,8 @@ PARAS = dict(
 			BASE = 25,
 			MIN = 49,
 			MAX = 163)),
-	EVOLUTION = dict(
-		PARASECT = PARASECT))
+	EVOLUTION = (
+		"PARASECT"))
 
 PARASECT = dict(
 	POKEDEX = 47,
@@ -3878,7 +3878,7 @@ PARASECT = dict(
 			BASE = 30,
 			MIN = 58,
 			MAX = 174)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 VENONAT = dict(
 	POKEDEX = 48,
@@ -3956,8 +3956,8 @@ VENONAT = dict(
 			BASE = 45,
 			MIN = 85,
 			MAX = 207)),
-	EVOLUTION = dict(
-		VENOMOTH = VENOMOTH))
+	EVOLUTION = (
+		"VENOMOTH"))
 
 VENOMOTH = dict(
 	POKEDEX = 49,
@@ -4036,7 +4036,7 @@ VENOMOTH = dict(
 			BASE = 90,
 			MIN = 166,
 			MAX = 306)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 DIGLETT = dict(
 	POKEDEX = 50,
@@ -4114,8 +4114,8 @@ DIGLETT = dict(
 			BASE = 95,
 			MIN = 175,
 			MAX = 317)),
-	EVOLUTION = dict(
-		DUGTRIO = DUGTRIO))
+	EVOLUTION = (
+		"UGTRIO"))
 
 DUGTRIO = dict(
 	POKEDEX = 51,
@@ -4193,7 +4193,7 @@ DUGTRIO = dict(
 			BASE = 120,
 			MIN = 220,
 			MAX = 372)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 MEOWTH = dict(
 	POKEDEX = 52,
@@ -4271,8 +4271,8 @@ MEOWTH = dict(
 			BASE = 90,
 			MIN = 166,
 			MAX = 306)),
-	EVOLUTION = dict(
-		PERSIAN = PERSIAN))
+	EVOLUTION = (
+		"ERSIAN"))
 
 PERSIAN = dict(
 	POKEDEX = 53,
@@ -4350,7 +4350,7 @@ PERSIAN = dict(
 			BASE = 115,
 			MIN = 221,
 			MAX = 361)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 PSYDUCK = dict(
 	POKEDEX = 54,
@@ -4428,8 +4428,8 @@ PSYDUCK = dict(
 			BASE = 55,
 			MIN = 103,
 			MAX = 229)),
-	EVOLUTION = dict(
-		GOLDUCK = GOLDUCK))
+	EVOLUTION = (
+		"OLDUCK"))
 
 GOLDUCK = dict(
 	POKEDEX = 55,
@@ -4507,7 +4507,7 @@ GOLDUCK = dict(
 			BASE = 85,
 			MIN = 157,
 			MAX = 295)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 MANKEY = dict(
 	POKEDEX = 56,
@@ -4585,8 +4585,8 @@ MANKEY = dict(
 			BASE = 70,
 			MIN = 130,
 			MAX = 262)),
-	EVOLUTION = dict(
-		PRIMEAPE = PRIMEAPE))
+	EVOLUTION = (
+		"PRIMEAPE"))
 
 PRIMEAPE = dict(
 	POKEDEX = 57,
@@ -4664,7 +4664,7 @@ PRIMEAPE = dict(
 			BASE = 95,
 			MIN = 175,
 			MAX = 317)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 GROWLITHE = dict(
 	POKEDEX = 58,
@@ -4742,8 +4742,8 @@ GROWLITHE = dict(
 			BASE = 60,
 			MIN = 112,
 			MAX = 240)),
-	EVOLUTION = dict(
-		ARCANINE = ARCANINE))
+	EVOLUTION = (
+		"ARCANINE"))
 
 ARCANINE = dict(
 	POKEDEX = 59,
@@ -4821,7 +4821,7 @@ ARCANINE = dict(
 			BASE = 95,
 			MIN = 175,
 			MAX = 317)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 POLIWAG = dict(
 	POKEDEX = 60,
@@ -4899,8 +4899,8 @@ POLIWAG = dict(
 			BASE = 90,
 			MIN = 166,
 			MAX = 306)),
-	EVOLUTION = dict(
-		POLIWHIRL = POLIWHIRL))
+	EVOLUTION = (
+		"POLIWHIRL"))
 
 POLIWHIRL = dict(
 	POKEDEX = 61,
@@ -4978,8 +4978,8 @@ POLIWHIRL = dict(
 			BASE = 90,
 			MIN = 166,
 			MAX = 306)),
-	EVOLUTION = dict(
-		POLIWRATH = POLIWRATH))
+	EVOLUTION = (
+		"POLIWRATH"))
 
 POLIWRATH = dict(
 	POKEDEX = 62,
@@ -5057,7 +5057,7 @@ POLIWRATH = dict(
 			BASE = 70,
 			MIN = 130,
 			MAX = 262)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 ABRA = dict(
 	POKEDEX = 63,
@@ -5135,8 +5135,8 @@ ABRA = dict(
 			BASE = 90,
 			MIN = 166,
 			MAX = 306)),
-	EVOLUTION = dict(
-		KADABRA = KADABRA))
+	EVOLUTION = (
+		"ADABRA"))
 
 KADABRA = dict(
 	POKEDEX = 64,
@@ -5214,8 +5214,8 @@ KADABRA = dict(
 			BASE = 105,
 			MIN = 193,
 			MAX = 339)),
-	EVOLUTION = dict(
-		ALAKAZAM = ALAKAZAM))
+	EVOLUTION = (
+		"ALAKAZAM"))
 
 ALAKAZAM = dict(
 	POKEDEX = 65,
@@ -5293,7 +5293,7 @@ ALAKAZAM = dict(
 			BASE = 120,
 			MIN = 220,
 			MAX = 372)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 MACHOP = dict(
 	POKEDEX = 66,
@@ -5371,8 +5371,8 @@ MACHOP = dict(
 			BASE = 35,
 			MIN = 67,
 			MAX = 185)),
-	EVOLUTION = dict(
-		MACHOKE = MACHOKE))
+	EVOLUTION = (
+		"ACHOKE"))
 
 MACHOKE = dict(
 	POKEDEX = 67,
@@ -5450,8 +5450,8 @@ MACHOKE = dict(
 			BASE = 45,
 			MIN = 85,
 			MAX = 207)),
-	EVOLUTION = dict(
-		MACHAMP = MACHAMP))
+	EVOLUTION = (
+		"ACHAMP"))
 
 MACHAMP = dict(
 	POKEDEX = 68,
@@ -5495,8 +5495,8 @@ MACHAMP = dict(
 			STR = "MEDIUM_SLOW")),
 	BREEDING = dict(
 		GROUPS = dict(
-			PRIMARY = , 
-			SECONDARY = ),
+			PRIMARY = "HUMAN_LIKE", 
+			SECONDARY = None),
 		GENDERS = dict(
 			MALE = 75.0, 
 			FEMALE = 25.0, 
@@ -5529,7 +5529,7 @@ MACHAMP = dict(
 			BASE = 55,
 			MIN = 103,
 			MAX = 229)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 BELLSPROUT = dict(
 	POKEDEX = 69,
@@ -5607,8 +5607,8 @@ BELLSPROUT = dict(
 			BASE = 40,
 			MIN = 76,
 			MAX = 196)),
-	EVOLUTION = dict(
-		WEEPINBELL = WEEPINBELL))
+	EVOLUTION = (
+		 "WEEPINBELL"))
 
 WEEPINBELL = dict(
 	POKEDEX = 70,
@@ -5686,8 +5686,8 @@ WEEPINBELL = dict(
 			BASE = 55,
 			MIN = 103,
 			MAX = 229)),
-	EVOLUTION = dict(
-		VICTREEBEL = VICTREEBEL))
+	EVOLUTION = (
+		 "VICTREEBEL"))
 
 VICTREEBEL = dict(
 	POKEDEX = 71,
@@ -5765,7 +5765,7 @@ VICTREEBEL = dict(
 			BASE = 70,
 			MIN = 130,
 			MAX = 262)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 TENTACOOL = dict(
 	POKEDEX = 72,
@@ -5843,8 +5843,8 @@ TENTACOOL = dict(
 			BASE = 70,
 			MIN = 130,
 			MAX = 262)),
-	EVOLUTION = dict(
-		TENTACRUEL = TENTACRUEL))
+	EVOLUTION = (
+		 "TENTACRUEL"))
 
 TENTACRUEL = dict(
 	POKEDEX = 73,
@@ -5922,7 +5922,7 @@ TENTACRUEL = dict(
 			BASE = 100,
 			MIN = 184,
 			MAX = 328)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 GEODUDE = dict(
 	POKEDEX = 74,
@@ -6000,8 +6000,8 @@ GEODUDE = dict(
 			BASE = 20,
 			MIN = 40,
 			MAX = 152)),
-	EVOLUTION = dict(
-		GRAVELER = GRAVELER))
+	EVOLUTION = (
+		"GRAVELER"))
 
 GRAVELER = dict(
 	POKEDEX = 75,
@@ -6079,8 +6079,8 @@ GRAVELER = dict(
 			BASE = 35,
 			MIN = 67,
 			MAX = 185)),
-	EVOLUTION = dict(
-		GOLEM = GOLEM))
+	EVOLUTION = (
+		"GOLEM"))
 
 GOLEM = dict(
 	POKEDEX = 76,
@@ -6158,7 +6158,7 @@ GOLEM = dict(
 			BASE = 45,
 			MIN = 85,
 			MAX = 207)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 PONYTA = dict(
 	POKEDEX = 77,
@@ -6236,8 +6236,8 @@ PONYTA = dict(
 			BASE = 90,
 			MIN = 166,
 			MAX = 306)),
-	EVOLUTION = dict(
-		RAPIDASH = RAPIDASH))
+	EVOLUTION = (
+		"RAPIDASH"))
 
 RAPIDASH = dict(
 	POKEDEX = 78,
@@ -6315,7 +6315,7 @@ RAPIDASH = dict(
 			BASE = 105,
 			MIN = 193,
 			MAX = 339)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 SLOWPOKE = dict(
 	POKEDEX = 79,
@@ -6393,7 +6393,7 @@ SLOWPOKE = dict(
 			BASE = 15,
 			MIN = 31,
 			MAX = 141)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 SLOWBRO = dict(
 	POKEDEX = 80,
@@ -6471,7 +6471,7 @@ SLOWBRO = dict(
 			BASE = 30,
 			MIN = 58,
 			MAX = 174)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 MAGNEMITE = dict(
 	POKEDEX = 81,
@@ -6549,8 +6549,8 @@ MAGNEMITE = dict(
 			BASE = 45,
 			MIN = 85,
 			MAX = 207)),
-	EVOLUTION = dict(
-		MAGNETON = MAGNETON))
+	EVOLUTION = (
+		"MAGNETON"))
 
 MAGNETON = dict(
 	POKEDEX = 82,
@@ -6628,7 +6628,7 @@ MAGNETON = dict(
 			BASE = 70,
 			MIN = 130,
 			MAX = 262)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 FARFETCHD = dict(
 	POKEDEX = 83,
@@ -6706,7 +6706,7 @@ FARFETCHD = dict(
 			BASE = 60,
 			MIN = 112,
 			MAX = 240)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 DODUO = dict(
 	POKEDEX = 84,
@@ -6784,8 +6784,8 @@ DODUO = dict(
 			BASE = 75,
 			MIN = 139,
 			MAX = 273)),
-	EVOLUTION = dict(
-		DODRIO = DODRIO))
+	EVOLUTION = (
+		"DODRIO"))
 
 DODRIO = dict(
 	POKEDEX = 85,
@@ -6863,7 +6863,7 @@ DODRIO = dict(
 			BASE = 110,
 			MIN = 202,
 			MAX = 350)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 SEEL = dict(
 	POKEDEX = 86,
@@ -6941,8 +6941,8 @@ SEEL = dict(
 			BASE = 45,
 			MIN = 85,
 			MAX = 207)),
-	EVOLUTION = dict(
-		DEWGONG = DEWGONG))
+	EVOLUTION = (
+		"EWGONG"))
 
 DEWGONG = dict(
 	POKEDEX = 87,
@@ -7020,7 +7020,7 @@ DEWGONG = dict(
 			BASE = 70,
 			MIN = 130,
 			MAX = 262)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 GRIMER = dict(
 	POKEDEX = 88,
@@ -7098,8 +7098,8 @@ GRIMER = dict(
 			BASE = 25,
 			MIN = 49,
 			MAX = 163)),
-	EVOLUTION = dict(
-		MUK = MUK))
+	EVOLUTION = (
+		"MUK"))
 
 MUK = dict(
 	POKEDEX = 89,
@@ -7178,7 +7178,7 @@ MUK = dict(
 			BASE = 50,
 			MIN = 94,
 			MAX = 218)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 SHELLDER = dict(
 	POKEDEX = 90,
@@ -7256,8 +7256,8 @@ SHELLDER = dict(
 			BASE = 40,
 			MIN = 76,
 			MAX = 196)),
-	EVOLUTION = dict(
-		CLOYSTER = CLOYSTER))
+	EVOLUTION = (
+		"CLOYSTER"))
 
 CLOYSTER = dict(
 	POKEDEX = 91,
@@ -7335,7 +7335,7 @@ CLOYSTER = dict(
 			BASE = 70,
 			MIN = 130,
 			MAX = 262)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 GASTLY = dict(
 	POKEDEX = 92,
@@ -7413,8 +7413,8 @@ GASTLY = dict(
 			BASE = 80,
 			MIN = 148,
 			MAX = 284)),
-	EVOLUTION = dict(
-		HAUNTER = HAUNTER))
+	EVOLUTION = (
+		"AUNTER"))
 
 HAUNTER = dict(
 	POKEDEX = 93,
@@ -7492,8 +7492,8 @@ HAUNTER = dict(
 			BASE = 95,
 			MIN = 175,
 			MAX = 317)),
-	EVOLUTION = dict(
-		GENGAR = GENGAR))
+	EVOLUTION = (
+		"GENGAR"))
 
 GENGAR = dict(
 	POKEDEX = 94,
@@ -7571,7 +7571,7 @@ GENGAR = dict(
 			BASE = 110,
 			MIN = 202,
 			MAX = 350)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 ONIX = dict(
 	POKEDEX = 95,
@@ -7649,7 +7649,7 @@ ONIX = dict(
 			BASE = 70,
 			MIN = 130,
 			MAX = 262)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 DROWZEE = dict(
 	POKEDEX = 96,
@@ -7727,8 +7727,8 @@ DROWZEE = dict(
 			BASE = 42,
 			MIN = 80,
 			MAX = 201)),
-	EVOLUTION = dict(
-		HYPNO = HYPNO))
+	EVOLUTION = (
+		"HYPNO"))
 
 HYPNO = dict(
 	POKEDEX = 97,
@@ -7806,7 +7806,7 @@ HYPNO = dict(
 			BASE = 67,
 			MIN = 125,
 			MAX = 256)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 KRABBY = dict(
 	POKEDEX = 98,
@@ -7884,8 +7884,8 @@ KRABBY = dict(
 			BASE = 50,
 			MIN = 94,
 			MAX = 218)),
-	EVOLUTION = dict(
-		KINGLER = KINGLER))
+	EVOLUTION = (
+		"INGLER"))
 
 KINGLER = dict(
 	POKEDEX = 99,
@@ -7963,7 +7963,7 @@ KINGLER = dict(
 			BASE = 75,
 			MIN = 139,
 			MAX = 273)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 VOLTORB = dict(
 	POKEDEX = 100,
@@ -8041,8 +8041,8 @@ VOLTORB = dict(
 			BASE = 100,
 			MIN = 184,
 			MAX = 328)),
-	EVOLUTION = dict(
-		ELECTRODE = ELECTRODE))
+	EVOLUTION = (
+		"ELECTRODE"))
 
 ELECTRODE = dict(
 	POKEDEX = 101,
@@ -8120,7 +8120,7 @@ ELECTRODE = dict(
 			BASE = 150,
 			MIN = 274,
 			MAX = 438)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 EXEGGCUTE = dict(
 	POKEDEX = 102,
@@ -8198,8 +8198,8 @@ EXEGGCUTE = dict(
 			BASE = 40,
 			MIN = 76,
 			MAX = 196)),
-	EVOLUTION = dict(
-		EXEGGUTOR = EXEGGUTOR))
+	EVOLUTION = (
+		"EXEGGUTOR"))
 
 EXEGGUTOR = dict(
 	POKEDEX = 103,
@@ -8277,7 +8277,7 @@ EXEGGUTOR = dict(
 			BASE = 55,
 			MIN = 103,
 			MAX = 229)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 CUBONE = dict(
 	POKEDEX = 104,
@@ -8355,8 +8355,8 @@ CUBONE = dict(
 			BASE = 35,
 			MIN = 67,
 			MAX = 185)),
-	EVOLUTION = dict(
-		MAROWAK = MAROWAK))
+	EVOLUTION = (
+		"AROWAK"))
 
 MAROWAK = dict(
 	POKEDEX = 105,
@@ -8434,7 +8434,7 @@ MAROWAK = dict(
 			BASE = 45,
 			MIN = 85,
 			MAX = 207)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 HITMONLEE = dict(
 	POKEDEX = 106,
@@ -8512,7 +8512,7 @@ HITMONLEE = dict(
 			BASE = 87,
 			MIN = 161,
 			MAX = 300)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 HITMONCHAN = dict(
 	POKEDEX = 107,
@@ -8590,7 +8590,7 @@ HITMONCHAN = dict(
 			BASE = 76,
 			MIN = 141,
 			MAX = 276)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 LICKITUNG = dict(
 	POKEDEX = 108,
@@ -8668,7 +8668,7 @@ LICKITUNG = dict(
 			BASE = 30,
 			MIN = 58,
 			MAX = 174)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 KOFFING = dict(
 	POKEDEX = 109,
@@ -8746,8 +8746,8 @@ KOFFING = dict(
 			BASE = 35,
 			MIN = 67,
 			MAX = 185)),
-	EVOLUTION = dict(
-		WEEZING = WEEZING))
+	EVOLUTION = (
+		"EEZING"))
 
 WEEZING = dict(
 	POKEDEX = 110,
@@ -8825,7 +8825,7 @@ WEEZING = dict(
 			BASE = 60,
 			MIN = 112,
 			MAX = 240)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 RHYHORN = dict(
 	POKEDEX = 111,
@@ -8903,8 +8903,8 @@ RHYHORN = dict(
 			BASE = 25,
 			MIN = 49,
 			MAX = 163)),
-	EVOLUTION = dict(
-		RHYDON = RHYDON))
+	EVOLUTION = (
+		"RHYDON"))
 
 RHYDON = dict(
 	POKEDEX = 112,
@@ -8927,8 +8927,8 @@ RHYDON = dict(
 				SUM = 264.6,
 				UNITS = "POUNDS"))),
 	TYPES = dict(
-		PRIMARY = ,
-		SECONDARY = ),
+		PRIMARY = "GROUND",
+		SECONDARY = "ROCK"),
 	ABILITIES = dict(
 
 		),
@@ -8982,7 +8982,7 @@ RHYDON = dict(
 			BASE = 40,
 			MIN = 76,
 			MAX = 196)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 CHANSEY = dict(
 	POKEDEX = 113,
@@ -9060,7 +9060,7 @@ CHANSEY = dict(
 			BASE = 50,
 			MIN = 94,
 			MAX = 218)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 TANGELA = dict(
 	POKEDEX = 114,
@@ -9138,7 +9138,7 @@ TANGELA = dict(
 			BASE = 60,
 			MIN = 112,
 			MAX = 240)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 KANGASKHAN = dict(
 	POKEDEX = 115,
@@ -9216,7 +9216,7 @@ KANGASKHAN = dict(
 			BASE = 90,
 			MIN = 166,
 			MAX = 306)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 HORSEA = dict(
 	POKEDEX = 116,
@@ -9294,8 +9294,8 @@ HORSEA = dict(
 			BASE = 60,
 			MIN = 112,
 			MAX = 240)),
-	EVOLUTION = dict(
-		SEADRA = SEADRA))
+	EVOLUTION = (
+		"SEADRA"))
 
 SEADRA = dict(
 	POKEDEX = 117,
@@ -9374,7 +9374,7 @@ SEADRA = dict(
 			BASE = 85,
 			MIN = 157,
 			MAX = 295)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 GOLDEEN = dict(
 	POKEDEX = 118,
@@ -9452,8 +9452,8 @@ GOLDEEN = dict(
 			BASE = 63,
 			MIN = 117,
 			MAX = 247)),
-	EVOLUTION = dict(
-		SEAKING = SEAKING))
+	EVOLUTION = (
+		"EAKING"))
 
 SEAKING = dict(
 	POKEDEX = 119,
@@ -9531,7 +9531,7 @@ SEAKING = dict(
 			BASE = 68,
 			MIN = 126,
 			MAX = 258)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 STARYU = dict(
 	POKEDEX = 120,
@@ -9570,7 +9570,7 @@ STARYU = dict(
 			SUM = 70,
 			STR = "NORMAL"),
 		BASE_EXP = dict(
-			SUM =),
+			SUM = 106),
 		GROWTH_RATE = dict(
 			STR = "SLOW")),
 	BREEDING = dict(
@@ -9609,8 +9609,8 @@ STARYU = dict(
 			BASE = 85,
 			MIN = 157,
 			MAX = 295)),
-	EVOLUTION = dict(
-		STARMIE = STARMIE))
+	EVOLUTION = (
+		"TARMIE"))
 
 STARMIE = dict(
 	POKEDEX = 121,
@@ -9688,7 +9688,7 @@ STARMIE = dict(
 			BASE = 115,
 			MIN = 211,
 			MAX = 361)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 MR_MIME = dict(
 	POKEDEX = 122,
@@ -9766,7 +9766,7 @@ MR_MIME = dict(
 			BASE = 90,
 			MIN = 166,
 			MAX = 306)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 SCYTHER = dict(
 	POKEDEX = 123,
@@ -9844,7 +9844,7 @@ SCYTHER = dict(
 			BASE = 105,
 			MIN = 193,
 			MAX = 339)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 JYNX = dict(
 	POKEDEX = 124,
@@ -9922,7 +9922,7 @@ JYNX = dict(
 			BASE = 95,
 			MIN = 175,
 			MAX = 317)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 ELECTABUZZ = dict(
 	POKEDEX = 125,
@@ -10000,7 +10000,7 @@ ELECTABUZZ = dict(
 			BASE = 105,
 			MIN = 193,
 			MAX = 339)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 MAGMAR = dict(
 	POKEDEX = 126,
@@ -10078,7 +10078,7 @@ MAGMAR = dict(
 			BASE = 93,
 			MIN = 171,
 			MAX = 313)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 PINSIR = dict(
 	POKEDEX = 127,
@@ -10156,7 +10156,7 @@ PINSIR = dict(
 			BASE = 85,
 			MIN = 157,
 			MAX = 295)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 TAUROS = dict(
 	POKEDEX = 128,
@@ -10235,7 +10235,7 @@ TAUROS = dict(
 			BASE = 110,
 			MIN = 202,
 			MAX = 350)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 MAGIKARP = dict(
 	POKEDEX = 129,
@@ -10313,8 +10313,8 @@ MAGIKARP = dict(
 			BASE = 80,
 			MIN = 148,
 			MAX = 284)),
-	EVOLUTION = dict(
-		GYARADOS = GYARADOS))
+	EVOLUTION = (
+		"GYARADOS"))
 
 GYARADOS = dict(
 	POKEDEX = 130,
@@ -10392,7 +10392,7 @@ GYARADOS = dict(
 			BASE = 81,
 			MIN = 150,
 			MAX = 287)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 LAPRAS = dict(
 	POKEDEX = 131,
@@ -10470,7 +10470,7 @@ LAPRAS = dict(
 			BASE = 60,
 			MIN = 112,
 			MAX = 240)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 DITTO = dict(
 	POKEDEX = 132,
@@ -10548,7 +10548,7 @@ DITTO = dict(
 			SUM = 48,
 			MIN = 90, 
 			MAX = 214)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 EEVEE = dict(
 	POKEDEX = 133,
@@ -10626,10 +10626,8 @@ EEVEE = dict(
 			BASE = 55,
 			MIN = 103,
 			MAX = 229)),
-	EVOLUTION = dict(
-		VAPOREON = VAPOREON,
-		JOLTEON = JOLTEON,
-		FLAREON = FLAREON))
+	EVOLUTION = (
+		"VAPOREON", "JOLTEON", "FLAREON"))
 
 VAPOREON = dict(
 	POKEDEX = 134,
@@ -10707,7 +10705,7 @@ VAPOREON = dict(
 			BASE = 65,
 			MIN = 121,
 			MAX = 251)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 JOLTEON = dict(
 	POKEDEX = 135,
@@ -10785,7 +10783,7 @@ JOLTEON = dict(
 			BASE = 130,
 			MIN = 238,
 			MAX = 394)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 FLAREON = dict(
 	POKEDEX = 136,
@@ -10863,7 +10861,7 @@ FLAREON = dict(
 			BASE = 65,
 			MIN = 121,
 			MAX = 251)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 PORYGON = dict(
 	POKEDEX = 137,
@@ -10886,8 +10884,8 @@ PORYGON = dict(
 				SUM = 80.5,
 				UNITS = "POUNDS"))),
 	TYPES = dict(
-		PRIMARY = ,
-		SECONDARY = ),
+		PRIMARY = "NORMAL",
+		SECONDARY = None),
 	ABILITIES = dict(
 
 		),
@@ -10941,7 +10939,7 @@ PORYGON = dict(
 			BASE = 40,
 			MIN = 76,
 			MAX = 196)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 OMANYTE = dict(
 	POKEDEX = 138,
@@ -11019,8 +11017,8 @@ OMANYTE = dict(
 			BASE = 35,
 			MIN = 67,
 			MAX = 185)),
-	EVOLUTION = dict(
-		OMASTAR = OMASTAR))
+	EVOLUTION = (
+		"MASTAR"))
 
 OMASTAR = dict(
 	POKEDEX = 139,
@@ -11098,7 +11096,7 @@ OMASTAR = dict(
 			BASE = 55,
 			MIN = 103,
 			MAX = 229)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 KABUTO = dict(
 	POKEDEX = 140,
@@ -11176,8 +11174,8 @@ KABUTO = dict(
 			BASE = 55,
 			MIN = 103,
 			MAX = 229)),
-	EVOLUTION = dict(
-		KABUTOPS = KABUTOPS))
+	EVOLUTION = (
+		"KABUTOPS"))
 
 KABUTOPS = dict(
 	POKEDEX = 141,
@@ -11255,7 +11253,7 @@ KABUTOPS = dict(
 			BASE = 80,
 			MIN = 148,
 			MAX = 284)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 AERODACTYL = dict(
 	POKEDEX = 142,
@@ -11333,7 +11331,7 @@ AERODACTYL = dict(
 			BASE = 130,
 			MIN = 238,
 			MAX = 394)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 SNORLAX = dict(
 	POKEDEX = 143,
@@ -11411,7 +11409,7 @@ SNORLAX = dict(
 			BASE = 30,
 			MIN = 58,
 			MAX = 174)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 ARTICUNO = dict(
 	POKEDEX = 144,
@@ -11489,7 +11487,7 @@ ARTICUNO = dict(
 			BASE = 85,
 			MIN = 157,
 			MAX = 295)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 ZAPDOS = dict(
 	POKEDEX = 145,
@@ -11528,9 +11526,9 @@ ZAPDOS = dict(
 			SUM = 35,
 			STR = "LOWER_THAN_NORMAL"),
 		BASE_EXP = dict(
-			SUM =),
+			SUM = 216),
 		GROWTH_RATE = dict(
-			STR = "<SLOW></SLOW>")),
+			STR = "SLOW")),
 	BREEDING = dict(
 		GROUPS = dict(
 			PRIMARY = "UNDISCOVERED", 
@@ -11567,7 +11565,7 @@ ZAPDOS = dict(
 			BASE = 100,
 			MIN = 184,
 			MAX = 328)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 MOLTRES = dict(
 	POKEDEX = 146,
@@ -11645,7 +11643,7 @@ MOLTRES = dict(
 			BASE = 90,
 			MIN = 166,
 			MAX = 306)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 DRATINI = dict(
 	POKEDEX = 147,
@@ -11723,8 +11721,8 @@ DRATINI = dict(
 			BASE = 50,
 			MIN = 94,
 			MAX = 218)),
-	EVOLUTION = dict(
-		DRAGONAIR = DRAGONAIR))
+	EVOLUTION = (
+		"DRAGONAIR"))
 
 DRAGONAIR = dict(
 	POKEDEX = 148,
@@ -11802,8 +11800,8 @@ DRAGONAIR = dict(
 			BASE = 70,
 			MIN = 130,
 			MAX = 262)),
-	EVOLUTION = dict(
-		DRAGONITE = DRAGONITE))
+	EVOLUTION = (
+		"DRAGONITE"))
 
 DRAGONITE = dict(
 	POKEDEX = 149,
@@ -11881,7 +11879,7 @@ DRAGONITE = dict(
 			BASE = 80,
 			MIN = 148,
 			MAX = 284)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 MEWTWO = dict(
 	POKEDEX = 150,
@@ -11959,7 +11957,7 @@ MEWTWO = dict(
 			BASE = 130,
 			MIN = 238,
 			MAX = 394)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 MEW = dict(
 	POKEDEX = 151,
@@ -12037,7 +12035,7 @@ MEW = dict(
 			BASE = 100,
 			MIN = 184,
 			MAX = 328)),
-	EVOLUTION = dict())
+	EVOLUTION = ())
 
 
 
