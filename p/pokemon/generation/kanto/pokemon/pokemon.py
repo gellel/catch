@@ -200,7 +200,9 @@ BULBASAUR = dict(
 		PRIMARY = "GRASS",
 		SECONDARY = "POISON"),
 	ABILITIES = dict(
-		
+		OVERGROW = "OVERGROW",
+		CHLOROPHYLL = "CHLOROPHYLL"),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -279,7 +281,9 @@ IVYSAUR = dict(
 		PRIMARY = "GRASS",
 		SECONDARY = "POISON"),
 	ABILITIES = dict(
-		
+	
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -359,7 +363,8 @@ VENUSAUR = dict(
 		PRIMARY = "GRASS",
 		SECONDARY = "POISON"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -438,7 +443,9 @@ CHARMANDER = dict(
 		PRIMARY = "FIRE",
 		SECONDARY = None),
 	ABILITIES = dict(
-		
+	
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -517,7 +524,9 @@ CHARMELEON = dict(
 		PRIMARY = "FIRE",
 		SECONDARY = None),
 	ABILITIES = dict(
-	
+
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -597,7 +606,9 @@ CHARIZARD = dict(
 		PRIMARY = "FIRE",
 		SECONDARY = "FLYING"),
 	ABILITIES = dict(
-		
+	
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -676,7 +687,8 @@ SQUIRTLE = dict(
 		PRIMARY = "WATER",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -756,7 +768,8 @@ WARTORTLE = dict(
 		PRIMARY = "WATER",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -836,7 +849,8 @@ BLASTOISE = dict(
 		PRIMARY = "WATER",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -914,7 +928,8 @@ CATERPIE = dict(
 		PRIMARY = "BUG",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -993,7 +1008,8 @@ METAPOD = dict(
 		PRIMARY = "BUG",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -1072,7 +1088,8 @@ BUTTERFREE = dict(
 		PRIMARY = "BUG",
 		SECONDARY = "POISON"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -1151,7 +1168,8 @@ WEEDLE = dict(
 		PRIMARY = "BUG",
 		SECONDARY = "POISON"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -1230,7 +1248,8 @@ KAKUNA = dict(
 		PRIMARY = "BUG",
 		SECONDARY = "POISON"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -1309,7 +1328,8 @@ BEEDRILL = dict(
 		PRIMARY = "BUG",
 		SECONDARY = "POISON"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -1388,7 +1408,8 @@ PIDGEY = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = "FLYING"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -1467,7 +1488,8 @@ PIDGEOTTO = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = "FLYING"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -1546,7 +1568,8 @@ PIDGEOT = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = "FLYING"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -1624,7 +1647,8 @@ RATTATA = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -1703,7 +1727,8 @@ RATICATE = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -1781,7 +1806,8 @@ SPEAROW = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = "FLYING"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -1860,7 +1886,8 @@ FEAROW = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = "FLYING"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -1938,7 +1965,8 @@ EKANS = dict(
 		PRIMARY = "POISON",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -2017,7 +2045,8 @@ ARBOK = dict(
 		PRIMARY = "POISON",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -2095,7 +2124,8 @@ PIKACHU = dict(
 		PRIMARY = "ELECTRIC",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -2174,7 +2204,8 @@ RAICHU = dict(
 		PRIMARY = "ELECTRIC",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -2252,7 +2283,8 @@ SANDSHREW = dict(
 		PRIMARY = "GROUND",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -2331,7 +2363,8 @@ SANDSLASH = dict(
 		PRIMARY = "GROUND",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -2409,7 +2442,8 @@ NIDORAN_FEMALE = dict(
 		PRIMARY = "POISON",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -2488,7 +2522,8 @@ NIDORINA = dict(
 		PRIMARY = "POISON",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -2567,7 +2602,8 @@ NIDOQUEEN = dict(
 		PRIMARY = "POISON",
 		SECONDARY = "GROUND"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -2645,7 +2681,8 @@ NIDORAN_MALE = dict(
 		PRIMARY = "POISON",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -2724,7 +2761,8 @@ NIDORINO = dict(
 		PRIMARY = "POISON",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -2803,7 +2841,8 @@ NIDOKING = dict(
 		PRIMARY = "POISON",
 		SECONDARY = "GROUND"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -2881,7 +2920,8 @@ CLEFAIRY = dict(
 		PRIMARY = "FAIRY",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -2960,7 +3000,8 @@ CLEFABLE = dict(
 		PRIMARY = "FAIRY",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -3038,7 +3079,8 @@ VULPIX = dict(
 		PRIMARY = "FIRE",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -3117,7 +3159,8 @@ NINETALES = dict(
 		PRIMARY = "FIRE",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -3196,7 +3239,8 @@ JIGGLYPUFF = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = "FAIRY"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -3274,7 +3318,8 @@ WIGGLYTUFF = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = "FAIRY"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -3352,7 +3397,8 @@ ZUBAT = dict(
 		PRIMARY = "POISON",
 		SECONDARY = "FLYING"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -3431,7 +3477,8 @@ GOLBAT = dict(
 		PRIMARY = "POISON",
 		SECONDARY = "FLYING"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -3509,7 +3556,8 @@ ODDISH = dict(
 		PRIMARY = "GRASS",
 		SECONDARY = "POISON"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -3588,7 +3636,8 @@ GLOOM = dict(
 		PRIMARY = "GRASS",
 		SECONDARY = "POISON"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -3667,7 +3716,8 @@ VILEPLUME = dict(
 		PRIMARY = "GRASS",
 		SECONDARY = "POISON"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -3745,7 +3795,8 @@ PARAS = dict(
 		PRIMARY = "BUG",
 		SECONDARY = "GRASS"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -3824,7 +3875,8 @@ PARASECT = dict(
 		PRIMARY = "BUG",
 		SECONDARY = "GRASS"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -3903,7 +3955,8 @@ VENONAT = dict(
 		PRIMARY = "BUG",
 		SECONDARY = "POISON"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -3982,7 +4035,8 @@ VENOMOTH = dict(
 		PRIMARY = "BUG",
 		SECONDARY = "POISON"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -4061,7 +4115,8 @@ DIGLETT = dict(
 		PRIMARY = "GROUND",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -4140,7 +4195,8 @@ DUGTRIO = dict(
 		PRIMARY = "GROUND",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -4218,7 +4274,8 @@ MEOWTH = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -4297,7 +4354,8 @@ PERSIAN = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -4375,7 +4433,8 @@ PSYDUCK = dict(
 		PRIMARY = "WATER",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -4454,7 +4513,8 @@ GOLDUCK = dict(
 		PRIMARY = "WATER",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -4532,7 +4592,8 @@ MANKEY = dict(
 		PRIMARY = "FIGHTING",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -4611,7 +4672,8 @@ PRIMEAPE = dict(
 		PRIMARY = "FIGHTING",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -4689,7 +4751,8 @@ GROWLITHE = dict(
 		PRIMARY = "FIRE",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -4768,7 +4831,8 @@ ARCANINE = dict(
 		PRIMARY = "FIRE",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -4846,7 +4910,8 @@ POLIWAG = dict(
 		PRIMARY = "WATER",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -4925,7 +4990,8 @@ POLIWHIRL = dict(
 		PRIMARY = "WATER",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -5004,7 +5070,8 @@ POLIWRATH = dict(
 		PRIMARY = "WATER",
 		SECONDARY = "FIGHTING"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -5082,7 +5149,8 @@ ABRA = dict(
 		PRIMARY = "PSYCHIC",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -5161,7 +5229,8 @@ KADABRA = dict(
 		PRIMARY = "PSYCHIC",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -5240,7 +5309,8 @@ ALAKAZAM = dict(
 		PRIMARY = "PSYCHIC",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -5318,7 +5388,8 @@ MACHOP = dict(
 		PRIMARY = "FIGHTING",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -5397,7 +5468,8 @@ MACHOKE = dict(
 		PRIMARY = "FIGHTING",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -5476,7 +5548,8 @@ MACHAMP = dict(
 		PRIMARY = "FIGHTING",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -5554,7 +5627,8 @@ BELLSPROUT = dict(
 		PRIMARY = "GRASS",
 		SECONDARY = "POISON"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -5633,7 +5707,8 @@ WEEPINBELL = dict(
 		PRIMARY = "GRASS",
 		SECONDARY = "POISON"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -5712,7 +5787,8 @@ VICTREEBEL = dict(
 		PRIMARY = "GRASS",
 		SECONDARY = "POISON"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -5790,7 +5866,8 @@ TENTACOOL = dict(
 		PRIMARY = "WATER",
 		SECONDARY = "POISON"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -5869,7 +5946,8 @@ TENTACRUEL = dict(
 		PRIMARY = "WATER",
 		SECONDARY = "POISON"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -5947,7 +6025,8 @@ GEODUDE = dict(
 		PRIMARY = "ROCK",
 		SECONDARY = "GROUND"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -6026,7 +6105,8 @@ GRAVELER = dict(
 		PRIMARY = "ROCK",
 		SECONDARY = "GROUND"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -6105,7 +6185,8 @@ GOLEM = dict(
 		PRIMARY = "ROCK",
 		SECONDARY = "GROUND"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -6183,7 +6264,8 @@ PONYTA = dict(
 		PRIMARY = "FIRE",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -6262,7 +6344,8 @@ RAPIDASH = dict(
 		PRIMARY = "FIRE",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -6340,7 +6423,8 @@ SLOWPOKE = dict(
 		PRIMARY = "WATER",
 		SECONDARY = "PSYCHIC"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -6418,7 +6502,8 @@ SLOWBRO = dict(
 		PRIMARY = "WATER",
 		SECONDARY = "PSYCHIC"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -6496,7 +6581,8 @@ MAGNEMITE = dict(
 		PRIMARY = "ELECTRIC",
 		SECONDARY = "STEEL"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -6575,7 +6661,8 @@ MAGNETON = dict(
 		PRIMARY = "ELECTRIC",
 		SECONDARY = "STEEL"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -6653,7 +6740,8 @@ FARFETCHD = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = "FLYING"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -6731,7 +6819,8 @@ DODUO = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = "FLYING"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -6810,7 +6899,8 @@ DODRIO = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = "FLYING"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -6888,7 +6978,8 @@ SEEL = dict(
 		PRIMARY = "WATER",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -6967,7 +7058,8 @@ DEWGONG = dict(
 		PRIMARY = "WATER",
 		SECONDARY = "ICE"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -7045,7 +7137,8 @@ GRIMER = dict(
 		PRIMARY = "POISON",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -7124,7 +7217,8 @@ MUK = dict(
 		PRIMARY = "POISON",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -7203,7 +7297,8 @@ SHELLDER = dict(
 		PRIMARY = "WATER",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -7282,7 +7377,8 @@ CLOYSTER = dict(
 		PRIMARY = "WATER",
 		SECONDARY = "ICE"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -7360,7 +7456,8 @@ GASTLY = dict(
 		PRIMARY = "GHOST",
 		SECONDARY = "POISON"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -7439,7 +7536,8 @@ HAUNTER = dict(
 		PRIMARY = "GHOST",
 		SECONDARY = "POISON"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -7518,7 +7616,8 @@ GENGAR = dict(
 		PRIMARY = "GHOST",
 		SECONDARY = "POISON"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -7596,7 +7695,8 @@ ONIX = dict(
 		PRIMARY = "ROCK",
 		SECONDARY = "GROUND"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -7674,7 +7774,8 @@ DROWZEE = dict(
 		PRIMARY = "PSYCHIC",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -7753,7 +7854,8 @@ HYPNO = dict(
 		PRIMARY = "PSYCHIC",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -7831,7 +7933,8 @@ KRABBY = dict(
 		PRIMARY = "WATER",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -7910,7 +8013,8 @@ KINGLER = dict(
 		PRIMARY = "WATER",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -7988,7 +8092,8 @@ VOLTORB = dict(
 		PRIMARY = "ELECTRIC",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -8067,7 +8172,8 @@ ELECTRODE = dict(
 		PRIMARY = "ELECTRIC",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -8145,7 +8251,8 @@ EXEGGCUTE = dict(
 		PRIMARY = "GRASS",
 		SECONDARY = "PSYCHIC"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -8224,7 +8331,8 @@ EXEGGUTOR = dict(
 		PRIMARY = "GRASS",
 		SECONDARY = "PSYCHIC"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -8302,7 +8410,8 @@ CUBONE = dict(
 		PRIMARY = "GROUND",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -8381,7 +8490,8 @@ MAROWAK = dict(
 		PRIMARY = "GROUND",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -8459,7 +8569,8 @@ HITMONLEE = dict(
 		PRIMARY = "FIGHTING",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -8537,7 +8648,8 @@ HITMONCHAN = dict(
 		PRIMARY = "FIGHTING",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -8615,7 +8727,8 @@ LICKITUNG = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -8693,7 +8806,8 @@ KOFFING = dict(
 		PRIMARY = "POISON",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -8772,7 +8886,8 @@ WEEZING = dict(
 		PRIMARY = "POISON",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -8850,7 +8965,8 @@ RHYHORN = dict(
 		PRIMARY = "GROUND",
 		SECONDARY = "ROCK"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -8929,7 +9045,8 @@ RHYDON = dict(
 		PRIMARY = "GROUND",
 		SECONDARY = "ROCK"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -9007,7 +9124,8 @@ CHANSEY = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -9085,7 +9203,8 @@ TANGELA = dict(
 		PRIMARY = "GRASS",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -9163,7 +9282,8 @@ KANGASKHAN = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -9241,7 +9361,8 @@ HORSEA = dict(
 		PRIMARY = "WATER",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -9320,7 +9441,8 @@ SEADRA = dict(
 		PRIMARY = "WATER",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -9399,7 +9521,8 @@ GOLDEEN = dict(
 		PRIMARY = "WATER",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -9478,7 +9601,8 @@ SEAKING = dict(
 		PRIMARY = "WATER",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -9556,7 +9680,8 @@ STARYU = dict(
 		PRIMARY = "WATER",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -9635,7 +9760,8 @@ STARMIE = dict(
 		PRIMARY = "WATER",
 		SECONDARY = "PSYCHIC"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -9713,7 +9839,8 @@ MR_MIME = dict(
 		PRIMARY = "PSYCHIC",
 		SECONDARY = "FAIRY"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -9791,7 +9918,8 @@ SCYTHER = dict(
 		PRIMARY = "BUG",
 		SECONDARY = "FLYING"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -9869,7 +9997,8 @@ JYNX = dict(
 		PRIMARY = "ICE",
 		SECONDARY = "PSYCHIC"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -9947,7 +10076,8 @@ ELECTABUZZ = dict(
 		PRIMARY = "ELECTRIC",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -10025,7 +10155,8 @@ MAGMAR = dict(
 		PRIMARY = "FIRE",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -10103,7 +10234,8 @@ PINSIR = dict(
 		PRIMARY = "BUG",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -10181,7 +10313,8 @@ TAUROS = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -10260,7 +10393,8 @@ MAGIKARP = dict(
 		PRIMARY = "WATER",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -10339,7 +10473,8 @@ GYARADOS = dict(
 		PRIMARY = "WATER",
 		SECONDARY = "FLYING"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -10417,7 +10552,8 @@ LAPRAS = dict(
 		PRIMARY = "WATER",
 		SECONDARY = "ICE"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -10495,7 +10631,8 @@ DITTO = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -10573,7 +10710,8 @@ EEVEE = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -10654,7 +10792,8 @@ VAPOREON = dict(
 		PRIMARY = "WATER",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -10732,7 +10871,8 @@ JOLTEON = dict(
 		PRIMARY = "ELECTRIC",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -10810,7 +10950,8 @@ FLAREON = dict(
 		PRIMARY = "FIRE",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -10888,7 +11029,8 @@ PORYGON = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -10966,7 +11108,8 @@ OMANYTE = dict(
 		PRIMARY = "ROCK",
 		SECONDARY = "WATER"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -11045,7 +11188,8 @@ OMASTAR = dict(
 		PRIMARY = "ROCK",
 		SECONDARY = "WATER"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -11123,7 +11267,8 @@ KABUTO = dict(
 		PRIMARY = "ROCK",
 		SECONDARY = "WATER"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -11202,7 +11347,8 @@ KABUTOPS = dict(
 		PRIMARY = "ROCK",
 		SECONDARY = "WATER"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -11280,7 +11426,8 @@ AERODACTYL = dict(
 		PRIMARY = "ROCK",
 		SECONDARY = "FLYING"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -11358,7 +11505,8 @@ SNORLAX = dict(
 		PRIMARY = "NORMAL",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -11436,7 +11584,8 @@ ARTICUNO = dict(
 		PRIMARY = "ICE",
 		SECONDARY = "FLYING"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -11514,7 +11663,8 @@ ZAPDOS = dict(
 		PRIMARY = "ELECTRIC",
 		SECONDARY = "FLYING"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -11592,7 +11742,8 @@ MOLTRES = dict(
 		PRIMARY = "FIRE",
 		SECONDARY = "FLYING"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -11670,7 +11821,8 @@ DRATINI = dict(
 		PRIMARY = "DRAGON",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -11749,7 +11901,8 @@ DRAGONAIR = dict(
 		PRIMARY = "DRAGON",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -11828,7 +11981,8 @@ DRAGONITE = dict(
 		PRIMARY = "DRAGON",
 		SECONDARY = "FLYING"),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -11906,7 +12060,8 @@ MEWTWO = dict(
 		PRIMARY = "PSYCHIC",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
@@ -11984,7 +12139,8 @@ MEW = dict(
 		PRIMARY = "PSYCHIC",
 		SECONDARY = None),
 	ABILITIES = dict(
-
+		),
+	MOVESET = dict(
 		),
 	TRAINING = dict(
 		EV_YIELD = dict(
