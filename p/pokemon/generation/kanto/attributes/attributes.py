@@ -5,9 +5,23 @@
 ### Required ##############
 ###########################
 
-from collections import namedtuple
-
 import sys
+
+import os
+
+###########################
+### Paths #################
+###########################
+
+os.chdir(os.path.realpath(os.path.dirname(sys.argv[0])))
+
+sys.path.append("../../../lib/constructors/ptype/")
+
+###########################
+### Supports ##############
+###########################
+
+from ptype import Ptype
 
 ###########################
 ### About #################
@@ -43,8 +57,7 @@ __all__ = [
 ### Constants #############
 ###########################
 
-
-BUG = dict(
+BUG = Ptype(
 	BUG = 1,
 	DARK = 1,
 	DRAGON = 1,
@@ -64,7 +77,7 @@ BUG = dict(
 	STEEL = 0.5,
 	WATER = 1)
 
-DARK = dict(
+DARK = Ptype(
 	BUG = 1,
 	DARK = 0.5,
 	DRAGON = 1,
@@ -84,7 +97,7 @@ DARK = dict(
 	STEEL = 1,
 	WATER = 1)
 
-DRAGON = dict(
+DRAGON = Ptype(
 	BUG = 1,
 	DARK = 1,
 	DRAGON = 2,
@@ -104,7 +117,7 @@ DRAGON = dict(
 	STEEL = 0.5,
 	WATER = 1)
 
-ELECTRIC = dict(
+ELECTRIC = Ptype(
 	BUG = 1,
 	DARK = 1,
 	DRAGON = 0.5,
@@ -124,7 +137,7 @@ ELECTRIC = dict(
 	STEEL = 1,
 	WATER = 2)
 
-FAIRY = dict(
+FAIRY = Ptype(
 	BUG = 1,
 	DARK = 2,
 	DRAGON = 2,
@@ -144,7 +157,7 @@ FAIRY = dict(
 	STEEL = 0.5,
 	WATER = 1)
 
-FIGHTING = dict(
+FIGHTING = Ptype(
 	BUG = 0.5,
 	DARK = 2,
 	DRAGON = 1,
@@ -164,7 +177,7 @@ FIGHTING = dict(
 	STEEL = 2,
 	WATER = 1)
 
-FIRE = dict(
+FIRE = Ptype(
 	BUG = 2,
 	DARK = 1,
 	DRAGON = 0.5,
@@ -184,7 +197,7 @@ FIRE = dict(
 	STEEL = 2,
 	WATER = 0.5)
 
-FLYING = dict(
+FLYING = Ptype(
 	BUG = 2,
 	DARK = 1,
 	DRAGON = 1,
@@ -204,7 +217,7 @@ FLYING = dict(
 	STEEL = 0.5,
 	WATER = 1)
 
-GHOST = dict(
+GHOST = Ptype(
 	BUG = 1,
 	DARK = 0.5,
 	DRAGON = 1,
@@ -224,7 +237,7 @@ GHOST = dict(
 	STEEL = 1,
 	WATER = 1,)
 
-GRASS = dict(
+GRASS = Ptype(
 	BUG = 0.5,
 	DARK = 1,
 	DRAGON = 0.5,
@@ -244,7 +257,7 @@ GRASS = dict(
 	STEEL = 0.5,
 	WATER = 2)
 
-GROUND = dict(
+GROUND = Ptype(
 	BUG = 0.5,
 	DARK = 1,
 	DRAGON = 1,
@@ -264,7 +277,7 @@ GROUND = dict(
 	STEEL = 2,
 	WATER = 1)
 
-ICE = dict(
+ICE = Ptype(
 	BUG = 1,
 	DARK = 1,
 	DRAGON = 2,
@@ -284,7 +297,7 @@ ICE = dict(
 	STEEL = 0.5,
 	WATER = 0.5)
 
-NORMAL = dict(
+NORMAL = Ptype(
 	BUG = 1,
 	DARK = 1,
 	DRAGON = 1,
@@ -304,7 +317,7 @@ NORMAL = dict(
 	STEEL = 0.5,
 	WATER = 1)
 
-POISON = dict(
+POISON = Ptype(
 	BUG = 1,
 	DARK = 1,
 	DRAGON = 1,
@@ -324,7 +337,7 @@ POISON = dict(
 	STEEL = 0,
 	WATER = 1)
 
-PSYCHIC = dict(
+PSYCHIC = Ptype(
 	BUG = 1,
 	DARK = 0,
 	DRAGON = 1,
@@ -344,7 +357,7 @@ PSYCHIC = dict(
 	STEEL = 0.5,
 	WATER = 1)
 
-ROCK = dict(
+ROCK = Ptype(
 	BUG = 2,
 	DARK = 1,
 	DRAGON = 1,
@@ -364,7 +377,7 @@ ROCK = dict(
 	STEEL = 0.5,
 	WATER = 1)
 
-STEEL = dict(
+STEEL = Ptype(
 	BUG = 1,
 	DARK = 1,
 	DRAGON = 1,
@@ -384,7 +397,7 @@ STEEL = dict(
 	STEEL = 0.5,
 	WATER = 0.5)
 
-WATER = dict(
+WATER = Ptype(
 	BUG = 1,
 	DARK = 1,
 	DRAGON = 0.5,
@@ -436,16 +449,3 @@ Requires Pokemon type be entered within attributes colleciton.
 """
 
 NAMES = tuple(dict.keys(ATTRIBUTES))
-
-"""Generate namedtuples for defined Pokemon type constants.
-
-Uses names tuple containing Pokemon type strings as the instances for each namedtuple.
-Constructors are unique to each other and do not generate generic class type.
-Resistences are not calculated based on finding strengths against weakness from previous types.
-"""
-
-for i in range(0, len(NAMES)):
-
-	setattr(sys.modules[__name__], NAMES[i], 
-		namedtuple(NAMES[i], dict.keys(
-			ATTRIBUTES[NAMES[i]]))(**ATTRIBUTES[NAMES[i]]))
