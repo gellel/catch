@@ -13550,7 +13550,7 @@ NAMES = tuple(dict.keys(POKEMON))
 """Edit dictionary for Pokemon to contain properties their evolutionary Pokemon."""
 
 for i in range(0, len(NAMES)):
-
+	# iterate across keys for current property at index.
 	for KEY in POKEMON[NAMES[i]]["EVOLUTION"]:
-
+		# set current key as dictionary from collections dictionary.
 		POKEMON[NAMES[i]]["EVOLUTION"][KEY] = POKEMON[KEY]
