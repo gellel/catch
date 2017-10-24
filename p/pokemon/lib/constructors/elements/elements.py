@@ -1,0 +1,445 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*- 
+
+###########################
+### Required ##############
+###########################
+
+from collections import namedtuple
+
+###########################
+### About #################
+###########################
+
+__author__ = "Lindsay Gelle (gellel)"
+
+###########################
+### Exports ###############
+###########################
+
+__all__ = [
+	"BUG",
+	"DARK",
+	"DRAGON",
+	"ELECTRIC",
+	"FAIRY",
+	"FIGHTING",
+	"FIRE",
+	"FLYING",
+	"GHOST",
+	"GRASS",
+	"GROUND",
+	"ICE",
+	"NORMAL",
+	"POISON",
+	"PSYCHIC",
+	"ROCK",
+	"STEEL",
+	"WATER"]
+
+###########################
+### Constants #############
+###########################
+
+PROPERTIES = " ".join(
+	__all__)
+
+BUG = namedtuple("BUG", 
+	PROPERTIES)(
+		BUG = 1,
+		DARK = 1,
+		DRAGON = 1,
+		ELECTRIC = 1,
+		FAIRY = 0.5,
+		FIGHTING = 0.5,
+		FIRE = 0.5,
+		FLYING = 0.5,
+		GHOST = 0.5,
+		GRASS = 2,
+		GROUND = 1,
+		ICE = 1,
+		NORMAL = 1,
+		POISON = 0.5,
+		PSYCHIC = 2,
+		ROCK = 1,
+		STEEL = 0.5,
+		WATER = 1)
+
+DARK = namedtuple("DARK", 
+	PROPERTIES)(
+		BUG = 1,
+		DARK = 0.5,
+		DRAGON = 1,
+		ELECTRIC = 1,
+		FAIRY = 0.5,
+		FIGHTING = 0.5,
+		FIRE = 1,
+		FLYING = 1,
+		GHOST = 2,	
+		GRASS = 1,
+		GROUND = 1,
+		ICE = 1,
+		NORMAL = 1,
+		POISON = 1,
+		PSYCHIC = 2,
+		ROCK = 1,
+		STEEL = 1,
+		WATER = 1)
+
+DRAGON = namedtuple("DRAGON", 
+	PROPERTIES)(
+		BUG = 1,
+		DARK = 1,
+		DRAGON = 2,
+		ELECTRIC = 1,
+		FAIRY = 0,
+		FIGHTING = 1,
+		FIRE = 1,
+		FLYING = 1,
+		GHOST = 1,
+		GRASS = 1,
+		GROUND = 1,
+		ICE = 1,
+		NORMAL = 1,
+		POISON = 1,
+		PSYCHIC = 1,
+		ROCK = 1,
+		STEEL = 0.5,
+		WATER = 1)
+
+ELECTRIC = namedtuple("ELECTRIC",
+	PROPERTIES)(
+		BUG = 1,
+		DARK = 1,
+		DRAGON = 0.5,
+		ELECTRIC = 0.5,
+		FAIRY = 1,
+		FIGHTING = 1,
+		FIRE = 1,
+		FLYING = 2,
+		GHOST = 1,
+		GRASS = 0.5,
+		GROUND = 0,
+		ICE = 1,
+		NORMAL = 1,
+		POISON = 1,
+		PSYCHIC = 1,
+		ROCK = 1,
+		STEEL = 1,
+		WATER = 2)
+
+FAIRY = namedtuple("FAIRY",
+	PROPERTIES)(
+		BUG = 1,
+		DARK = 2,
+		DRAGON = 2,
+		ELECTRIC = 1,
+		FAIRY = 1,
+		FIGHTING = 2,
+		FIRE = 0.5,
+		FLYING = 1,
+		GHOST = 1,
+		GRASS = 1,
+		GROUND = 1,
+		ICE = 1,
+		NORMAL = 1,
+		POISON = 0.5,
+		PSYCHIC = 1,
+		ROCK = 1,
+		STEEL = 0.5,
+		WATER = 1)
+
+FIGHTING = namedtuple("FIGHTING", 
+	PROPERTIES)(
+		BUG = 0.5,
+		DARK = 2,
+		DRAGON = 1,
+		ELECTRIC = 1,
+		FAIRY = 0.5,
+		FIGHTING = 1,
+		FIRE = 1,
+		FLYING = 0.5,
+		GHOST = 0,
+		GRASS = 1,
+		GROUND = 1,
+		ICE = 2,
+		NORMAL = 2,
+		POISON = 0.5,
+		PSYCHIC = 0.5,
+		ROCK = 2,
+		STEEL = 2,
+		WATER = 1)
+
+FIRE = namedtuple("FIRE", 
+	PROPERTIES)(
+		BUG = 2,
+		DARK = 1,
+		DRAGON = 0.5,
+		ELECTRIC = 1,
+		FAIRY = 1,
+		FIGHTING = 1,
+		FIRE = 0.5,
+		FLYING = 1,
+		GHOST = 1,
+		GRASS = 2,
+		GROUND = 1,
+		ICE = 2,
+		NORMAL = 1,
+		POISON = 1,
+		PSYCHIC = 1,
+		ROCK = 0.5,
+		STEEL = 2,
+		WATER = 0.5)
+
+FLYING = namedtuple("FLYING", 
+	PROPERTIES)(
+		BUG = 2,
+		DARK = 1,
+		DRAGON = 1,
+		ELECTRIC = 0.5,
+		FAIRY = 1,
+		FIGHTING = 2,
+		FIRE = 1,
+		GHOST = 1,
+		GRASS = 2,
+		GROUND = 1,
+		ICE = 1,
+		NORMAL = 1,
+		POISON = 1,
+		FLYING = 1,
+		PSYCHIC = 1,
+		ROCK = 0.5,
+		STEEL = 0.5,
+		WATER = 1)
+
+GHOST = namedtuple("GHOST", 
+	PROPERTIES)(
+		BUG = 1,
+		DARK = 0.5,
+		DRAGON = 1,
+		ELECTRIC = 1,
+		FAIRY = 1,
+		FIGHTING = 1,
+		FIRE = 1,
+		FLYING = 1,
+		GHOST = 2,
+		GRASS = 1,
+		GROUND = 1,
+		ICE = 1,
+		NORMAL = 0,
+		POISON = 1,
+		PSYCHIC = 2,
+		ROCK = 1,
+		STEEL = 1,
+		WATER = 1,)
+
+GRASS = namedtuple("GRASS", 
+	PROPERTIES)(
+		BUG = 0.5,
+		DARK = 1,
+		DRAGON = 0.5,
+		ELECTRIC = 1,
+		FAIRY = 1,
+		FIGHTING = 1,
+		FIRE = 0.5,
+		GHOST = 1,
+		GRASS = 0.5,
+		GROUND = 2,
+		ICE = 1,
+		NORMAL = 1,
+		POISON = 0.5,
+		FLYING = 0.5,
+		PSYCHIC = 1,
+		ROCK = 2,
+		STEEL = 0.5,
+		WATER = 2)
+
+GROUND = namedtuple("GROUND", 
+	PROPERTIES)(
+		BUG = 0.5,
+		DARK = 1,
+		DRAGON = 1,
+		ELECTRIC = 2,
+		FAIRY = 1,
+		FIGHTING = 1,
+		FIRE = 2,
+		FLYING = 0,
+		GHOST = 1,
+		GRASS = 0.5,
+		GROUND = 1,
+		ICE = 1,
+		NORMAL = 1,
+		POISON = 2,
+		PSYCHIC = 1,
+		ROCK = 2,
+		STEEL = 2,
+		WATER = 1)
+
+ICE = namedtuple("ICE", 
+	PROPERTIES)(
+		BUG = 1,
+		DARK = 1,
+		DRAGON = 2,
+		ELECTRIC = 1,	
+		FAIRY = 1,
+		FIGHTING = 1,
+		FIRE = 0.5,
+		FLYING = 2,
+		GHOST = 1,
+		GRASS = 2,
+		GROUND = 2,
+		ICE = 0.5,
+		NORMAL = 1,
+		POISON = 1,
+		PSYCHIC = 1,
+		ROCK = 1,
+		STEEL = 0.5,
+		WATER = 0.5)
+
+NORMAL = namedtuple("NORMAL", 
+	PROPERTIES)(
+		BUG = 1,
+		DARK = 1,
+		DRAGON = 1,
+		ELECTRIC = 1,
+		FAIRY = 1,
+		FIGHTING = 2,
+		FIRE = 1,
+		FLYING = 1,
+		GHOST = 0,
+		GRASS = 1,
+		GROUND = 1,
+		ICE = 1,
+		NORMAL = 1,
+		POISON = 1,
+		PSYCHIC = 1,
+		ROCK = 0.5,
+		STEEL = 0.5,
+		WATER = 1)
+
+POISON = namedtuple("POISON", 
+	PROPERTIES)(
+		BUG = 1,
+		DARK = 1,
+		DRAGON = 1,
+		ELECTRIC = 1,
+		FAIRY = 1,
+		FIGHTING = 1,
+		FIRE = 1,
+		FLYING = 1,
+		GHOST = 0.5,
+		GRASS = 2,
+		GROUND = 0.5,
+		ICE = 1,
+		NORMAL = 1,
+		POISON = 0.5,
+		PSYCHIC = 1,
+		ROCK = 0.5,
+		STEEL = 0,
+		WATER = 1)
+
+PSYCHIC = namedtuple("PSYCHIC", 
+	PROPERTIES)(
+		BUG = 1,
+		DARK = 0,
+		DRAGON = 1,
+		ELECTRIC = 1,	
+		FAIRY = 1,
+		FIGHTING = 2,
+		FIRE = 1,
+		FLYING = 1,
+		GHOST = 2,
+		GRASS = 1,
+		GROUND = 1,
+		ICE = 1,
+		NORMAL = 1,
+		POISON = 2,
+		PSYCHIC = 0.5,
+		ROCK = 1,
+		STEEL = 0.5,
+		WATER = 1)
+
+ROCK = namedtuple("ROCK", 
+	PROPERTIES)(
+		BUG = 2,
+		DARK = 1,
+		DRAGON = 1,
+		ELECTRIC = 1,
+		FAIRY = 1,
+		FIGHTING = 0.5,
+		FIRE = 2,
+		FLYING = 2,
+		GHOST = 1,
+		GRASS = 1,
+		GROUND = 0.5,
+		ICE = 2,
+		NORMAL = 1,
+		POISON = 1,
+		PSYCHIC = 1,
+		ROCK = 1,
+		STEEL = 0.5,
+		WATER = 1)
+
+STEEL = namedtuple("STEEL", 
+	PROPERTIES)(
+		BUG = 1,
+		DARK = 1,
+		DRAGON = 1,
+		ELECTRIC = 0.5,
+		FAIRY = 2,
+		FIGHTING = 1,
+		FIRE = 0.5,
+		FLYING = 1,
+		GHOST = 1,
+		GRASS = 1,
+		GROUND = 1,
+		ICE = 2,
+		NORMAL = 1,
+		POISON = 1,
+		PSYCHIC = 1,
+		ROCK = 2,
+		STEEL = 0.5,
+		WATER = 0.5)
+
+WATER = namedtuple("WATER", 
+	PROPERTIES)(
+		BUG = 1,
+		DARK = 1,
+		DRAGON = 0.5,
+		ELECTRIC = 0.5,
+		FAIRY = 1,
+		FIGHTING = 1,
+		FIRE = 2,
+		FLYING = 1,
+		GHOST = 1,
+		GRASS = 0.5,
+		GROUND = 2,
+		ICE = 1,
+		NORMAL = 1,
+		POISON = 1,
+		PSYCHIC = 1,
+		ROCK = 2,
+		STEEL = 1,
+		WATER = 0.5)
+
+ELEMENTS = dict(
+	BUG = BUG,
+	DARK = DARK,
+	DRAGON = DRAGON,
+	ELECTRIC = ELECTRIC,
+	FAIRY = FAIRY,
+	FIGHTING = FIGHTING,
+	FIRE = FIRE,
+	FLYING = FLYING,
+	GHOST = GHOST,
+	GRASS = GRASS,
+	GROUND = GROUND,
+	ICE = ICE,
+	NORMAL = NORMAL,
+	POISON = POISON,
+	ROCK = ROCK,
+	STEEL = STEEL,
+	WATER = WATER)
+
+NAMES = tuple(
+	dict.keys(ELEMENTS))

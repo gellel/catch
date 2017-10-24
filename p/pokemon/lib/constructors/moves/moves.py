@@ -17,13 +17,14 @@ __author__ = "Lindsay Gelle (gellel)"
 ### Exports ###############
 ###########################
 
-__all__ = ["Move"]
+__all__ = [
+	"MOVE"]
 
 ###########################
 ### Constants #############
 ###########################
 
-MOVE_TUPLE_ATTRIBUTES_KEYS = " ".join([
+CONSTRUCTOR_KEYS = " ".join([
 	"ELEMENT_TYPE", 
 	"CATEGORY", 
 	"POWER", 
@@ -31,9 +32,5 @@ MOVE_TUPLE_ATTRIBUTES_KEYS = " ".join([
 	"POWER_POINTS", 
 	"DESCRIPTION"])
 
-###########################
-### Classes ###############
-###########################
-
-Move = namedtuple("Move", 
-	MOVE_TUPLE_ATTRIBUTES_KEYS)
+MOVE = namedtuple("MOVE", 
+	CONSTRUCTOR_KEYS)
