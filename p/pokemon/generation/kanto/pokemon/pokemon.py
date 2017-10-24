@@ -13547,11 +13547,10 @@ Sequence does not automatically regenerate to facilitate updated Pokemon in late
 
 NAMES = tuple(dict.keys(POKEMON))
 
-"""
+"""Edit dictionary for Pokemon to contain properties their evolutionary Pokemon."""
 
 for i in range(0, len(NAMES)):
 
-	for (key, value) in POKEMON[NAMES[i]]['EVOLUTION'].iteritems():
+	for KEY in POKEMON[NAMES[i]]["EVOLUTION"]:
 
-		POKEMON[NAMES[i]]['EVOLUTION'][key] = getattr(sys.modules[__name__], value)
-"""
+		POKEMON[NAMES[i]]["EVOLUTION"][KEY] = POKEMON[KEY]
