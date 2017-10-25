@@ -2505,15 +2505,16 @@ PIKACHU = dict(
 	JP_NAME = "PIKACHU",
 	SPECIES = "MOUSE",
 	LATIUM = dict(
-		),
+		PIKA = "A_SMALL_MOUSE-LIKE_MAMMAL",
+		CHU = "JAPANESE_FOR_SQUEAK"),
 	ABOUT = dict(
-		RED = None,
-		BLUE = None,
-		YELLOW = None),
+		RED = "When several of these POKeMON gather, their electricity could build and cause lightning storms.",
+		BLUE = "When several of these POKeMON gather, their electricity could build and cause lightning storms.",
+		YELLOW = "It keeps its tail raised to monitor its surroundings. If you yank its tail, it will try to bite you."),
 	FOUND = dict(
-		RED = (),
-		BLUE = (),
-		YELLOW = ()),
+		RED = ("POWER_PLANT", "VIRIDIAN_FOREST"),
+		BLUE = ("POWER_PLANT", "VIRIDIAN_FOREST"),
+		YELLOW = ("PALLET_TOWN")),
 	SIZE = dict(
 		METRIC = dict(
 			HEIGHT = dict(
@@ -2532,7 +2533,8 @@ PIKACHU = dict(
 	TYPES = dict(
 		ELECTRIC = elements.ELECTRIC),
 	ABILITIES = dict(
-		),
+		STATIC = "STATIC",
+		LIGHTNING_ROD = "LIGHTNING_ROD"),
 	MOVESET = dict(
 		),
 	TRAINING = dict(
@@ -2599,15 +2601,16 @@ RAICHU = dict(
 	JP_NAME = "RAICHU",
 	SPECIES = "MOUSE",
 	LATIUM = dict(
-		),
+		RAI = "JAPANESE_FOR_THUNDER",
+		CHU = "JAPANESE_FOR_SQUEAK"),
 	ABOUT = dict(
-		RED = None,
-		BLUE = None,
-		YELLOW = None),
+		RED = "Its long tail serves as a ground to protect itself from its own high voltage power.",
+		BLUE = "Its long tail serves as a ground to protect itself from its own high voltage power.",
+		YELLOW = "When electricity builds up inside its body, it becomes feisty. It also glows in the dark."),
 	FOUND = dict(
-		RED = (),
-		BLUE = (),
-		YELLOW = ()),
+		RED = ("EVOLVE_PIKACHU"),
+		BLUE = ("EVOLVE_PIKACHU", "POWER_PLANT"),
+		YELLOW = ("EVOLVE_PIKACHU")),
 	SIZE = dict(
 		METRIC = dict(
 			HEIGHT = dict(
@@ -2626,7 +2629,8 @@ RAICHU = dict(
 	TYPES = dict(
 		ELECTRIC = elements.ELECTRIC),
 	ABILITIES = dict(
-		),
+		STATIC = "STATIC",
+		LIGHTNING_ROD = "LIGHTNING_ROD"),
 	MOVESET = dict(
 		),
 	TRAINING = dict(
