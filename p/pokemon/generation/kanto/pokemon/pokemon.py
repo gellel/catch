@@ -193,20 +193,37 @@ __all__ = [
 ###########################
 
 MISSINGNO = dict(
-	POKEDEX = -1,
-	EN_NAME = "MISSING_NO",
+	POKEDEX = 0,
+	EN_NAME = "MISSINGNO",
 	JP_NAME = "KETSUBAN",
 	SPECIES = "GLITCH",
 	LATIUM = dict(
 		),
 	ABOUT = dict(
-		),
+		RED = "???",
+		BLUE = "???",
+		RED = "???"),
 	FOUND = dict(
 		),
 	SIZE = dict(
-		),
+		METRIC = dict(
+			HEIGHT = dict(
+				SUM = 3.048,
+				UNITS = "METERS"),
+			WEIGHT = dict(
+				SUM = 1590.83916,
+				UNITS = "KILOGRAMS")),
+		IMPERIAL = dict(
+			HEIGHT = dict(
+				SUM = 10,
+				UNITS = "FEET"),
+			WEIGHT = dict(
+				SUM = 3507.2,
+				UNITS = "POUNDS"))),
 	TYPES = dict(
-		),
+		BIRD = dict(),
+		NORMAL = elements.NORMAL,
+		N999 = dict()),
 	ABILITIES = dict(
 		),
 	MOVESET = dict(
@@ -243,29 +260,29 @@ MISSINGNO = dict(
 			STEPS = 0)),
 	STATS = dict(
 		HP = dict(
-			BASE = 178,
-			MIN = 238,
-			MAX = 284),
+			BASE = 0,
+			MIN = 0,
+			MAX = 0),
 		ATTACK = dict(
-			BASE = 49,
-			MIN = 92, 
-			MAX = 216),
+			BASE = 0,
+			MIN = 0,
+			MAX = 0),
 		DEFENSE = dict(
-			BASE = 49,
-			MIN = 92,
-			MAX = 216),
+			BASE = 0,
+			MIN = 0,
+			MAX = 0),
 		SP_ATTACK = dict(
-			BASE = 65,
-			MIN = 121,
-			MAX = 251),
+			BASE = 0,
+			MIN = 0,
+			MAX = 0),
 		SP_DEFENSE = dict(
-			BASE = 65,
-			MIN = 121,
-			MAX = 251),
+			BASE = 0,
+			MIN = 0,
+			MAX = 0),
 		SPEED = dict(
-			BASE = 45,
-			MIN = 85,
-			MAX = 207)),
+			BASE = 0,
+			MIN = 0,
+			MAX = 0)),
 	EVOLUTION = dict())
 
 BULBASAUR = dict(
