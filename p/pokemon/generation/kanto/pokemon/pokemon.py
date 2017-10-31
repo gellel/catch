@@ -192,6 +192,82 @@ __all__ = [
 ### Constants #############
 ###########################
 
+MISSINGNO = dict(
+	POKEDEX = -1,
+	EN_NAME = "MISSING_NO",
+	JP_NAME = "KETSUBAN",
+	SPECIES = "GLITCH",
+	LATIUM = dict(
+		),
+	ABOUT = dict(
+		),
+	FOUND = dict(
+		),
+	SIZE = dict(
+		),
+	TYPES = dict(
+		),
+	ABILITIES = dict(
+		),
+	MOVESET = dict(
+		),
+	TRAINING = dict(
+		EV_YIELD = dict(
+			HP = 0,
+			ATTACK = 0,
+			DEFENSE = 0,
+			SP_ATTACK = 0,
+			SP_DEFENSE = 0,
+			SPEED = 0),
+		CATCH_RATE = dict(
+			SUM = 0,
+			RATE = 0,
+			BALL = "POKE_BALL"),
+		BASE_HAPPINESS = dict(
+			SUM = 0,
+			STR = "UNKNOWN"),
+		BASE_EXP = dict(
+			SUM = 0),
+		GROWTH_RATE = dict(
+			STR = "UNKNOWN")),
+	BREEDING = dict(
+		GROUPS = dict(
+			PRIMARY = "UNKNOWN", 
+			SECONDARY = "UNKNOWN"),
+		GENDERS = dict(
+			MALE = 0, 
+			FEMALE = 0, 
+			GENDERLESS = 0.0),
+		EGG_CYCLES = dict(
+			SUM = 0,
+			STEPS = 0)),
+	STATS = dict(
+		HP = dict(
+			BASE = 178,
+			MIN = 238,
+			MAX = 284),
+		ATTACK = dict(
+			BASE = 49,
+			MIN = 92, 
+			MAX = 216),
+		DEFENSE = dict(
+			BASE = 49,
+			MIN = 92,
+			MAX = 216),
+		SP_ATTACK = dict(
+			BASE = 65,
+			MIN = 121,
+			MAX = 251),
+		SP_DEFENSE = dict(
+			BASE = 65,
+			MIN = 121,
+			MAX = 251),
+		SPEED = dict(
+			BASE = 45,
+			MIN = 85,
+			MAX = 207)),
+	EVOLUTION = dict())
+
 BULBASAUR = dict(
 	POKEDEX = 1,
 	EN_NAME = "BULBASAUR",
@@ -14732,6 +14808,7 @@ MEW = dict(
 	EVOLUTION = dict())
 
 POKEMON = dict(
+	MISSINGNO = MISSINGNO,
 	BULBASAUR = BULBASAUR,
 	IVYSAUR = IVYSAUR,
 	VENUSAUR = VENUSAUR,
