@@ -202,7 +202,7 @@ MISSINGNO = dict(
 	ABOUT = dict(
 		RED = "???",
 		BLUE = "???",
-		RED = "???"),
+		YELLOW = "???"),
 	FOUND = dict(
 		),
 	SIZE = dict(
