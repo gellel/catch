@@ -36,6 +36,7 @@ __author__ = "Lindsay Gelle (gellel)"
 ###########################
 
 __all__ = [
+	"MISSINGNO",
 	"BULBASAUR",
 	"IVYSAUR",
 	"VENUSAUR",
