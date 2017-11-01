@@ -36,6 +36,7 @@ def main (args):
 				print([str.upper(i) for i in generation.GENERATIONS])
 
 
+
 if __name__ == '__main__':
 
 	main(sys.argv[1:])

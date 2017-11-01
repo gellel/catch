@@ -5,7 +5,11 @@
 ### Required ##############
 ###########################
 
+import importlib
+
 import os
+
+import kanto.pokemon.pokemon as kanto
 
 ###########################
 ### About #################
@@ -26,3 +30,5 @@ __all__ = [
 
 GENERATIONS = tuple([i for i in os.listdir(os.path.dirname(os.path.abspath(__file__)))
 	if os.path.isfile(os.path.join(os.path.dirname(os.path.abspath(__file__)), i, "pokemon", "pokemon.py"))])
+
+print(kanto.DITTO)

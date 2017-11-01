@@ -13,9 +13,8 @@ import os
 ### Paths #################
 ###########################
 
-os.chdir(os.path.realpath(os.path.dirname(sys.argv[0])))
-
-sys.path.append("../../../")
+sys.path.insert(0, os.path.join(
+	os.path.dirname(os.path.abspath(__file__)), "..", "..", ".."))
 
 ###########################
 ### Supports ##############
