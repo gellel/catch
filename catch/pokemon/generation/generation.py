@@ -9,8 +9,6 @@ import importlib
 
 import os
 
-import kanto.pokemon.pokemon as kanto
-
 ###########################
 ### About #################
 ###########################
@@ -22,7 +20,8 @@ __author__ = "Lindsay Gelle (gellel)"
 ###########################
 
 __all__ = [
-	"GENERATIONS"]
+	"GENERATIONS",
+	"POKEMON"]
 
 ###########################
 ### Constants #############
@@ -31,4 +30,10 @@ __all__ = [
 GENERATIONS = tuple([i for i in os.listdir(os.path.dirname(os.path.abspath(__file__)))
 	if os.path.isfile(os.path.join(os.path.dirname(os.path.abspath(__file__)), i, "pokemon", "pokemon.py"))])
 
-print(kanto.DITTO)
+
+POKEMON = {
+	str.upper(GENERATIONS[i]): __import__(
+		".".join([GENERATIONS[i], "pokemon", "pokemon"]), "__all__") 
+			for i in range(0, len(GENERATIONS)) }
+
+print(POKEMON["KANTO"])
