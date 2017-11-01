@@ -21960,6 +21960,10 @@ Sequence does not automatically regenerate to facilitate updated Pokemon in late
 
 NAMES = tuple(dict.keys(POKEMON))
 
+###########################
+### Module ################
+###########################
+
 """Edit dictionary for Pokemon to contain properties their evolutionary Pokemon."""
 
 # iterate for stored names of Pokemon.
