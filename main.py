@@ -10,7 +10,7 @@ import sys
 import os
 
 ###########################
-### Paths #################
+### Supports ##############
 ###########################
 
 from catch.pokemon.generation import generation
@@ -27,14 +27,7 @@ __author__ = "Lindsay Gelle (gellel)"
 
 def main (args):
 
-	if (len(args)):
-
-		if str.upper(args[0]) == "GET":
-
-			if str.upper(args[1]) == "GENERATIONS":
-
-				print([str.upper(i) for i in generation.GENERATIONS])
-
+	print(generation.kanto.DITTO)
 
 
 if __name__ == '__main__':
