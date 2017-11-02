@@ -20,20 +20,13 @@ __author__ = "Lindsay Gelle (gellel)"
 ###########################
 
 __all__ = [
-	"GENERATIONS",
-	"POKEMON"]
+	"GENERATIONS"]
 
 ###########################
 ### Constants #############
 ###########################
 
-GENERATIONS = tuple([i for i in os.listdir(os.path.dirname(os.path.abspath(__file__)))
-	if os.path.isfile(os.path.join(os.path.dirname(os.path.abspath(__file__)), i, "pokemon", "pokemon.py"))])
-
-
-POKEMON = {
-	str.upper(GENERATIONS[i]): __import__(
-		".".join([GENERATIONS[i], "pokemon", "pokemon"]), "__all__") 
-			for i in range(0, len(GENERATIONS)) }
-
-print(POKEMON["KANTO"])
+GENERATIONS = { str.upper(i): getattr(
+	importlib.import_module(".".join([i, "pokemon", "pokemon"])), "POKEMON") 
+		for i in os.listdir(os.path.dirname(os.path.abspath(__file__)))
+			if os.path.isfile(os.path.join(os.path.dirname(os.path.abspath(__file__)), i, "pokemon", "pokemon.py")) }
