@@ -27,7 +27,11 @@ __author__ = "Lindsay Gelle (gellel)"
 
 def main (args):
 
-	print(generation.kanto.DITTO)
+	if len(args):
+		if str.upper(args[0]) == "GET":
+			if str.upper(args[1]) == "PKMN":
+				if str.upper(args[2]) in []:
+					print("hi")
 
 
 if __name__ == '__main__':
