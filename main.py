@@ -29,17 +29,28 @@ __author__ = "Lindsay Gelle (gellel)"
 ### Module ################
 ###########################
 
+def g (source, target, sequence):
+
+	key = sequence.pop(0)
+
+	if target == key and len(sequence) is 0:
+
+		return source[key]
+
+	elif key in source and type(source[key]) is dict:
+		
+		return g(source[key], target, sequence)
+	
+	return dict()
+
+
+
 def get_primary_attribute (pkmn, args):
 
-	if type(pkmn) is dict and type(args) in (list, tuple):
+	print(g(pkmn, args[-1], args))
 
-		args = map(str.upper, map(str, args))
+	return pkmn
 
-		if len(args):
-			
-			if args[0] in pkmn:
-
-				print(pkmn[str.upper(args[0])])
 
 def main (args):
 
@@ -48,9 +59,13 @@ def main (args):
 		args = map(str.upper, map(str, args))
 
 		if args[0] == "GET":
+			
 			if args[1] and args[1] == "PKMN":
+				
 				if args[2]:
+					
 					for key in generation.GENERATIONS:
+						
 						if args[2] in generation.GENERATIONS[key]:
 
 							if len(args[3:]):
