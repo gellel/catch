@@ -14,6 +14,13 @@ import kanto.pokemon.pokemon as kanto
 __author__ = "Lindsay Gelle (gellel)"
 
 ###########################
+### Constants #############
+###########################
+
+GENERATIONS = dict(
+	KANTO = kanto.POKEMON)
+
+###########################
 ### Exports ###############
 ###########################
 

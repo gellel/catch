@@ -22,16 +22,42 @@ from catch.pokemon.generation import generation
 __author__ = "Lindsay Gelle (gellel)"
 
 ###########################
+### Constants #############
+###########################
+
+###########################
 ### Module ################
 ###########################
+
+def get_primary_attribute (pkmn, args):
+
+	if type(pkmn) is dict and type(args) in (list, tuple):
+
+		args = map(str.upper, map(str, args))
+
+		if len(args):
+			
+			if args[0] in pkmn:
+
+				print(pkmn[str.upper(args[0])])
 
 def main (args):
 
 	if len(args):
-		if str.upper(args[0]) == "GET":
-			if str.upper(args[1]) == "PKMN":
-				if str.upper(args[2]) in []:
-					print("hi")
+
+		args = map(str.upper, map(str, args))
+
+		if args[0] == "GET":
+			if args[1] and args[1] == "PKMN":
+				if args[2]:
+					for key in generation.GENERATIONS:
+						if args[2] in generation.GENERATIONS[key]:
+
+							if len(args[3:]):
+
+								get_primary_attribute(generation.GENERATIONS[key][args[2]], args[3:])
+
+							return generation.GENERATIONS[key]
 
 
 if __name__ == '__main__':
