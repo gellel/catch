@@ -9,6 +9,8 @@ import sys
 
 import os
 
+import random
+
 ###########################
 ### Supports ##############
 ###########################
@@ -29,27 +31,43 @@ __author__ = "Lindsay Gelle (gellel)"
 ### Module ################
 ###########################
 
-def g (source, target, sequence):
+
+def get_general_message (pokemon):
+
+	about = { key: value for (key, value) in pkmn["ABOUT"].iteritems() 
+		if value is not None }
+
+	key = random.choice(list(about.keys()))
+
+	return " ".join([pokemon["EN_NAME"], "".join(["(", pokemon["JP_NAME"], ")"]), ":", "".join(["(", key, ")"]),  about[key]])
+
+
+def get_attribute_message (attribute, key, source):
+	
+	return attribute
+
+
+def descend_attribute_sequence (current, target, sequence, source):
 
 	key = sequence.pop(0)
 
-	if target == key and len(sequence) is 0:
 
-		return source[key]
+	if target == key and not len(sequence):
 
-	elif key in source and type(source[key]) is dict:
+		if key in current:
+
+			return get_attribute_message(current[key], key, source)
+
+	elif key in current and type(current[key]) is dict:
 		
-		return g(source[key], target, sequence)
+		return descend_attribute_sequence(current[key], target, sequence, source)
 	
 	return dict()
 
 
+def get_attribute (pokemon, args):
 
-def get_primary_attribute (pkmn, args):
-
-	print(g(pkmn, args[-1], args))
-
-	return pkmn
+	return descend_attribute_sequence(pokemon, args[-1], args, pokemon)
 
 
 def main (args):
@@ -70,11 +88,11 @@ def main (args):
 
 							if len(args[3:]):
 
-								get_primary_attribute(generation.GENERATIONS[key][args[2]], args[3:])
+								return get_attribute(generation.GENERATIONS[key][args[2]], args[3:])
 
-							return generation.GENERATIONS[key]
+							return get_general_message(generation.GENERATIONS[key][args[2]])
 
 
 if __name__ == '__main__':
 
-	main(sys.argv[1:])
+	print(main(sys.argv[1:]))
