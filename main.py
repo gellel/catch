@@ -9,6 +9,8 @@ import sys
 
 import os
 
+import re
+
 import random
 
 ###########################
@@ -47,10 +49,14 @@ def concatenate (*args):
 	"""
 
 	# set argument strings to concatenated string.
-	string = str.join(" ", args)
+	string = str.join(" ", map(str, args))
 	
 	# @return: @type: @string.
 	return string
+
+def concatenate_number (number, generation):
+
+	return concatenate(number, parenthesize(generation))
 
 def concatenate_names (en_name = "EN", jp_name = "JP"):
 	"""Sets formatted string for POKEMON name.
@@ -68,25 +74,52 @@ def concatenate_names (en_name = "EN", jp_name = "JP"):
 	# @return: @type: @string.
 	return name
 
-def concatenate_about (game = "SAMPLE", description = "Lorem Ipsum"):
+def concatenate_about (version = "SAMPLE", description = "Lorem Ipsum"):
 
 	# set japanese name to contain parentheses.
-	game = parenthesize(game)
+	version = parenthesize(re.sub(r"_", " ", version))
 
-	# concatenate game version and corresponding description.
-	about = concatenate(game, description)
+	# concatenate version version and corresponding description.
+	about = concatenate(version, description)
 	
 	# @return: @type: @string.
 	return about
 
-def get_general_message (pokemon):
+def concatenate_height (metric, imperial):
+
+	metric = concatenate(str(metric["SUM"]), metric["UNITS"])
+
+	imperial = parenthesize(concatenate(imperial["SUM"], imperial["UNITS"]))
+
+	return concatenate("HEIGHT", metric, imperial)
+
+def concatenate_weight (metric, imperial):
+
+	metric = concatenate(str(metric["SUM"]), metric["UNITS"])
+
+	imperial = parenthesize(concatenate(imperial["SUM"], imperial["UNITS"]))
+
+	return concatenate("WEIGHT", metric, imperial)
+
+def get_general_message (pokemon, generation):
 
 	about = { key: value for (key, value) in pokemon["ABOUT"].iteritems() 
 		if value is not None }
 
 	key = random.choice(list(about.keys()))
 
-	return " ".join([concatenate_names(pokemon["EN_NAME"], pokemon["JP_NAME"]), concatenate_about(key, about[key])])
+	pokedex_num = concatenate_number(pokemon["POKEDEX"], generation)
+
+	pokemon_name = concatenate_names(pokemon["EN_NAME"], pokemon["JP_NAME"])
+
+	description = concatenate_about(key, about[key])
+
+	height_size = concatenate_height(pokemon["SIZE"]["METRIC"]["HEIGHT"], pokemon["SIZE"]["IMPERIAL"]["HEIGHT"])
+
+	weight_size = concatenate_height(pokemon["SIZE"]["METRIC"]["WEIGHT"], pokemon["SIZE"]["IMPERIAL"]["WEIGHT"])
+
+
+	return concatenate(pokedex_num, pokemon_name, height_size, weight_size, description)
 
 
 def get_attribute_message (attribute, key, source):
@@ -136,7 +169,7 @@ def main (args):
 
 								return get_attribute(generation.GENERATIONS[key][args[2]], args[3:])
 
-							return get_general_message(generation.GENERATIONS[key][args[2]])
+							return get_general_message(generation.GENERATIONS[key][args[2]], key)
 
 
 if __name__ == '__main__':
