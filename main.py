@@ -31,26 +31,71 @@ __author__ = "Lindsay Gelle (gellel)"
 ### Module ################
 ###########################
 
+def parenthesize (arg): 
+	"""Sets argument to string and encases in parentheses."""
+
+	# set argument to contain substring formatting.
+	string = str.join("", ("(", str(arg), ")"))
+
+	# @return: @type: @string.
+	return string
+
+def concatenate (*args):
+	"""Joins sequence arguments as a single string.
+	
+	Concatenates arguments by white-space string.
+	"""
+
+	# set argument strings to concatenated string.
+	string = str.join(" ", args)
+	
+	# @return: @type: @string.
+	return string
+
+def concatenate_names (en_name = "EN", jp_name = "JP"):
+	"""Sets formatted string for POKEMON name.
+
+	Uses Japanese and English names to compose contents of returned string.
+	Created string does not contain formatting.
+	"""
+
+	# set japanese name to contain parentheses.
+	jp_name = parenthesize(jp_name)
+
+	# concatenate english and japanese names.
+	name = concatenate(en_name, jp_name)
+
+	# @return: @type: @string.
+	return name
+
+def concatenate_about (game = "SAMPLE", description = "Lorem Ipsum"):
+
+	# set japanese name to contain parentheses.
+	game = parenthesize(game)
+
+	about = concatenate(game, description)
+	
+	# @return: @type: @string.
+	return about
 
 def get_general_message (pokemon):
 
-	about = { key: value for (key, value) in pkmn["ABOUT"].iteritems() 
+	about = { key: value for (key, value) in pokemon["ABOUT"].iteritems() 
 		if value is not None }
 
 	key = random.choice(list(about.keys()))
 
-	return " ".join([pokemon["EN_NAME"], "".join(["(", pokemon["JP_NAME"], ")"]), ":", "".join(["(", key, ")"]),  about[key]])
+	return " ".join([concatenate_names(pokemon["EN_NAME"], pokemon["JP_NAME"]), concatenate_about(key, about[key])])
 
 
 def get_attribute_message (attribute, key, source):
-	
+
 	return attribute
 
 
-def descend_attribute_sequence (current, target, sequence, source):
+def process_attributes_sequence (current, target, sequence, source):
 
 	key = sequence.pop(0)
-
 
 	if target == key and not len(sequence):
 
@@ -60,14 +105,14 @@ def descend_attribute_sequence (current, target, sequence, source):
 
 	elif key in current and type(current[key]) is dict:
 		
-		return descend_attribute_sequence(current[key], target, sequence, source)
+		return process_attributes_sequence(current[key], target, sequence, source)
 	
 	return dict()
 
 
 def get_attribute (pokemon, args):
 
-	return descend_attribute_sequence(pokemon, args[-1], args, pokemon)
+	return process_attributes_sequence(pokemon, args[-1], args, pokemon)
 
 
 def main (args):
