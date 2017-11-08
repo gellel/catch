@@ -73,6 +73,7 @@ def concatenate_about (game = "SAMPLE", description = "Lorem Ipsum"):
 	# set japanese name to contain parentheses.
 	game = parenthesize(game)
 
+	# concatenate game version and corresponding description.
 	about = concatenate(game, description)
 	
 	# @return: @type: @string.
