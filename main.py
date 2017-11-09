@@ -11,7 +11,11 @@ import os
 
 import re
 
+import json
+
 import random
+
+import requests
 
 ###########################
 ### Supports ##############
@@ -33,73 +37,80 @@ __author__ = "Lindsay Gelle (gellel)"
 ### Module ################
 ###########################
 
-def parenthesize (arg): 
+def encase_code_line (*args):
+
+	# @return: @type: @string.
+	return concatenate(*[str.join("", ("`", i, "`")) for i in args])
+
+def encase_code_block (*args):
+	pass
+
+def encase_paragraph ():
+	pass
+
+def encase (arg): 
 	"""Sets argument to string and encases in parentheses."""
 
-	# set argument to contain substring formatting.
-	string = str.join("", ("(", str(arg), ")"))
-
 	# @return: @type: @string.
-	return string
+	return str.join("", ("(", str(arg), ")"))
 
 def concatenate (*args):
-	"""Joins sequence arguments as a single string.
-	
-	Concatenates arguments by white-space string.
-	"""
+	"""Joins sequence arguments as a single string."""
 
-	# set argument strings to concatenated string.
-	string = str.join(" ", map(str, args))
-	
 	# @return: @type: @string.
-	return string
+	return str.join(" ", map(str, args))
 
 def concatenate_number (number, generation):
-
-	return concatenate(number, parenthesize(generation))
-
-def concatenate_names (en_name = "EN", jp_name = "JP"):
-	"""Sets formatted string for POKEMON name.
-
-	Uses Japanese and English names to compose contents of returned string.
-	Created string does not contain formatting.
-	"""
-
-	# set japanese name to contain parentheses.
-	jp_name = parenthesize(jp_name)
-
-	# concatenate english and japanese names.
-	name = concatenate(en_name, jp_name)
+	"""Sets formatted string for POKEMON POKEDEX number."""
 
 	# @return: @type: @string.
-	return name
+	return concatenate(number, encase(generation))
 
-def concatenate_about (version = "SAMPLE", description = "Lorem Ipsum"):
+def concatenate_names (english, japanese):
+	"""Sets formatted string for english and japanese POKEMON names."""
 
-	# set japanese name to contain parentheses.
-	version = parenthesize(re.sub(r"_", " ", version))
+	# @return: @type: @string.
+	return concatenate(english, encase(japanese))
 
-	# concatenate version version and corresponding description.
-	about = concatenate(version, description)
+def concatenate_types (types):
 	
 	# @return: @type: @string.
-	return about
+	return concatenate("TYPES", *dict.keys(types))
+
+def concatenate_about (version, description):
+	"""Sets formatted string for POKEMON description and game it's from."""
+
+	# @return: @type: @string.
+	return concatenate("ABOUT", encase(re.sub("_", " ", version)), description)
 
 def concatenate_height (metric, imperial):
 
-	metric = concatenate(str(metric["SUM"]), metric["UNITS"])
-
-	imperial = parenthesize(concatenate(imperial["SUM"], imperial["UNITS"]))
-
-	return concatenate("HEIGHT", metric, imperial)
+	# @return: @type: @string.
+	return concatenate("HEIGHT", concatenate(metric["SUM"], metric["UNITS"]), 
+		encase(concatenate(imperial["SUM"], imperial["UNITS"])))
 
 def concatenate_weight (metric, imperial):
 
-	metric = concatenate(str(metric["SUM"]), metric["UNITS"])
+	# @return: @type: @string.
+	return concatenate("WEIGHT", concatenate(metric["SUM"], metric["UNITS"]), 
+		encase(concatenate(imperial["SUM"], imperial["UNITS"])))
 
-	imperial = parenthesize(concatenate(imperial["SUM"], imperial["UNITS"]))
+def concatenate_found (version, found):
 
-	return concatenate("WEIGHT", metric, imperial)
+	# @return: @type: @string.
+	return concatenate("FOUND", encase(re.sub("_", " ", version)), 
+		", ".join([re.sub("_", " ", i) for i in found]))
+
+
+def concatenate_stats (stats):
+
+	# @return: @type: @string.
+	return "\n".join([concatenate(re.sub("_", " ", key), stats[key]["BASE"], 
+		stats[key]["MIN"], stats[key]["MAX"]) for key in stats])
+
+
+	
+
 
 def get_general_message (pokemon, generation):
 
@@ -108,9 +119,12 @@ def get_general_message (pokemon, generation):
 
 	key = random.choice(list(about.keys()))
 
+
 	pokedex_num = concatenate_number(pokemon["POKEDEX"], generation)
 
 	pokemon_name = concatenate_names(pokemon["EN_NAME"], pokemon["JP_NAME"])
+
+	pokemon_types = concatenate_types(pokemon["TYPES"])
 
 	description = concatenate_about(key, about[key])
 
@@ -118,8 +132,12 @@ def get_general_message (pokemon, generation):
 
 	weight_size = concatenate_height(pokemon["SIZE"]["METRIC"]["WEIGHT"], pokemon["SIZE"]["IMPERIAL"]["WEIGHT"])
 
+	found = concatenate_found(key, pokemon["FOUND"][key])
 
-	return concatenate(pokedex_num, pokemon_name, height_size, weight_size, description)
+	stats = concatenate_stats(pokemon["STATS"])
+
+
+	return "\n".join((pokedex_num, pokemon_name, pokemon_types, height_size, weight_size, description, found, stats))
 
 
 def get_attribute_message (attribute, key, source):
@@ -174,4 +192,9 @@ def main (args):
 
 if __name__ == '__main__':
 
-	print(main(sys.argv[1:]))
+	post = main(sys.argv[1:])
+
+	post = encase_code_line(post)
+
+
+	print(response)
