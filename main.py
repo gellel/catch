@@ -57,7 +57,7 @@ def encase_blockquote_block (*args):
 	# @return: @type: @string.
 	return str.join("", (">>>", str.join("\n", args)))
 
-def encase (arg): 
+def encase_parentheses (arg): 
 	"""Sets argument to string and encases in parentheses."""
 
 	# @return: @type: @string.
@@ -73,42 +73,46 @@ def concatenate_number (number, generation):
 	"""Sets formatted string for POKEMON POKEDEX number."""
 
 	# @return: @type: @string.
-	return concatenate(number, encase(generation))
+	return concatenate(number, 
+		encase_parentheses(generation))
 
 def concatenate_names (english, japanese):
 	"""Sets formatted string for english and japanese POKEMON names."""
 
 	# @return: @type: @string.
-	return concatenate(english, encase(japanese))
+	return concatenate(english, 
+		encase_parentheses(japanese))
 
 def concatenate_types (types):
 	"""Sets formatting string for element types for POKEMON."""
 	
 	# @return: @type: @string.
-	return concatenate("TYPES", *dict.keys(types))
+	return concatenate("TYPES", 
+		*dict.keys(types))
 
 def concatenate_about (version, description):
 	"""Sets formatted string for POKEMON description and game it's from."""
 
 	# @return: @type: @string.
-	return concatenate("ABOUT", encase(re.sub("_", " ", version)), description)
+	return concatenate("ABOUT", 
+		encase_parentheses(re.sub("_", " ", version)), description)
 
 def concatenate_height (metric, imperial):
 
 	# @return: @type: @string.
 	return concatenate("HEIGHT", concatenate(metric["SUM"], metric["UNITS"]), 
-		encase(concatenate(imperial["SUM"], imperial["UNITS"])))
+		encase_parentheses(concatenate(imperial["SUM"], imperial["UNITS"])))
 
 def concatenate_weight (metric, imperial):
 
 	# @return: @type: @string.
 	return concatenate("WEIGHT", concatenate(metric["SUM"], metric["UNITS"]), 
-		encase(concatenate(imperial["SUM"], imperial["UNITS"])))
+		encase_parentheses(concatenate(imperial["SUM"], imperial["UNITS"])))
 
 def concatenate_found (version, found):
 
 	# @return: @type: @string.
-	return concatenate("FOUND", encase(re.sub("_", " ", version)), 
+	return concatenate("FOUND", encase_parentheses(re.sub("_", " ", version)), 
 		", ".join([re.sub("_", " ", i) for i in found]))
 
 
