@@ -40,12 +40,17 @@ __author__ = "Lindsay Gelle (gellel)"
 def encase_code_line (*args):
 
 	# @return: @type: @string.
-	return concatenate(*[str.join("", ("`", i, "`")) for i in args])
+	return concatenate(*(str.join("", ("`", i, "`")) for i in args))
 
 def encase_code_block (*args):
+
+	# @return: @type: @string.
+	return str.join("", ("```", str.join("\n", args), "```"))
+
+def encase_blockquote_line ():
 	pass
 
-def encase_paragraph ():
+def encase_blockquote_block ():
 	pass
 
 def encase (arg): 
@@ -73,6 +78,7 @@ def concatenate_names (english, japanese):
 	return concatenate(english, encase(japanese))
 
 def concatenate_types (types):
+	"""Sets formatting string for element types for POKEMON."""
 	
 	# @return: @type: @string.
 	return concatenate("TYPES", *dict.keys(types))
@@ -192,9 +198,10 @@ def main (args):
 
 if __name__ == '__main__':
 
-	post = main(sys.argv[1:])
+	"""post = main(sys.argv[1:])
 
-	post = encase_code_line(post)
+	post = encase_code_line(post)"""
+
+	post = encase_code_line("hello", "world", "this", "is", "me")
 
 
-	print(response)
