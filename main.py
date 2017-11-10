@@ -38,22 +38,30 @@ __author__ = "Lindsay Gelle (gellel)"
 ###########################
 
 def encase_href (address, text):
+	"""Formats string as Slack messenger hyperlink."""
+
 	# @return: @type: @string.
 	return str.join("", ("<", address, "|", text, ">"))
 
 def encase_code_line (*args):
+	"""Formats arguments to be code snippets for Slack messenger."""
+
 	# @return: @type: @string.
 	return concatenate(*(str.join("", ("`", i, "`")) for i in args))
 
 def encase_code_block (*args):
+	"""Formats arguments to be multiple line code snippets for Slack messenger."""
+
 	# @return: @type: @string.
 	return str.join("", ("```", str.join("\n", args), "```"))
 
 def encase_blockquote_line (arg):
+	""""""
 	# @return: @type: @string.
 	return str.join("", (">>>", arg))
 
 def encase_blockquote_block (*args):
+	""""""
 	# @return: @type: @string.
 	return str.join("", (">>>", str.join("\n", args)))
 
@@ -206,16 +214,7 @@ def main (args):
 
 if __name__ == '__main__':
 
-	"""post = main(sys.argv[1:])
+	post = main(sys.argv[1:])
 
-	post = encase_code_line(post)"""
-
-	post = encase_blockquote_block("hello", "world", "this", "is", "me")
-
-	response = requests.post("#", 
-		headers = {"Content-Type": "application/json"},
-		data = json.dumps({"channel": "#", "username": "lul", "text": post, "icon_emoji": ":feelsbadman:"}))
-
-	print(response)
 
 
