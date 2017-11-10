@@ -123,6 +123,16 @@ def numbers (*args):
 		(str((i + 1)), ".", " ", args[i])) 
 			for i in range(0, len(args))))
 
+def parentheses (*args): 
+	"""Sets arguments to string and encases in parentheses.
+	
+	Arguments are joined by spaces.
+	"""
+
+	# @return: @type: @string.
+	return str.join(" ", (str.join("", 
+		("(", str(i), ")")) for i in args))
+
 def points (*args):
 	"""Creates bulleted points for arguments.
 
@@ -156,6 +166,3 @@ def strike (*args):
 	return str.join(" ", (str.join("", 
 		("~", str(i), "~")) for i in args))
 
-
-
-print(address(("https://site.com", "site"),))

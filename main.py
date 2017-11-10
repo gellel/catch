@@ -21,6 +21,8 @@ import requests
 ### Supports ##############
 ###########################
 
+from slack.message.formatting import formatting
+
 from catch.pokemon.generation import generation
 
 ###########################
@@ -37,39 +39,6 @@ __author__ = "Lindsay Gelle (gellel)"
 ### Module ################
 ###########################
 
-def encase_href (address, text):
-	"""Formats string as Slack messenger hyperlink."""
-
-	# @return: @type: @string.
-	return str.join("", ("<", address, "|", text, ">"))
-
-def encase_code_line (*args):
-	"""Formats arguments to be code snippets for Slack messenger."""
-
-	# @return: @type: @string.
-	return concatenate(*(str.join("", ("`", i, "`")) for i in args))
-
-def encase_code_block (*args):
-	"""Formats arguments to be multiple line code snippets for Slack messenger."""
-
-	# @return: @type: @string.
-	return str.join("", ("```", str.join("\n", args), "```"))
-
-def encase_blockquote_line (arg):
-	""""""
-	# @return: @type: @string.
-	return str.join("", (">>>", arg))
-
-def encase_blockquote_block (*args):
-	""""""
-	# @return: @type: @string.
-	return str.join("", (">>>", str.join("\n", args)))
-
-def encase_parentheses (arg): 
-	"""Sets argument to string and encases in parentheses."""
-
-	# @return: @type: @string.
-	return str.join("", ("(", str(arg), ")"))
 
 def concatenate (*args):
 	"""Joins sequence arguments as a single string."""
@@ -82,14 +51,14 @@ def concatenate_number (number, generation):
 
 	# @return: @type: @string.
 	return concatenate(number, 
-		encase_parentheses(generation))
+		formatting.parentheses(generation))
 
 def concatenate_names (english, japanese):
 	"""Sets formatted string for english and japanese POKEMON names."""
 
 	# @return: @type: @string.
 	return concatenate(english, 
-		encase_parentheses(japanese))
+		formatting.parentheses(japanese))
 
 def concatenate_types (types):
 	"""Sets formatting string for element types for POKEMON."""
@@ -103,24 +72,24 @@ def concatenate_about (version, description):
 
 	# @return: @type: @string.
 	return concatenate("ABOUT", 
-		encase_parentheses(re.sub("_", " ", version)), description)
+		formatting.parentheses(re.sub("_", " ", version)), description)
 
 def concatenate_height (metric, imperial):
 
 	# @return: @type: @string.
 	return concatenate("HEIGHT", concatenate(metric["SUM"], metric["UNITS"]), 
-		encase_parentheses(concatenate(imperial["SUM"], imperial["UNITS"])))
+		formatting.parentheses(concatenate(imperial["SUM"], imperial["UNITS"])))
 
 def concatenate_weight (metric, imperial):
 
 	# @return: @type: @string.
 	return concatenate("WEIGHT", concatenate(metric["SUM"], metric["UNITS"]), 
-		encase_parentheses(concatenate(imperial["SUM"], imperial["UNITS"])))
+		formatting.parentheses(concatenate(imperial["SUM"], imperial["UNITS"])))
 
 def concatenate_found (version, found):
 
 	# @return: @type: @string.
-	return concatenate("FOUND", encase_parentheses(re.sub("_", " ", version)), 
+	return concatenate("FOUND", formatting.parentheses(re.sub("_", " ", version)), 
 		", ".join([re.sub("_", " ", i) for i in found]))
 
 
@@ -215,7 +184,6 @@ def main (args):
 if __name__ == '__main__':
 
 	post = main(sys.argv[1:])
-
 
 
 
