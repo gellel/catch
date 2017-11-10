@@ -5,6 +5,8 @@
 ### Required ##############
 ###########################
 
+import re
+
 ###########################
 ### About #################
 ###########################
@@ -16,20 +18,31 @@ __author__ = "Lindsay Gelle (gellel)"
 ###########################
 
 __all__ = [
-	bold,
-	block,
-	code,
-	emphasis,
-	emojim
-	mono,
-	numbers,
-	points,
-	quote,
-	strike]
+	"bold",
+	"block",
+	"code",
+	"emphasis",
+	"emoji",
+	"mono",
+	"numbers",
+	"points",
+	"quote",
+	"strike"]
 
 ###########################
 ### Module ################
 ###########################
+
+def address (*args):
+	"""Creates hyperlink references for arguments.
+
+	Encases arguments with <address|title> to generate web address.
+	Argument are joined by spaces."""
+
+	# @return: @type: @string.
+	return str.join(" ", (str.join("", ("<", 
+		(str.join("|", i) if type(i) in (list, tuple) else (i["href"], i["text"])), ">")) 
+			for i in args))
 
 def bold (*args):
 	"""Creates emphasis for arguments.
@@ -39,7 +52,8 @@ def bold (*args):
 	"""
 
 	# @return: @type: @string.
-	return str.join(" ", (str.join("", ("*", str(i), "*")) for i in args))
+	return str.join(" ", (str.join("", 
+		("*", str(i), "*")) for i in args))
 
 def block (*args):
 	"""Creates blockquote for arguments.
@@ -49,7 +63,8 @@ def block (*args):
 	"""
 
 	# @return: @type: @string.
-	return str.join("", (">>>", str.join("\n", args)))
+	return str.join("", (">>>", 
+		str.join("\n", args)))
 
 def code (*args):
 	"""Creates code snippet for arguments.
@@ -59,7 +74,8 @@ def code (*args):
 	"""
 
 	# @return: @type: @string.	
-	return str.join("", ("```", str.join("\n", args), "```"))
+	return str.join("", ("```", 
+		str.join("\n", args), "```"))
 
 def emphasis (*args):
 	"""Creates italics for arguments.
@@ -69,7 +85,8 @@ def emphasis (*args):
 	"""
 
 	# @return: @type: @string.	
-	return str.join(" ", (str.join("", ("_", str(i), "_")) for i in args))
+	return str.join(" ", (str.join("", 
+		("_", str(i), "_")) for i in args))
 
 def emoji (*args):
 	"""Create emoji formatting for arguments.
@@ -79,7 +96,8 @@ def emoji (*args):
 	"""
 
 	# @return: @type: @string.	
-	return str.join(" ", (str.join("", (":", str(i), ":")) for i in args))
+	return str.join(" ", (str.join("", 
+		(":", str(i), ":")) for i in args))
 
 def mono (*args):
 	"""Creates monospace for arguments.
@@ -101,7 +119,8 @@ def numbers (*args):
 
 	# @return: @type: @string.	
 	return str.join("\n", (str.join("", 
-		(str((i + 1)), ".", " ", args[i])) for i in range(0, len(args))))
+		(str((i + 1)), ".", " ", args[i])) 
+			for i in range(0, len(args))))
 
 def points (*args):
 	"""Creates bulleted points for arguments.
@@ -135,3 +154,7 @@ def strike (*args):
 	# @return: @type: @string.	
 	return str.join(" ", (str.join("", 
 		("~", str(i), "~")) for i in args))
+
+
+
+print(address(("https://site.com", "site"),))
