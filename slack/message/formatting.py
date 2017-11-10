@@ -18,6 +18,7 @@ __author__ = "Lindsay Gelle (gellel)"
 ###########################
 
 __all__ = [
+	"address",
 	"bold",
 	"block",
 	"code",
