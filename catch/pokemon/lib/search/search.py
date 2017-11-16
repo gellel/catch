@@ -67,7 +67,7 @@ def search (args, properties):
 
 
 def main (args = ("a", "b", "c"), 
-		properties = dict(a = dict(B = dict(C = True)))):
+		properties = dict(A = dict(B = dict(C = True)))):
 
 	# @return: @type: @mixed
 	return search(args, properties)

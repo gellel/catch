@@ -185,5 +185,10 @@ if __name__ == '__main__':
 
 	post = main(sys.argv[1:])
 
+	response = requests.post("https://hooks.slack.com/services/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", 
+		headers = {"Content-Type": "application/json"},
+		data = json.dumps({"channel": "@lindsaygelle", "username": "lul", "text": post, "icon_emoji": ":feelsbadman:"}))
+
+	print(response)
 
 
